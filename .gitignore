@@ -1,0 +1,41 @@
+# Xcode
+.DS_Store
+.idea/
+.vscode/
+xcuserdata/
+*.xcuserstate
+*.swp
+
+# Build generated files
+build/
+DerivedData/
+
+# User-specific files
+*.moved-aside
+*.xcworkspace
+*.xcodeproj/project.xcworkspace/
+*.xcodeproj/xcuserdata/
+*.xcodeproj/project.xcuserstate
+
+# Storyboard & Nib files (generated .xib and .storyboard files)
+*.storyboard~
+*.xib~
+
+# Swift Package Manager
+/.build
+/.swiftpm
+
+# CocoaPods
+Pods/
+
+# Carthage
+Carthage/Build/
+
+# Other files
+*.log
+*.lock
+*.xcconfig
+*.hmap
+
+# Archive and Archive-related files
+*.xcarchive
