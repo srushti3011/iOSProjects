@@ -31,13 +31,18 @@ class SignUpController: UIViewController {
     //     MARK: Lifecycle Events
     override func viewDidLoad() {
         super.viewDidLoad()
+        changeColors()
+        setPropertiesSignup()
+    }
+    
+    func changeColors() {
         if let termsAndServiceContent = termsAndServices.text {
             var attributedString = AttributedString(termsAndServiceContent)
             if let rangeOfTermsOfService = attributedString.range(of: "Terms of Service") {
-                attributedString[rangeOfTermsOfService].foregroundColor = UIColor(red: 81/255, green: 124/255, blue: 184/255, alpha: 1.0)
+                attributedString[rangeOfTermsOfService].foregroundColor = UIColor(named: "PracticeStrings")
             }
             if let rangeOfPrivacyPolicy = attributedString.range(of: "Privacy Policy") {
-                attributedString[rangeOfPrivacyPolicy].foregroundColor = UIColor(red: 37.0/255, green: 130.0/255, blue: 223.0/255, alpha: 1.0)
+                attributedString[rangeOfPrivacyPolicy].foregroundColor = UIColor(named: "PracticeStrings")
             }
             termsAndServices.attributedText = NSAttributedString(attributedString)
         }
@@ -45,10 +50,13 @@ class SignUpController: UIViewController {
         if let loginBlueContent = loginInBlue.text {
             var attributedString = AttributedString(loginBlueContent)
             if let loginRange = attributedString.range(of: "Log in") {
-                attributedString[loginRange].foregroundColor = UIColor(red: 37.0/255, green: 130.0/255, blue: 223.0/255, alpha: 1.0)
+                attributedString[loginRange].foregroundColor = UIColor(named: "PracticeStrings")
             }
             loginInBlue.attributedText = NSAttributedString(attributedString)
         }
+    }
+    
+    func setPropertiesSignup() {
         btnSignUp.applyGradient()
         logoGoogle.layer.borderWidth = CGFloat(1)
         logoGoogle.layer.borderColor = CGColor(red: 0.6, green: 0.6, blue: 0.6, alpha: 0.5)
@@ -59,21 +67,22 @@ class SignUpController: UIViewController {
         txtFieldPassword.setPadding(value: 10)
         txtFieldPassword.setSymbol(name: "eye.slash")
     }
+    
 }
 
-extension UITextField {
-    func setPadding(value: Int) {
-        let paddingView = UIView(frame: CGRect(x: 0, y: 0, width: value, height: Int(self.frame.height)))
-        self.leftView = paddingView
-        self.leftViewMode = .always
-        self.rightView = paddingView
-        self.rightViewMode = .always
-    }
-    
-    func setSymbol(name: String) {
-        let imgView = UIImageView(image: UIImage(systemName: name))
-        imgView.tintColor = UIColor(named: "LabelColor")
-        self.rightView = imgView
-        self.rightViewMode = .always
-    }
-}
+//extension UITextField {
+//    func setPadding(value: Int) {
+//        let paddingView = UIView(frame: CGRect(x: 0, y: 0, width: value, height: Int(self.frame.height)))
+//        self.leftView = paddingView
+//        self.leftViewMode = .always
+//        self.rightView = paddingView
+//        self.rightViewMode = .always
+//    }
+//    
+//    func setSymbol(name: String) {
+//        let imgView = UIImageView(image: UIImage(systemName: name))
+//        imgView.tintColor = UIColor(named: "LabelColor")
+//        self.rightView = imgView
+//        self.rightViewMode = .always
+//    }
+//}

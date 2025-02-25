@@ -540,55 +540,72 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="cKA-9n-Tmj" userLabel="landingScreen">
-                                <rect key="frame" x="40" y="318" width="322" height="55"/>
+                                <rect key="frame" x="40" y="136" width="322" height="55"/>
                                 <color key="backgroundColor" red="0.163320303" green="0.20572045450000001" blue="0.61580652000000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="55" id="O0b-Zf-vNU"/>
                                 </constraints>
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="plain" title="Go to landing Screen">
-                                    <color key="baseForegroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    <color key="baseForegroundColor" name="Color"/>
                                 </buttonConfiguration>
                                 <connections>
                                     <action selector="navigateToLanding:" destination="tZS-Z7-EWQ" eventType="touchUpInside" id="EIm-0g-iv9"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="yeM-1l-9q1" userLabel="signUpScreen">
-                                <rect key="frame" x="40" y="433" width="322" height="55"/>
+                                <rect key="frame" x="40" y="251" width="322" height="55"/>
                                 <color key="backgroundColor" red="0.163320303" green="0.20572045450000001" blue="0.61580652000000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="plain" title="Go to Signup Page">
-                                    <color key="baseForegroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    <color key="baseForegroundColor" name="Color"/>
                                 </buttonConfiguration>
                                 <connections>
                                     <action selector="navigateToSignUp:" destination="tZS-Z7-EWQ" eventType="touchUpInside" id="GYb-Ly-BpU"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="tVZ-KI-YIJ" userLabel="loginScreen">
-                                <rect key="frame" x="40" y="548" width="322" height="55"/>
+                                <rect key="frame" x="40" y="366" width="322" height="55"/>
                                 <color key="backgroundColor" red="0.163320303" green="0.20572045450000001" blue="0.61580652000000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="plain" title="Go to Login Page">
-                                    <color key="baseForegroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    <color key="baseForegroundColor" name="Color"/>
                                 </buttonConfiguration>
                                 <connections>
                                     <action selector="navigateToLogin:" destination="tZS-Z7-EWQ" eventType="touchUpInside" id="Sr8-p4-r15"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="APv-jm-80k">
-                                <rect key="frame" x="155.33333333333334" y="669" width="91.333333333333343" height="35"/>
+                                <rect key="frame" x="40" y="481" width="322" height="55"/>
+                                <color key="backgroundColor" name="ButtonBackground"/>
                                 <state key="normal" title="Button"/>
-                                <buttonConfiguration key="configuration" style="plain" title="KT Login"/>
+                                <buttonConfiguration key="configuration" style="plain" title="KT Login">
+                                    <color key="baseForegroundColor" name="Color"/>
+                                </buttonConfiguration>
                                 <connections>
                                     <action selector="btnKtLogin:" destination="tZS-Z7-EWQ" eventType="touchUpInside" id="jtv-H3-BpU"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="jpZ-Oj-E3c">
-                                <rect key="frame" x="149.66666666666666" y="747" width="102.66666666666666" height="35"/>
+                                <rect key="frame" x="40" y="596" width="322" height="55"/>
+                                <color key="backgroundColor" name="ButtonBackground"/>
                                 <state key="normal" title="Button"/>
-                                <buttonConfiguration key="configuration" style="plain" title="KT Signup"/>
+                                <buttonConfiguration key="configuration" style="plain" title="KT Signup">
+                                    <color key="baseForegroundColor" name="Color"/>
+                                </buttonConfiguration>
                                 <connections>
                                     <action selector="btnKTSignup:" destination="tZS-Z7-EWQ" eventType="touchUpInside" id="gpd-aK-1YD"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="sbN-aZ-N3C">
+                                <rect key="frame" x="40" y="711" width="322" height="55"/>
+                                <color key="backgroundColor" name="AccentColor"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" title="KT Task">
+                                    <color key="baseForegroundColor" name="Color"/>
+                                </buttonConfiguration>
+                                <connections>
+                                    <action selector="btnKtTask:" destination="tZS-Z7-EWQ" eventType="touchUpInside" id="GCA-eV-aFJ"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -596,20 +613,28 @@
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
                             <constraint firstItem="yeM-1l-9q1" firstAttribute="top" secondItem="cKA-9n-Tmj" secondAttribute="bottom" constant="60" id="1Tm-r8-mHv"/>
-                            <constraint firstItem="jpZ-Oj-E3c" firstAttribute="top" secondItem="APv-jm-80k" secondAttribute="bottom" constant="43" id="AIf-E2-Irp"/>
+                            <constraint firstItem="jpZ-Oj-E3c" firstAttribute="height" secondItem="APv-jm-80k" secondAttribute="height" id="5mH-So-vK7"/>
+                            <constraint firstItem="jpZ-Oj-E3c" firstAttribute="width" secondItem="APv-jm-80k" secondAttribute="width" id="7e8-tX-Xou"/>
+                            <constraint firstItem="jpZ-Oj-E3c" firstAttribute="top" secondItem="APv-jm-80k" secondAttribute="bottom" constant="60" id="AIf-E2-Irp"/>
                             <constraint firstItem="yeM-1l-9q1" firstAttribute="height" secondItem="cKA-9n-Tmj" secondAttribute="height" id="Btt-cN-AWK"/>
                             <constraint firstItem="jSf-I5-jGs" firstAttribute="trailing" secondItem="yeM-1l-9q1" secondAttribute="trailing" constant="40" id="Dmp-IP-teH"/>
+                            <constraint firstItem="sbN-aZ-N3C" firstAttribute="height" secondItem="jpZ-Oj-E3c" secondAttribute="height" id="HjS-07-GQl"/>
                             <constraint firstItem="yeM-1l-9q1" firstAttribute="leading" secondItem="jSf-I5-jGs" secondAttribute="leading" constant="40" id="Rtp-dX-lNd"/>
+                            <constraint firstItem="sbN-aZ-N3C" firstAttribute="top" secondItem="jpZ-Oj-E3c" secondAttribute="bottom" constant="60" id="TJm-yN-Flt"/>
+                            <constraint firstItem="sbN-aZ-N3C" firstAttribute="centerX" secondItem="jSf-I5-jGs" secondAttribute="centerX" id="UWe-dE-pfN"/>
                             <constraint firstItem="APv-jm-80k" firstAttribute="centerX" secondItem="jSf-I5-jGs" secondAttribute="centerX" id="W7G-uz-73h"/>
                             <constraint firstItem="tVZ-KI-YIJ" firstAttribute="top" secondItem="yeM-1l-9q1" secondAttribute="bottom" constant="60" id="X0V-Uf-zfZ"/>
                             <constraint firstItem="tVZ-KI-YIJ" firstAttribute="leading" secondItem="jSf-I5-jGs" secondAttribute="leading" constant="40" id="Z11-aM-4Sn"/>
                             <constraint firstItem="tVZ-KI-YIJ" firstAttribute="height" secondItem="yeM-1l-9q1" secondAttribute="height" id="Z68-ca-YBL"/>
-                            <constraint firstItem="cKA-9n-Tmj" firstAttribute="top" secondItem="jSf-I5-jGs" secondAttribute="top" multiplier="3" id="f9L-1t-Kfz"/>
-                            <constraint firstItem="APv-jm-80k" firstAttribute="top" secondItem="tVZ-KI-YIJ" secondAttribute="bottom" constant="66" id="k7M-Yr-9RR"/>
+                            <constraint firstItem="sbN-aZ-N3C" firstAttribute="width" secondItem="jpZ-Oj-E3c" secondAttribute="width" id="dgm-dK-4wj"/>
+                            <constraint firstItem="cKA-9n-Tmj" firstAttribute="top" secondItem="jSf-I5-jGs" secondAttribute="top" constant="30" id="f9L-1t-Kfz"/>
+                            <constraint firstItem="APv-jm-80k" firstAttribute="top" secondItem="tVZ-KI-YIJ" secondAttribute="bottom" constant="60" id="k7M-Yr-9RR"/>
                             <constraint firstItem="jSf-I5-jGs" firstAttribute="trailing" secondItem="tVZ-KI-YIJ" secondAttribute="trailing" constant="40" id="kcT-il-ggv"/>
                             <constraint firstItem="jpZ-Oj-E3c" firstAttribute="centerX" secondItem="jSf-I5-jGs" secondAttribute="centerX" id="kza-Uk-v16"/>
                             <constraint firstItem="cKA-9n-Tmj" firstAttribute="leading" secondItem="jSf-I5-jGs" secondAttribute="leading" constant="40" id="rvS-P9-Jzf"/>
+                            <constraint firstItem="APv-jm-80k" firstAttribute="width" secondItem="tVZ-KI-YIJ" secondAttribute="width" id="sNy-Z7-Nf7"/>
                             <constraint firstItem="jSf-I5-jGs" firstAttribute="trailing" secondItem="cKA-9n-Tmj" secondAttribute="trailing" constant="40" id="sUQ-eT-5YD"/>
+                            <constraint firstItem="APv-jm-80k" firstAttribute="height" secondItem="tVZ-KI-YIJ" secondAttribute="height" id="tP7-Be-vx9"/>
                             <constraint firstItem="yeM-1l-9q1" firstAttribute="centerX" secondItem="jSf-I5-jGs" secondAttribute="centerX" id="yUf-ol-aEw"/>
                             <constraint firstItem="cKA-9n-Tmj" firstAttribute="centerX" secondItem="jSf-I5-jGs" secondAttribute="centerX" id="zOV-FN-eYo"/>
                         </constraints>
@@ -650,6 +675,12 @@
         <image name="locationLogo" width="474" height="474"/>
         <namedColor name="AccentColor">
             <color red="0.0" green="0.46000000000000002" blue="0.89000000000000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <namedColor name="ButtonBackground">
+            <color red="0.32549019607843138" green="0.69411764705882351" blue="0.45882352941176469" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+        </namedColor>
+        <namedColor name="Color">
+            <color red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
         </namedColor>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>

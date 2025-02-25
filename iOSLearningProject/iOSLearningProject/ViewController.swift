@@ -20,9 +20,7 @@ class ViewController: UIViewController {
     
     @IBAction func navigateToLanding(_ sender: Any) {
         let storyBoard : UIStoryboard = UIStoryboard(name: "Main", bundle:nil)
-//        let vc = SignUpController.indsitancate(.main) LandingController
         let nextViewController = storyBoard.instantiateViewController(withIdentifier: "LandingController") as! LandingController
-//        navigationController?.viewControllers = [nextViewController]
         navigationController?.pushViewController(nextViewController, animated: true)
     }
     
@@ -47,6 +45,11 @@ class ViewController: UIViewController {
     @IBAction func btnKTSignup(_ sender: Any) {
         let storyBoard: UIStoryboard = UIStoryboard(name: "KtExercise", bundle: nil)
         let nextViewController = storyBoard.instantiateViewController(withIdentifier: "KtSignUpController") as! KtSignUpController
+        navigationController?.pushViewController(nextViewController, animated: true)
+    }
+    @IBAction func btnKtTask(_ sender: Any) {
+        let storyboard: UIStoryboard = UIStoryboard(name: "KtTask", bundle: nil)
+        let nextViewController = storyboard.instantiateViewController(withIdentifier: "KtTaskLogin") as! KtTaskLogin
         navigationController?.pushViewController(nextViewController, animated: true)
     }
     

@@ -25,8 +25,11 @@ class KtSignUpController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
-//        assigning the values from string catalog
+        assignStringsToLabelsKTSignup()
+        setPropertiesKTSignup()
+    }
+    
+    func assignStringsToLabelsKTSignup() {
         labelSignup.text = NSLocalizedString("signupHeading", comment: "")
         labelSignupSubheading.text = NSLocalizedString("signupSubHeading", comment: "")
         labelUsername.text = NSLocalizedString("usernameLabel", comment: "")
@@ -34,11 +37,13 @@ class KtSignUpController: UIViewController {
         labelPassword.text = NSLocalizedString("passwordLabel", comment: "")
         lblTermsServiceAndPrivacyPolicy.text = NSLocalizedString("termsOfService", comment: "")
         labelSignUp.text = NSLocalizedString("haveAccountQn", comment: "")
-        
+    }
+    
+    func setPropertiesKTSignup() {
         btnSignUp.roundedBorder(radius: 19)
-        lblTermsServiceAndPrivacyPolicy.stringColorChange(of: "Privacy Policy", toColor: UIColor(red: 76.0/255.0, green: 167.0/255.0, blue: 109.0/255.0, alpha: 1.0))
-        lblTermsServiceAndPrivacyPolicy.stringColorChange(of: "Terms of Service", toColor: UIColor(red: 76.0/255.0, green: 167.0/255.0, blue: 109.0/255.0, alpha: 1.0))
-        labelSignUp.stringColorChange(of: "Sign up", toColor: UIColor(red: 76.0/255.0, green: 167.0/255.0, blue: 109.0/255.0, alpha: 1.0))
+        lblTermsServiceAndPrivacyPolicy.stringColorChange(of: "Privacy Policy", toColor: UIColor(named: "KTPracticeStrings")!)
+        lblTermsServiceAndPrivacyPolicy.stringColorChange(of: "Terms of Service", toColor: UIColor(named: "KTPracticeStrings")!)
+        labelSignUp.stringColorChange(of: "Sign up", toColor: UIColor(named: "KTPracticeStrings")!)
         txtFieldUsername.setBottomBorder()
         txtFieldEmail.setBottomBorder()
         txtFieldPassword.setBottomBorder()
