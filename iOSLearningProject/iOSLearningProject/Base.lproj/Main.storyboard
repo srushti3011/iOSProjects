@@ -220,7 +220,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="OwA-0d-rZq" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1146.818181818182" y="-40.1673640167364"/>
+            <point key="canvasLocation" x="1825" y="-41"/>
         </scene>
         <!--Landing Controller-->
         <scene sceneID="B5a-xE-6TM">
@@ -335,7 +335,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ftj-I3-KsC" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="473.25581395348837" y="-39.244186046511629"/>
+            <point key="canvasLocation" x="1152" y="-40"/>
         </scene>
         <!--Login Controller-->
         <scene sceneID="JLY-39-SXC">
@@ -529,7 +529,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="xFN-Y6-UKl" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1821.818181818182" y="-39.5397489539749"/>
+            <point key="canvasLocation" x="2500" y="-40"/>
         </scene>
         <!--View Controller-->
         <scene sceneID="s55-Wr-1sb">
@@ -554,7 +554,7 @@
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="yeM-1l-9q1" userLabel="signUpScreen">
-                                <rect key="frame" x="40" y="251" width="322" height="55"/>
+                                <rect key="frame" x="40" y="201" width="322" height="55"/>
                                 <color key="backgroundColor" red="0.163320303" green="0.20572045450000001" blue="0.61580652000000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="plain" title="Go to Signup Page">
@@ -565,7 +565,7 @@
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="tVZ-KI-YIJ" userLabel="loginScreen">
-                                <rect key="frame" x="40" y="366" width="322" height="55"/>
+                                <rect key="frame" x="40" y="266" width="322" height="55"/>
                                 <color key="backgroundColor" red="0.163320303" green="0.20572045450000001" blue="0.61580652000000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="plain" title="Go to Login Page">
@@ -576,7 +576,7 @@
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="APv-jm-80k">
-                                <rect key="frame" x="40" y="481" width="322" height="55"/>
+                                <rect key="frame" x="40" y="331" width="322" height="55"/>
                                 <color key="backgroundColor" name="ButtonBackground"/>
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="plain" title="KT Login">
@@ -587,7 +587,7 @@
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="jpZ-Oj-E3c">
-                                <rect key="frame" x="40" y="596" width="322" height="55"/>
+                                <rect key="frame" x="40" y="396" width="322" height="55"/>
                                 <color key="backgroundColor" name="ButtonBackground"/>
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="plain" title="KT Signup">
@@ -598,7 +598,7 @@
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="sbN-aZ-N3C">
-                                <rect key="frame" x="40" y="711" width="322" height="55"/>
+                                <rect key="frame" x="40" y="461" width="322" height="55"/>
                                 <color key="backgroundColor" name="AccentColor"/>
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="plain" title="KT Task">
@@ -608,29 +608,45 @@
                                     <action selector="btnKtTask:" destination="tZS-Z7-EWQ" eventType="touchUpInside" id="GCA-eV-aFJ"/>
                                 </connections>
                             </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="TXy-Cp-Dqe">
+                                <rect key="frame" x="40" y="546" width="322" height="55"/>
+                                <color key="backgroundColor" name="gradientStart"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" title="UI Components">
+                                    <color key="baseForegroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </buttonConfiguration>
+                                <connections>
+                                    <action selector="btnGoToUiComponents:" destination="tZS-Z7-EWQ" eventType="touchUpInside" id="WmB-br-Wpz"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="jSf-I5-jGs"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
-                            <constraint firstItem="yeM-1l-9q1" firstAttribute="top" secondItem="cKA-9n-Tmj" secondAttribute="bottom" constant="60" id="1Tm-r8-mHv"/>
+                            <constraint firstItem="yeM-1l-9q1" firstAttribute="top" secondItem="cKA-9n-Tmj" secondAttribute="bottom" constant="10" id="1Tm-r8-mHv"/>
                             <constraint firstItem="jpZ-Oj-E3c" firstAttribute="height" secondItem="APv-jm-80k" secondAttribute="height" id="5mH-So-vK7"/>
+                            <constraint firstItem="TXy-Cp-Dqe" firstAttribute="top" secondItem="sbN-aZ-N3C" secondAttribute="bottom" constant="30" id="6NZ-6k-Nw2"/>
                             <constraint firstItem="jpZ-Oj-E3c" firstAttribute="width" secondItem="APv-jm-80k" secondAttribute="width" id="7e8-tX-Xou"/>
-                            <constraint firstItem="jpZ-Oj-E3c" firstAttribute="top" secondItem="APv-jm-80k" secondAttribute="bottom" constant="60" id="AIf-E2-Irp"/>
+                            <constraint firstItem="jpZ-Oj-E3c" firstAttribute="top" secondItem="APv-jm-80k" secondAttribute="bottom" constant="10" id="AIf-E2-Irp"/>
                             <constraint firstItem="yeM-1l-9q1" firstAttribute="height" secondItem="cKA-9n-Tmj" secondAttribute="height" id="Btt-cN-AWK"/>
                             <constraint firstItem="jSf-I5-jGs" firstAttribute="trailing" secondItem="yeM-1l-9q1" secondAttribute="trailing" constant="40" id="Dmp-IP-teH"/>
                             <constraint firstItem="sbN-aZ-N3C" firstAttribute="height" secondItem="jpZ-Oj-E3c" secondAttribute="height" id="HjS-07-GQl"/>
                             <constraint firstItem="yeM-1l-9q1" firstAttribute="leading" secondItem="jSf-I5-jGs" secondAttribute="leading" constant="40" id="Rtp-dX-lNd"/>
-                            <constraint firstItem="sbN-aZ-N3C" firstAttribute="top" secondItem="jpZ-Oj-E3c" secondAttribute="bottom" constant="60" id="TJm-yN-Flt"/>
+                            <constraint firstItem="sbN-aZ-N3C" firstAttribute="top" secondItem="jpZ-Oj-E3c" secondAttribute="bottom" constant="10" id="TJm-yN-Flt"/>
                             <constraint firstItem="sbN-aZ-N3C" firstAttribute="centerX" secondItem="jSf-I5-jGs" secondAttribute="centerX" id="UWe-dE-pfN"/>
                             <constraint firstItem="APv-jm-80k" firstAttribute="centerX" secondItem="jSf-I5-jGs" secondAttribute="centerX" id="W7G-uz-73h"/>
-                            <constraint firstItem="tVZ-KI-YIJ" firstAttribute="top" secondItem="yeM-1l-9q1" secondAttribute="bottom" constant="60" id="X0V-Uf-zfZ"/>
+                            <constraint firstItem="tVZ-KI-YIJ" firstAttribute="top" secondItem="yeM-1l-9q1" secondAttribute="bottom" constant="10" id="X0V-Uf-zfZ"/>
                             <constraint firstItem="tVZ-KI-YIJ" firstAttribute="leading" secondItem="jSf-I5-jGs" secondAttribute="leading" constant="40" id="Z11-aM-4Sn"/>
                             <constraint firstItem="tVZ-KI-YIJ" firstAttribute="height" secondItem="yeM-1l-9q1" secondAttribute="height" id="Z68-ca-YBL"/>
                             <constraint firstItem="sbN-aZ-N3C" firstAttribute="width" secondItem="jpZ-Oj-E3c" secondAttribute="width" id="dgm-dK-4wj"/>
+                            <constraint firstItem="TXy-Cp-Dqe" firstAttribute="leading" secondItem="sbN-aZ-N3C" secondAttribute="leading" id="ewY-bv-xAf"/>
                             <constraint firstItem="cKA-9n-Tmj" firstAttribute="top" secondItem="jSf-I5-jGs" secondAttribute="top" constant="30" id="f9L-1t-Kfz"/>
-                            <constraint firstItem="APv-jm-80k" firstAttribute="top" secondItem="tVZ-KI-YIJ" secondAttribute="bottom" constant="60" id="k7M-Yr-9RR"/>
+                            <constraint firstItem="APv-jm-80k" firstAttribute="top" secondItem="tVZ-KI-YIJ" secondAttribute="bottom" constant="10" id="k7M-Yr-9RR"/>
+                            <constraint firstItem="TXy-Cp-Dqe" firstAttribute="trailing" secondItem="sbN-aZ-N3C" secondAttribute="trailing" id="kBb-CJ-bWV"/>
                             <constraint firstItem="jSf-I5-jGs" firstAttribute="trailing" secondItem="tVZ-KI-YIJ" secondAttribute="trailing" constant="40" id="kcT-il-ggv"/>
                             <constraint firstItem="jpZ-Oj-E3c" firstAttribute="centerX" secondItem="jSf-I5-jGs" secondAttribute="centerX" id="kza-Uk-v16"/>
+                            <constraint firstItem="TXy-Cp-Dqe" firstAttribute="height" secondItem="sbN-aZ-N3C" secondAttribute="height" id="qp8-DZ-7a3"/>
+                            <constraint firstItem="TXy-Cp-Dqe" firstAttribute="width" secondItem="sbN-aZ-N3C" secondAttribute="width" id="rO1-H1-xl2"/>
                             <constraint firstItem="cKA-9n-Tmj" firstAttribute="leading" secondItem="jSf-I5-jGs" secondAttribute="leading" constant="40" id="rvS-P9-Jzf"/>
                             <constraint firstItem="APv-jm-80k" firstAttribute="width" secondItem="tVZ-KI-YIJ" secondAttribute="width" id="sNy-Z7-Nf7"/>
                             <constraint firstItem="jSf-I5-jGs" firstAttribute="trailing" secondItem="cKA-9n-Tmj" secondAttribute="trailing" constant="40" id="sUQ-eT-5YD"/>
@@ -649,6 +665,187 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="EEA-At-zCx" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="-350.58139534883719" y="-40.116279069767437"/>
+        </scene>
+        <!--Ui Components View Controller-->
+        <scene sceneID="c2y-Se-0HB">
+            <objects>
+                <viewController storyboardIdentifier="UiComponentsViewController" id="tqz-bv-iBV" customClass="UiComponentsViewController" customModule="iOSLearningProject" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="bDS-LM-M6n">
+                        <rect key="frame" x="0.0" y="0.0" width="402" height="874"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="kot-Wi-FwL">
+                                <rect key="frame" x="48" y="117" width="307" height="679"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="zEi-qI-grZ">
+                                        <rect key="frame" x="0.0" y="0.0" width="307" height="57.333333333333336"/>
+                                        <color key="backgroundColor" name="gradientStart"/>
+                                        <state key="normal" title="Button"/>
+                                        <buttonConfiguration key="configuration" style="plain" title="Scroll View">
+                                            <color key="baseForegroundColor" name="whiteColor"/>
+                                        </buttonConfiguration>
+                                        <connections>
+                                            <action selector="btnGoToScrollView:" destination="tqz-bv-iBV" eventType="touchUpInside" id="3FK-W8-AK1"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="FwF-7B-EfR">
+                                        <rect key="frame" x="0.0" y="62.333333333333343" width="307" height="57"/>
+                                        <color key="backgroundColor" name="gradientStart"/>
+                                        <state key="normal" title="Button"/>
+                                        <buttonConfiguration key="configuration" style="plain" title="Text Field, Stepper">
+                                            <color key="baseForegroundColor" name="whiteColor"/>
+                                        </buttonConfiguration>
+                                        <connections>
+                                            <action selector="btnGoToStepperTextField:" destination="tqz-bv-iBV" eventType="touchUpInside" id="0sp-dF-G7H"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="t2Q-o9-7uy">
+                                        <rect key="frame" x="0.0" y="124.33333333333333" width="307" height="57.333333333333329"/>
+                                        <color key="backgroundColor" name="gradientStart"/>
+                                        <state key="normal" title="Button"/>
+                                        <buttonConfiguration key="configuration" style="plain" title="Page Control">
+                                            <color key="baseForegroundColor" name="whiteColor"/>
+                                        </buttonConfiguration>
+                                        <connections>
+                                            <action selector="btnGoToPageControl:" destination="tqz-bv-iBV" eventType="touchUpInside" id="Fqz-sn-t8K"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="i4y-A9-Y7M">
+                                        <rect key="frame" x="0.0" y="186.66666666666669" width="307" height="57"/>
+                                        <color key="backgroundColor" name="gradientStart"/>
+                                        <state key="normal" title="Button"/>
+                                        <buttonConfiguration key="configuration" style="plain" title="Segmented Control">
+                                            <color key="baseForegroundColor" name="whiteColor"/>
+                                        </buttonConfiguration>
+                                        <connections>
+                                            <action selector="btnGoToSegmentedControl:" destination="tqz-bv-iBV" eventType="touchUpInside" id="yPz-pb-KCt"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="6zx-gc-awc">
+                                        <rect key="frame" x="0.0" y="248.66666666666671" width="307" height="57.333333333333343"/>
+                                        <color key="backgroundColor" name="gradientStart"/>
+                                        <state key="normal" title="Button"/>
+                                        <buttonConfiguration key="configuration" style="plain" title="Stepper">
+                                            <color key="baseForegroundColor" name="whiteColor"/>
+                                        </buttonConfiguration>
+                                        <connections>
+                                            <action selector="btnGoToStepper:" destination="tqz-bv-iBV" eventType="touchUpInside" id="nm2-Pf-2qc"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="9BY-qw-rZM">
+                                        <rect key="frame" x="0.0" y="311" width="307" height="57"/>
+                                        <color key="backgroundColor" name="gradientStart"/>
+                                        <state key="normal" title="Button"/>
+                                        <buttonConfiguration key="configuration" style="plain" title="Table View">
+                                            <color key="baseForegroundColor" name="whiteColor"/>
+                                        </buttonConfiguration>
+                                        <connections>
+                                            <action selector="btnGoToTableView:" destination="tqz-bv-iBV" eventType="touchUpInside" id="JWU-mb-j59"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Ng5-tc-wVO">
+                                        <rect key="frame" x="0.0" y="373" width="307" height="57.333333333333314"/>
+                                        <color key="backgroundColor" name="gradientStart"/>
+                                        <state key="normal" title="Button"/>
+                                        <buttonConfiguration key="configuration" style="plain" title="Collection View">
+                                            <color key="baseForegroundColor" name="whiteColor"/>
+                                        </buttonConfiguration>
+                                        <connections>
+                                            <action selector="btnGoToCollectionView:" destination="tqz-bv-iBV" eventType="touchUpInside" id="4gD-iU-mX8"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="RPr-U8-GVE">
+                                        <rect key="frame" x="0.0" y="435.33333333333337" width="307" height="57"/>
+                                        <color key="backgroundColor" name="gradientStart"/>
+                                        <state key="normal" title="Button"/>
+                                        <buttonConfiguration key="configuration" style="plain" title="Chat Screen">
+                                            <color key="baseForegroundColor" name="whiteColor"/>
+                                        </buttonConfiguration>
+                                        <connections>
+                                            <action selector="btnGoToChatScreen:" destination="tqz-bv-iBV" eventType="touchUpInside" id="n9E-SV-b1h"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="86R-mg-KIJ">
+                                        <rect key="frame" x="0.0" y="497.33333333333331" width="307" height="57.333333333333314"/>
+                                        <color key="backgroundColor" name="gradientStart"/>
+                                        <state key="normal" title="Button"/>
+                                        <buttonConfiguration key="configuration" style="plain" title="Schedule UI">
+                                            <color key="baseForegroundColor" name="whiteColor"/>
+                                        </buttonConfiguration>
+                                        <connections>
+                                            <action selector="btnGoToScheduleScreen:" destination="tqz-bv-iBV" eventType="touchUpInside" id="ZvZ-eY-eei"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Qda-0G-pUD">
+                                        <rect key="frame" x="0.0" y="559.66666666666663" width="307" height="57"/>
+                                        <color key="backgroundColor" name="gradientStart"/>
+                                        <state key="normal" title="Button"/>
+                                        <buttonConfiguration key="configuration" style="plain" title="Tab Bar">
+                                            <color key="baseForegroundColor" name="whiteColor"/>
+                                        </buttonConfiguration>
+                                        <connections>
+                                            <action selector="btnGoToTabBar:" destination="tqz-bv-iBV" eventType="touchUpInside" id="NFN-nc-XJp"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="bQ4-xT-w04">
+                                        <rect key="frame" x="0.0" y="621.66666666666663" width="307" height="57.333333333333371"/>
+                                        <color key="backgroundColor" name="gradientStart"/>
+                                        <state key="normal" title="Button"/>
+                                        <buttonConfiguration key="configuration" style="plain" title="Map and Picker">
+                                            <color key="baseForegroundColor" name="whiteColor"/>
+                                        </buttonConfiguration>
+                                        <connections>
+                                            <action selector="btnGoToMapAndPicker:" destination="tqz-bv-iBV" eventType="touchUpInside" id="GTt-3Y-oJs"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                            </stackView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="Vu6-WG-Hqz"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="Vu6-WG-Hqz" firstAttribute="trailing" secondItem="kot-Wi-FwL" secondAttribute="trailing" constant="47" id="CkK-C9-Ik2"/>
+                            <constraint firstItem="Vu6-WG-Hqz" firstAttribute="bottom" secondItem="kot-Wi-FwL" secondAttribute="bottom" constant="44" id="eWt-Dq-fm3"/>
+                            <constraint firstItem="kot-Wi-FwL" firstAttribute="leading" secondItem="Vu6-WG-Hqz" secondAttribute="leading" constant="48" id="gqf-H0-YHR"/>
+                            <constraint firstItem="kot-Wi-FwL" firstAttribute="top" secondItem="Vu6-WG-Hqz" secondAttribute="top" constant="55" id="lK0-IR-3Gl"/>
+                        </constraints>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="saQ-sD-gWE" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="374.62686567164178" y="-41.189931350114414"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="Za9-Kk-er4">
+            <objects>
+                <navigationController id="Mvn-sh-3r3" sceneMemberID="viewController">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="nnh-6h-kie">
+                        <rect key="frame" x="0.0" y="62" width="402" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="0Zd-fj-8eB" kind="relationship" relationship="rootViewController" id="654-2a-BG2"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="ers-Ll-SXb" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-2772" y="-41"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="F5k-dF-Vjx">
+            <objects>
+                <viewController id="0Zd-fj-8eB" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="OHf-i6-Q0t">
+                        <rect key="frame" x="0.0" y="0.0" width="402" height="874"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <viewLayoutGuide key="safeArea" id="f8n-qf-6lx"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="wDI-dv-hNS"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="er4-LS-See" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-1916" y="-41"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="iGJ-Jb-iFT">
@@ -680,6 +877,12 @@
             <color red="0.32549019607843138" green="0.69411764705882351" blue="0.45882352941176469" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
         </namedColor>
         <namedColor name="Color">
+            <color red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+        </namedColor>
+        <namedColor name="gradientStart">
+            <color red="0.11372549019607843" green="0.66666666666666663" blue="0.9137254901960784" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+        </namedColor>
+        <namedColor name="whiteColor">
             <color red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
         </namedColor>
         <systemColor name="systemBackgroundColor">

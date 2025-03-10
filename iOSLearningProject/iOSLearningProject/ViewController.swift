@@ -53,4 +53,9 @@ class ViewController: UIViewController {
         navigationController?.pushViewController(nextViewController, animated: true)
     }
     
+    @IBAction func btnGoToUiComponents(_ sender: Any) {
+        let storyboard: UIStoryboard = UIStoryboard(name: "Main", bundle: nil)
+        let nextViewController = storyboard.instantiateViewController(withIdentifier: "UiComponentsViewController") as! UiComponentsViewController
+        navigationController?.pushViewController(nextViewController, animated: true)
+    }
 }
