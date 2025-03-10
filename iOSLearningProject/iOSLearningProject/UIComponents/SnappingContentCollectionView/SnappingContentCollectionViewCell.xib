@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="23504" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_12" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="23506"/>
+        <capability name="Named colors" minToolsVersion="9.0"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="SnappingContentCollectionViewCell" id="gTV-IL-0wX" customClass="SnappingContentCollectionViewCell" customModule="UIOne" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="162" height="117"/>
+            <autoresizingMask key="autoresizingMask"/>
+            <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
+                <rect key="frame" x="0.0" y="0.0" width="162" height="117"/>
+                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                <subviews>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="8hG-1K-WAE">
+                        <rect key="frame" x="0.0" y="59" width="53.333333333333336" height="24"/>
+                        <color key="backgroundColor" red="0.63424840319999998" green="0.89000000000000001" blue="0.57709593859999997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    </view>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="SPP-wp-bYA">
+                        <rect key="frame" x="55.333333333333343" y="59" width="53.666666666666657" height="24"/>
+                        <color key="backgroundColor" red="0.63424840319999998" green="0.89000000000000001" blue="0.57709593859999997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    </view>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Zo4-S3-xDJ">
+                        <rect key="frame" x="110.99999999999999" y="59" width="53.333333333333329" height="24"/>
+                        <color key="backgroundColor" red="0.63424840319999998" green="0.89000000000000001" blue="0.57709593859999997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    </view>
+                </subviews>
+            </view>
+            <viewLayoutGuide key="safeArea" id="ZTg-uK-7eu"/>
+            <color key="backgroundColor" name="Color"/>
+            <constraints>
+                <constraint firstItem="SPP-wp-bYA" firstAttribute="leading" secondItem="8hG-1K-WAE" secondAttribute="trailing" constant="2" id="1OO-B6-ORZ"/>
+                <constraint firstItem="SPP-wp-bYA" firstAttribute="height" secondItem="8hG-1K-WAE" secondAttribute="height" id="ADM-tX-ciD"/>
+                <constraint firstItem="8hG-1K-WAE" firstAttribute="height" secondItem="ZTg-uK-7eu" secondAttribute="height" id="D9w-ab-FIH"/>
+                <constraint firstItem="8hG-1K-WAE" firstAttribute="width" secondItem="ZTg-uK-7eu" secondAttribute="width" multiplier="0.33" id="Ob6-ih-h7P"/>
+                <constraint firstItem="Zo4-S3-xDJ" firstAttribute="height" secondItem="SPP-wp-bYA" secondAttribute="height" id="WQP-CZ-uLo"/>
+                <constraint firstItem="ZTg-uK-7eu" firstAttribute="top" secondItem="Zo4-S3-xDJ" secondAttribute="top" id="ZW7-LQ-QuO"/>
+                <constraint firstItem="Zo4-S3-xDJ" firstAttribute="width" secondItem="ZTg-uK-7eu" secondAttribute="width" multiplier="0.33" id="aCE-81-Fuw"/>
+                <constraint firstItem="SPP-wp-bYA" firstAttribute="width" secondItem="ZTg-uK-7eu" secondAttribute="width" multiplier="0.33" id="b4r-T5-X5i"/>
+                <constraint firstItem="8hG-1K-WAE" firstAttribute="leading" secondItem="ZTg-uK-7eu" secondAttribute="leading" id="eEa-WW-cKK"/>
+                <constraint firstItem="ZTg-uK-7eu" firstAttribute="top" secondItem="SPP-wp-bYA" secondAttribute="top" id="fYh-p9-IBU"/>
+                <constraint firstItem="ZTg-uK-7eu" firstAttribute="top" secondItem="8hG-1K-WAE" secondAttribute="top" id="mYZ-e0-ktU"/>
+                <constraint firstItem="Zo4-S3-xDJ" firstAttribute="leading" secondItem="SPP-wp-bYA" secondAttribute="trailing" constant="2" id="vu7-Cv-Ok6"/>
+            </constraints>
+            <size key="customSize" width="162" height="117"/>
+            <point key="canvasLocation" x="-21.374045801526716" y="10.91549295774648"/>
+        </collectionViewCell>
+    </objects>
+    <resources>
+        <namedColor name="Color">
+            <color red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+        </namedColor>
+    </resources>
+</document>

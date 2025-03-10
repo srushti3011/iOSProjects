@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="23504" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_12" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="23506"/>
+        <capability name="Named colors" minToolsVersion="9.0"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Stepper Controller-->
+        <scene sceneID="s0d-6b-0kx">
+            <objects>
+                <viewController storyboardIdentifier="StepperController" id="Y6W-OH-hqX" customClass="StepperController" customModule="UIOne" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="5EZ-qb-Rvc">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Enter the quantity" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="J60-QS-fWF">
+                                <rect key="frame" x="40" y="107" width="313" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="0" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1h3-vu-Ctk">
+                                <rect key="frame" x="40" y="142" width="10.333333333333336" height="32"/>
+                                <color key="backgroundColor" name="Color"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <stepper opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" maximumValue="10" translatesAutoresizingMaskIntoConstraints="NO" id="Ytf-gP-dwX">
+                                <rect key="frame" x="90.333333333333314" y="142" width="94" height="32"/>
+                                <color key="backgroundColor" name="Color"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="80" id="ltb-4l-a98"/>
+                                </constraints>
+                                <connections>
+                                    <action selector="acnChangeQuantity:" destination="Y6W-OH-hqX" eventType="valueChanged" id="M2q-Ae-MvA"/>
+                                </connections>
+                            </stepper>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="vDu-zF-Fre"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="1h3-vu-Ctk" firstAttribute="top" secondItem="J60-QS-fWF" secondAttribute="bottom" constant="14" id="8h6-cE-PRh"/>
+                            <constraint firstItem="J60-QS-fWF" firstAttribute="top" secondItem="vDu-zF-Fre" secondAttribute="top" constant="48" id="IMG-d1-He2"/>
+                            <constraint firstItem="Ytf-gP-dwX" firstAttribute="leading" secondItem="1h3-vu-Ctk" secondAttribute="trailing" constant="40" id="JOk-oG-MBI"/>
+                            <constraint firstItem="1h3-vu-Ctk" firstAttribute="leading" secondItem="J60-QS-fWF" secondAttribute="leading" id="P5M-b8-h1F"/>
+                            <constraint firstItem="1h3-vu-Ctk" firstAttribute="centerY" secondItem="Ytf-gP-dwX" secondAttribute="centerY" id="Wac-Kp-OZz"/>
+                            <constraint firstItem="1h3-vu-Ctk" firstAttribute="height" secondItem="Ytf-gP-dwX" secondAttribute="height" id="bg0-i3-ecZ"/>
+                            <constraint firstItem="J60-QS-fWF" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" constant="40" id="eE0-57-TVs"/>
+                            <constraint firstItem="vDu-zF-Fre" firstAttribute="trailing" secondItem="Ytf-gP-dwX" secondAttribute="trailing" constant="208.66666666666669" id="mgB-hw-5mo"/>
+                            <constraint firstItem="vDu-zF-Fre" firstAttribute="trailing" secondItem="J60-QS-fWF" secondAttribute="trailing" constant="40" id="pwa-md-ASl"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="lblDisplayQuantity" destination="1h3-vu-Ctk" id="hNT-8O-eAv"/>
+                        <outlet property="lblQuantity" destination="Ytf-gP-dwX" id="18a-D5-9N1"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Ief-a0-LHa" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-27" y="-27"/>
+        </scene>
+    </scenes>
+    <resources>
+        <namedColor name="Color">
+            <color red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+        </namedColor>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>
