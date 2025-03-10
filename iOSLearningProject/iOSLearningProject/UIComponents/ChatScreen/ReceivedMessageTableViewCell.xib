@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="23504" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_12" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="23506"/>
+        <capability name="Named colors" minToolsVersion="9.0"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="ReceivedMessageTableViewCell" rowHeight="99" id="KGk-i7-Jjw" customClass="ReceivedMessageTableViewCell" customModule="UIOne" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="325" height="99"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
+                <rect key="frame" x="0.0" y="0.0" width="325" height="99"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="pjt-cy-fEa">
+                        <rect key="frame" x="14.999999999999986" y="5" width="227.66666666666663" height="89"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="5" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xY6-v5-iXF">
+                                <rect key="frame" x="5.6666666666666714" y="4.9999999999999964" width="216" height="54.666666666666657"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="amC-53-Q4l">
+                                <rect key="frame" x="198.33333333333334" y="67.666666666666671" width="26.333333333333343" height="18.333333333333329"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="10"/>
+                                <color key="textColor" name="timeColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="QZs-u5-d4f">
+                                <rect key="frame" x="91.333333333333314" y="59.666666666666671" width="107" height="34.333333333333329"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" title="Read More"/>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" name="receivedMessage"/>
+                        <constraints>
+                            <constraint firstItem="xY6-v5-iXF" firstAttribute="width" secondItem="pjt-cy-fEa" secondAttribute="width" multiplier="0.95" id="GrG-gF-Lqw"/>
+                            <constraint firstItem="QZs-u5-d4f" firstAttribute="top" secondItem="xY6-v5-iXF" secondAttribute="bottom" id="OML-Dl-pN2"/>
+                            <constraint firstItem="amC-53-Q4l" firstAttribute="leading" secondItem="QZs-u5-d4f" secondAttribute="trailing" id="PBf-cJ-CZE"/>
+                            <constraint firstAttribute="bottom" secondItem="amC-53-Q4l" secondAttribute="bottom" constant="3" id="PlH-sZ-ydC"/>
+                            <constraint firstItem="xY6-v5-iXF" firstAttribute="centerX" secondItem="pjt-cy-fEa" secondAttribute="centerX" id="RnQ-q4-IJ1"/>
+                            <constraint firstAttribute="trailing" secondItem="amC-53-Q4l" secondAttribute="trailing" constant="3" id="UdJ-et-kas"/>
+                            <constraint firstItem="amC-53-Q4l" firstAttribute="centerY" secondItem="QZs-u5-d4f" secondAttribute="centerY" id="YbL-hx-lbY"/>
+                            <constraint firstItem="xY6-v5-iXF" firstAttribute="top" secondItem="pjt-cy-fEa" secondAttribute="top" constant="5" id="zpl-H0-nrG"/>
+                        </constraints>
+                    </view>
+                </subviews>
+                <constraints>
+                    <constraint firstAttribute="bottom" secondItem="pjt-cy-fEa" secondAttribute="bottom" constant="5" id="KHM-hj-nSK"/>
+                    <constraint firstItem="pjt-cy-fEa" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="5" id="izt-Fa-rgn"/>
+                    <constraint firstItem="pjt-cy-fEa" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="15" id="kAL-T7-2O9"/>
+                    <constraint firstItem="pjt-cy-fEa" firstAttribute="width" secondItem="H2p-sc-9uM" secondAttribute="width" multiplier="0.7" id="wFX-Te-4aq"/>
+                    <constraint firstAttribute="bottom" secondItem="QZs-u5-d4f" secondAttribute="bottom" id="xLb-gF-JGr"/>
+                </constraints>
+            </tableViewCellContentView>
+            <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>
+            <connections>
+                <outlet property="buttonReadMore" destination="QZs-u5-d4f" id="1cX-ID-9HD"/>
+                <outlet property="lblReceivedMessage" destination="xY6-v5-iXF" id="ej2-nK-79Z"/>
+                <outlet property="lblReceivedTime" destination="amC-53-Q4l" id="4PA-CT-M8V"/>
+                <outlet property="viewReceivedMessage" destination="pjt-cy-fEa" id="cnQ-Oi-z2u"/>
+            </connections>
+            <point key="canvasLocation" x="132.06106870229007" y="8.0985915492957758"/>
+        </tableViewCell>
+    </objects>
+    <resources>
+        <namedColor name="receivedMessage">
+            <color red="0.98039215686274506" green="0.98039215686274506" blue="0.98039215686274506" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+        </namedColor>
+        <namedColor name="timeColor">
+            <color red="0.0" green="0.0" blue="0.0" alpha="0.25" colorSpace="custom" customColorSpace="displayP3"/>
+        </namedColor>
+    </resources>
+</document>
