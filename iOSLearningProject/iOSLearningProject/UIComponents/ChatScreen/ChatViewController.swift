@@ -96,9 +96,10 @@ extension ChatViewController: UITableViewDelegate, UITableViewDataSource {
             }
             let content = messagesExample[indexPath.section].messages[indexPath.row].content
             cell.delegate = self
-            cell.configure(with: content)
+            cell.configure(with: content, isExpanded: message.isExpanded)
             cell.lblReceivedMessage.text = messagesExample[indexPath.section].messages[indexPath.row].content
             cell.viewReceivedMessage.layer.cornerRadius = 10
+            cell.indexPath = indexPath
             cell.backgroundColor = .clear
             cell.lblReceivedTime.text = messagesExample[indexPath.section].messages[indexPath.row].time
             return cell
@@ -108,30 +109,32 @@ extension ChatViewController: UITableViewDelegate, UITableViewDataSource {
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
         return UITableView.automaticDimension
     }
-    
-    
 }
 
 extension ChatViewController: SentMessageProtocol, ReceivedMessageProtocol {
-    func tappedButton(cell: ReceivedMessageTableViewCell) {
-        guard let index = tableViewMessages.indexPath(for: cell) else {
-            return
-        }
-        tableViewMessages.reloadRows(at: [index], with: .fade)
-    }
-    
-    func didTapCell(cell: SentMessageTableViewCell, at indexPath: IndexPath, isExpanded: Bool) {
+    func tappedButton(cell: ReceivedMessageTableViewCell, at indexPath: IndexPath, isExpanded: Bool) {
 //        guard let index = tableViewMessages.indexPath(for: cell) else {
 //            return
 //        }
 //        tableViewMessages.reloadRows(at: [index], with: .fade)
-//        tableViewMessages.reloadData()
         
         var message = messagesExample[indexPath.section].messages[indexPath.row]
-                message.isExpanded.toggle()
-                messagesExample[indexPath.section].messages[indexPath.row] = message
-                tableViewMessages.reloadRows(at: [indexPath], with: .fade)
-                tableViewMessages.reloadData()
+        print(indexPath)
+        print(message)
+        message.isExpanded.toggle()
+        messagesExample[indexPath.section].messages[indexPath.row] = message
+        tableViewMessages.reloadRows(at: [indexPath], with: .fade)
+        tableViewMessages.reloadData()
+    }
+    
+    func didTapCell(cell: SentMessageTableViewCell, at indexPath: IndexPath, isExpanded: Bool) {
+        var message = messagesExample[indexPath.section].messages[indexPath.row]
+        print(indexPath)
+        print(message)
+        message.isExpanded.toggle()
+        messagesExample[indexPath.section].messages[indexPath.row] = message
+        tableViewMessages.reloadRows(at: [indexPath], with: .fade)
+        tableViewMessages.reloadData()
     }
     
 }

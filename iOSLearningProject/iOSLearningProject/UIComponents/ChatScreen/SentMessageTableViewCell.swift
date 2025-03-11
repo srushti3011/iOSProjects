@@ -15,12 +15,8 @@ class SentMessageTableViewCell: UITableViewCell {
     var isExpanded: Bool = false
     var indexPath: IndexPath?
     
-//    private var isExpanded: Bool = false
     override func awakeFromNib() {
         super.awakeFromNib()
-//        viewSentMessage.UITapGestureRecognizer(target: self, action: #selector(toggleText))
-//        let tap = UITapGestureRecognizer(target: self, action: #selector(self.toggleText(_:)))
-//        viewSentMessage.addGestureRecognizer(tap)
         readMoreButton.addTarget(self, action: #selector(toggleText), for: .touchUpInside)
         readMoreButton.isHidden = true
     }
@@ -28,13 +24,6 @@ class SentMessageTableViewCell: UITableViewCell {
     override func setSelected(_ selected: Bool, animated: Bool) {
         
     }
-    
-//    @objc func toggleText(_ sender: UITapGestureRecognizer? = nil) {
-//            isExpanded.toggle()
-//            lblSentMessage.numberOfLines = isExpanded ? 0 : 5
-//            readMoreButton.setTitle(isExpanded ? "Read Less" : "Read More", for: .normal)
-//            delegate?.didTapCell(cell: self)
-//        }
     
     @objc func toggleText(_ sender: UITapGestureRecognizer? = nil) {
             isExpanded.toggle()
@@ -56,10 +45,12 @@ class SentMessageTableViewCell: UITableViewCell {
     func configure(with text: String, isExpanded: Bool) {
         self.isExpanded = isExpanded
         lblSentMessage.text = text
-//        if isExpanded {return}
         let requiredHeight = checkLines(text: text)
         let maxHeight = lblSentMessage.font.lineHeight * 5
         readMoreButton.isHidden = requiredHeight <= maxHeight
-//        readMoreButton.isHidden.toggle()
+        
+        lblSentMessage.numberOfLines = isExpanded ? 0 : 5
+        readMoreButton.setTitle(isExpanded ? "Read Less" : "Read More", for: .normal)
+
         }
 }

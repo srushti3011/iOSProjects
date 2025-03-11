@@ -8,7 +8,7 @@
 import UIKit
 
 protocol ReceivedMessageProtocol {
-    func tappedButton(cell: ReceivedMessageTableViewCell)
+    func tappedButton(cell: ReceivedMessageTableViewCell, at indexPath: IndexPath, isExpanded: Bool)
 }
 
 class ReceivedMessageTableViewCell: UITableViewCell {
@@ -20,6 +20,7 @@ class ReceivedMessageTableViewCell: UITableViewCell {
     
     var isExpanded: Bool = false
     var delegate: ReceivedMessageProtocol?
+    var indexPath: IndexPath?
     
     override func awakeFromNib() {
         super.awakeFromNib()
@@ -33,9 +34,9 @@ class ReceivedMessageTableViewCell: UITableViewCell {
     
     @objc func toggleText() {
             isExpanded.toggle()
-        lblReceivedMessage.numberOfLines = isExpanded ? 0 : 5
-        buttonReadMore.setTitle(isExpanded ? "Read Less" : "Read More", for: .normal)
-            delegate?.tappedButton(cell: self)
+            lblReceivedMessage.numberOfLines = isExpanded ? 0 : 5
+            buttonReadMore.setTitle(isExpanded ? "Read Less" : "Read More", for: .normal)
+            delegate?.tappedButton(cell: self, at: indexPath!, isExpanded: isExpanded)
         }
     
     func checkLines(text: String) -> CGFloat {
@@ -48,10 +49,13 @@ class ReceivedMessageTableViewCell: UITableViewCell {
         return label.frame.height
     }
     
-    func configure(with text: String) {
+    func configure(with text: String, isExpanded: Bool) {
         lblReceivedMessage.text = text
         let requiredHeight = checkLines(text: text)
         let maxHeight = lblReceivedMessage.font.lineHeight * 5
         buttonReadMore.isHidden = requiredHeight <= maxHeight
+        
+        lblReceivedMessage.numberOfLines = isExpanded ? 0 : 5
+        buttonReadMore.setTitle(isExpanded ? "Read Less" : "Read More", for: .normal)
         }
 }
