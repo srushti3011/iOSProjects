@@ -540,10 +540,10 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="cKA-9n-Tmj" userLabel="landingScreen">
-                                <rect key="frame" x="40" y="136" width="322" height="55"/>
+                                <rect key="frame" x="40" y="106" width="322" height="45"/>
                                 <color key="backgroundColor" red="0.163320303" green="0.20572045450000001" blue="0.61580652000000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="55" id="O0b-Zf-vNU"/>
+                                    <constraint firstAttribute="height" constant="45" id="O0b-Zf-vNU"/>
                                 </constraints>
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="plain" title="Go to landing Screen">
@@ -554,7 +554,7 @@
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="yeM-1l-9q1" userLabel="signUpScreen">
-                                <rect key="frame" x="40" y="201" width="322" height="55"/>
+                                <rect key="frame" x="40" y="161" width="322" height="45"/>
                                 <color key="backgroundColor" red="0.163320303" green="0.20572045450000001" blue="0.61580652000000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="plain" title="Go to Signup Page">
@@ -565,7 +565,7 @@
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="tVZ-KI-YIJ" userLabel="loginScreen">
-                                <rect key="frame" x="40" y="266" width="322" height="55"/>
+                                <rect key="frame" x="40" y="216" width="322" height="45"/>
                                 <color key="backgroundColor" red="0.163320303" green="0.20572045450000001" blue="0.61580652000000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="plain" title="Go to Login Page">
@@ -576,7 +576,7 @@
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="APv-jm-80k">
-                                <rect key="frame" x="40" y="331" width="322" height="55"/>
+                                <rect key="frame" x="40" y="271" width="322" height="45"/>
                                 <color key="backgroundColor" name="ButtonBackground"/>
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="plain" title="KT Login">
@@ -587,7 +587,7 @@
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="jpZ-Oj-E3c">
-                                <rect key="frame" x="40" y="396" width="322" height="55"/>
+                                <rect key="frame" x="40" y="326" width="322" height="45"/>
                                 <color key="backgroundColor" name="ButtonBackground"/>
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="plain" title="KT Signup">
@@ -598,8 +598,8 @@
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="sbN-aZ-N3C">
-                                <rect key="frame" x="40" y="461" width="322" height="55"/>
-                                <color key="backgroundColor" name="AccentColor"/>
+                                <rect key="frame" x="40" y="381" width="322" height="45"/>
+                                <color key="backgroundColor" name="ButtonBackground"/>
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="plain" title="KT Task">
                                     <color key="baseForegroundColor" name="Color"/>
@@ -609,7 +609,7 @@
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="TXy-Cp-Dqe">
-                                <rect key="frame" x="40" y="546" width="322" height="55"/>
+                                <rect key="frame" x="40" y="436" width="322" height="45"/>
                                 <color key="backgroundColor" name="gradientStart"/>
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="plain" title="UI Components">
@@ -620,7 +620,7 @@
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="uf2-29-rD4">
-                                <rect key="frame" x="40" y="611" width="322" height="55"/>
+                                <rect key="frame" x="40" y="491" width="322" height="45"/>
                                 <color key="backgroundColor" name="gradientStart"/>
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="plain" title="Navigation Controller">
@@ -630,14 +630,26 @@
                                     <action selector="btnGoToNavigationController:" destination="tZS-Z7-EWQ" eventType="touchUpInside" id="vry-Pj-E21"/>
                                 </connections>
                             </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ipf-Pg-Zch">
+                                <rect key="frame" x="40" y="546" width="322" height="45"/>
+                                <color key="backgroundColor" name="gradientStart"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" title="User Default">
+                                    <color key="baseForegroundColor" name="whiteColor"/>
+                                </buttonConfiguration>
+                                <connections>
+                                    <action selector="btnGoToUserDefault:" destination="tZS-Z7-EWQ" eventType="touchUpInside" id="6a0-j2-lVr"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="jSf-I5-jGs"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
                             <constraint firstItem="yeM-1l-9q1" firstAttribute="top" secondItem="cKA-9n-Tmj" secondAttribute="bottom" constant="10" id="1Tm-r8-mHv"/>
                             <constraint firstItem="jpZ-Oj-E3c" firstAttribute="height" secondItem="APv-jm-80k" secondAttribute="height" id="5mH-So-vK7"/>
-                            <constraint firstItem="TXy-Cp-Dqe" firstAttribute="top" secondItem="sbN-aZ-N3C" secondAttribute="bottom" constant="30" id="6NZ-6k-Nw2"/>
+                            <constraint firstItem="TXy-Cp-Dqe" firstAttribute="top" secondItem="sbN-aZ-N3C" secondAttribute="bottom" constant="10" id="6NZ-6k-Nw2"/>
                             <constraint firstItem="jpZ-Oj-E3c" firstAttribute="width" secondItem="APv-jm-80k" secondAttribute="width" id="7e8-tX-Xou"/>
+                            <constraint firstItem="ipf-Pg-Zch" firstAttribute="leading" secondItem="uf2-29-rD4" secondAttribute="leading" id="8dh-p5-Ynt"/>
                             <constraint firstItem="jpZ-Oj-E3c" firstAttribute="top" secondItem="APv-jm-80k" secondAttribute="bottom" constant="10" id="AIf-E2-Irp"/>
                             <constraint firstItem="yeM-1l-9q1" firstAttribute="height" secondItem="cKA-9n-Tmj" secondAttribute="height" id="Btt-cN-AWK"/>
                             <constraint firstItem="jSf-I5-jGs" firstAttribute="trailing" secondItem="yeM-1l-9q1" secondAttribute="trailing" constant="40" id="Dmp-IP-teH"/>
@@ -652,10 +664,13 @@
                             <constraint firstItem="tVZ-KI-YIJ" firstAttribute="top" secondItem="yeM-1l-9q1" secondAttribute="bottom" constant="10" id="X0V-Uf-zfZ"/>
                             <constraint firstItem="tVZ-KI-YIJ" firstAttribute="leading" secondItem="jSf-I5-jGs" secondAttribute="leading" constant="40" id="Z11-aM-4Sn"/>
                             <constraint firstItem="tVZ-KI-YIJ" firstAttribute="height" secondItem="yeM-1l-9q1" secondAttribute="height" id="Z68-ca-YBL"/>
+                            <constraint firstItem="ipf-Pg-Zch" firstAttribute="height" secondItem="uf2-29-rD4" secondAttribute="height" id="bLG-3s-IoW"/>
                             <constraint firstItem="uf2-29-rD4" firstAttribute="top" secondItem="TXy-Cp-Dqe" secondAttribute="bottom" constant="10" id="bu5-LH-67B"/>
+                            <constraint firstItem="ipf-Pg-Zch" firstAttribute="top" secondItem="uf2-29-rD4" secondAttribute="bottom" constant="10" id="cIw-An-DKV"/>
                             <constraint firstItem="sbN-aZ-N3C" firstAttribute="width" secondItem="jpZ-Oj-E3c" secondAttribute="width" id="dgm-dK-4wj"/>
                             <constraint firstItem="TXy-Cp-Dqe" firstAttribute="leading" secondItem="sbN-aZ-N3C" secondAttribute="leading" id="ewY-bv-xAf"/>
-                            <constraint firstItem="cKA-9n-Tmj" firstAttribute="top" secondItem="jSf-I5-jGs" secondAttribute="top" constant="30" id="f9L-1t-Kfz"/>
+                            <constraint firstItem="cKA-9n-Tmj" firstAttribute="top" secondItem="jSf-I5-jGs" secondAttribute="top" id="f9L-1t-Kfz"/>
+                            <constraint firstItem="ipf-Pg-Zch" firstAttribute="trailing" secondItem="uf2-29-rD4" secondAttribute="trailing" id="gkM-C5-S0H"/>
                             <constraint firstItem="APv-jm-80k" firstAttribute="top" secondItem="tVZ-KI-YIJ" secondAttribute="bottom" constant="10" id="k7M-Yr-9RR"/>
                             <constraint firstItem="TXy-Cp-Dqe" firstAttribute="trailing" secondItem="sbN-aZ-N3C" secondAttribute="trailing" id="kBb-CJ-bWV"/>
                             <constraint firstItem="jSf-I5-jGs" firstAttribute="trailing" secondItem="tVZ-KI-YIJ" secondAttribute="trailing" constant="40" id="kcT-il-ggv"/>

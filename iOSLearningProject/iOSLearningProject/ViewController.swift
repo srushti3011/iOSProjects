@@ -65,4 +65,9 @@ class ViewController: UIViewController {
         navigationController?.pushViewController(nextViewController, animated: true)
     }
     
+    @IBAction func btnGoToUserDefault(_ sender: Any) {
+        let storyboard: UIStoryboard = UIStoryboard(name: "UserDefaultStoryboard", bundle: nil)
+        let nextViewController = storyboard.instantiateViewController(withIdentifier: "UserDefaultVC") as! UserDefaultVC
+        navigationController?.pushViewController(nextViewController, animated: true)
+    }
 }

@@ -47,7 +47,7 @@
             </objects>
             <point key="canvasLocation" x="-705" y="11"/>
         </scene>
-        <!--Second screen-->
+        <!--Second-->
         <scene sceneID="CQ7-kW-iHg">
             <objects>
                 <viewController storyboardIdentifier="SecondViewController" id="bO3-aV-cwh" customClass="SecondViewController" customModule="iOSLearningProject" customModuleProvider="target" sceneMemberID="viewController">
@@ -91,7 +91,7 @@
                             <constraint firstItem="93M-c2-he6" firstAttribute="centerX" secondItem="48S-RP-iiC" secondAttribute="centerX" id="zC0-hB-05I"/>
                         </constraints>
                     </view>
-                    <navigationItem key="navigationItem" title="Second screen" id="3uN-1n-Dry"/>
+                    <navigationItem key="navigationItem" title="Second" id="3uN-1n-Dry"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="kKc-HM-cua" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
