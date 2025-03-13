@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="23504" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_12" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="23506"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Data Passing Using Navigation View Controller-->
+        <scene sceneID="s0d-6b-0kx">
+            <objects>
+                <viewController storyboardIdentifier="DataPassingUsingNavigationViewController" id="Y6W-OH-hqX" customClass="DataPassingUsingNavigationViewController" customModule="iOSLearningProject" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="5EZ-qb-Rvc">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="SAF-47-wB8">
+                                <rect key="frame" x="30" y="159" width="333" height="34"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="sKv-Ry-zFj">
+                                <rect key="frame" x="107.66666666666669" y="233" width="178" height="35"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" title="Pass data to second"/>
+                                <connections>
+                                    <action selector="btnPassData:" destination="Y6W-OH-hqX" eventType="touchUpInside" id="9s8-56-RZc"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="vDu-zF-Fre"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="SAF-47-wB8" firstAttribute="top" secondItem="vDu-zF-Fre" secondAttribute="top" constant="100" id="D09-Dq-94Z"/>
+                            <constraint firstItem="SAF-47-wB8" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" constant="30" id="Jic-SY-xR9"/>
+                            <constraint firstItem="vDu-zF-Fre" firstAttribute="trailing" secondItem="SAF-47-wB8" secondAttribute="trailing" constant="30" id="XL7-SC-Gjo"/>
+                            <constraint firstItem="sKv-Ry-zFj" firstAttribute="centerX" secondItem="vDu-zF-Fre" secondAttribute="centerX" id="YD2-KH-WAH"/>
+                            <constraint firstItem="sKv-Ry-zFj" firstAttribute="top" secondItem="SAF-47-wB8" secondAttribute="bottom" constant="40" id="rc7-RA-S4Q"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="txtFieldInfoInput" destination="SAF-47-wB8" id="o4s-pD-ss2"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Ief-a0-LHa" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="9.9236641221374047" y="-34.507042253521128"/>
+        </scene>
+        <!--Receive DataVC-->
+        <scene sceneID="RU4-84-Yql">
+            <objects>
+                <viewController storyboardIdentifier="ReceiveDataVC" id="hCh-oQ-F8G" customClass="ReceiveDataVC" customModule="iOSLearningProject" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="br8-XH-dEE">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="EiQ-oh-RaM">
+                                <rect key="frame" x="30" y="159" width="333" height="34"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="07N-cn-nW9">
+                                <rect key="frame" x="120.66666666666669" y="233" width="152" height="35"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" title="Pass data to first"/>
+                                <connections>
+                                    <action selector="btnGoBackAndSendData:" destination="hCh-oQ-F8G" eventType="touchUpInside" id="05y-cm-ujf"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="Ij6-pn-QA6"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="07N-cn-nW9" firstAttribute="centerX" secondItem="Ij6-pn-QA6" secondAttribute="centerX" id="2nz-3i-M3h"/>
+                            <constraint firstItem="Ij6-pn-QA6" firstAttribute="trailing" secondItem="EiQ-oh-RaM" secondAttribute="trailing" constant="30" id="6gf-vm-lrU"/>
+                            <constraint firstItem="EiQ-oh-RaM" firstAttribute="top" secondItem="Ij6-pn-QA6" secondAttribute="top" constant="100" id="9eJ-I0-v5Z"/>
+                            <constraint firstItem="EiQ-oh-RaM" firstAttribute="leading" secondItem="Ij6-pn-QA6" secondAttribute="leading" constant="30" id="mrA-M2-o9M"/>
+                            <constraint firstItem="07N-cn-nW9" firstAttribute="top" secondItem="EiQ-oh-RaM" secondAttribute="bottom" constant="40" id="oT8-Zm-A7X"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="txtFieldInput" destination="EiQ-oh-RaM" id="MTO-x0-E3T"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="gXc-d0-ydX" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="760" y="-35"/>
+        </scene>
+    </scenes>
+    <resources>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>
