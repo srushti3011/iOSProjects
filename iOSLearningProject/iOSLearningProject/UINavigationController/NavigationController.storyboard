@@ -16,15 +16,39 @@
                         <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="ga0-7e-fC3">
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="ga0-7e-fC3">
                                 <rect key="frame" x="31" y="127" width="330" height="617"/>
                                 <subviews>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="d5s-tS-Rgl">
-                                        <rect key="frame" x="0.0" y="0.0" width="330" height="617"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="330" height="154.33333333333334"/>
                                         <state key="normal" title="Button"/>
                                         <buttonConfiguration key="configuration" style="plain" title="Segue Navigation Controller"/>
                                         <connections>
                                             <action selector="btnGoToSegueNavController:" destination="Y6W-OH-hqX" eventType="touchUpInside" id="d5g-X4-LdF"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Yxd-Lc-6Y9">
+                                        <rect key="frame" x="0.0" y="154.33333333333331" width="330" height="154.33333333333331"/>
+                                        <state key="normal" title="Button"/>
+                                        <buttonConfiguration key="configuration" style="plain" title="Data passing practice"/>
+                                        <connections>
+                                            <action selector="btnGoToDataPassingPractice:" destination="Y6W-OH-hqX" eventType="touchUpInside" id="juR-sj-qtE"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="v0w-De-1oM">
+                                        <rect key="frame" x="0.0" y="308.66666666666669" width="330" height="154"/>
+                                        <state key="normal" title="Button"/>
+                                        <buttonConfiguration key="configuration" style="plain" title="Navigation Bar Customization"/>
+                                        <connections>
+                                            <action selector="btnGoToCustomizedNavigationBar:" destination="Y6W-OH-hqX" eventType="touchUpInside" id="L0w-rc-xoH"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="QbY-vv-5mj">
+                                        <rect key="frame" x="0.0" y="462.66666666666657" width="330" height="154.33333333333331"/>
+                                        <state key="normal" title="Button"/>
+                                        <buttonConfiguration key="configuration" style="plain" title="Tabbar Navigation"/>
+                                        <connections>
+                                            <action selector="btnGoToTabBarNavigation:" destination="Y6W-OH-hqX" eventType="touchUpInside" id="9mn-t5-Ub3"/>
                                         </connections>
                                     </button>
                                 </subviews>
@@ -42,7 +66,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Ief-a0-LHa" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-109.16030534351144" y="-3.5211267605633805"/>
+            <point key="canvasLocation" x="-150" y="20"/>
         </scene>
     </scenes>
     <resources>
