@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="23504" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_12" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="23506"/>
+        <capability name="Named colors" minToolsVersion="9.0"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="CoffeeCategoryCollectionCell" id="gTV-IL-0wX" customClass="CoffeeCategoryCollectionCell" customModule="iOSLearningProject" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="148" height="48"/>
+            <autoresizingMask key="autoresizingMask"/>
+            <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
+                <rect key="frame" x="0.0" y="0.0" width="148" height="48"/>
+                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                <subviews>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="BFg-pg-9iD">
+                        <rect key="frame" x="0.0" y="0.0" width="148" height="48"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="FI2-Uq-wt9">
+                                <rect key="frame" x="0.0" y="0.0" width="148" height="48"/>
+                                <color key="backgroundColor" name="NavUiButtonBackgroundColor"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" title="Button">
+                                    <color key="baseForegroundColor" name="whiteColor"/>
+                                </buttonConfiguration>
+                                <connections>
+                                    <action selector="acnCategorySelected:" destination="gTV-IL-0wX" eventType="touchUpInside" id="DSX-uV-7Ft"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="0.76648456409999999" blue="0.70960175130000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstAttribute="trailing" secondItem="FI2-Uq-wt9" secondAttribute="trailing" id="T9c-YR-jxC"/>
+                            <constraint firstAttribute="bottom" secondItem="FI2-Uq-wt9" secondAttribute="bottom" id="Upa-WJ-MXD"/>
+                            <constraint firstItem="FI2-Uq-wt9" firstAttribute="top" secondItem="BFg-pg-9iD" secondAttribute="top" id="VX5-k1-7yp"/>
+                            <constraint firstItem="FI2-Uq-wt9" firstAttribute="width" secondItem="BFg-pg-9iD" secondAttribute="width" id="xRI-ZN-efz"/>
+                            <constraint firstItem="FI2-Uq-wt9" firstAttribute="leading" secondItem="BFg-pg-9iD" secondAttribute="leading" id="yhd-Ou-xt7"/>
+                        </constraints>
+                    </view>
+                </subviews>
+            </view>
+            <viewLayoutGuide key="safeArea" id="ZTg-uK-7eu"/>
+            <constraints>
+                <constraint firstItem="BFg-pg-9iD" firstAttribute="top" secondItem="gTV-IL-0wX" secondAttribute="top" id="9Tv-TN-ezv"/>
+                <constraint firstItem="BFg-pg-9iD" firstAttribute="height" secondItem="gTV-IL-0wX" secondAttribute="height" id="FA1-ac-gup"/>
+                <constraint firstItem="BFg-pg-9iD" firstAttribute="leading" secondItem="ZTg-uK-7eu" secondAttribute="leading" id="JH8-kM-MwT"/>
+                <constraint firstItem="ZTg-uK-7eu" firstAttribute="trailing" secondItem="BFg-pg-9iD" secondAttribute="trailing" id="yc8-rX-bd8"/>
+            </constraints>
+            <size key="customSize" width="148" height="48"/>
+            <connections>
+                <outlet property="btnCellCategory" destination="FI2-Uq-wt9" id="0jK-aY-ybX"/>
+                <outlet property="viewCategory" destination="BFg-pg-9iD" id="kXD-8A-bHk"/>
+            </connections>
+            <point key="canvasLocation" x="206.10687022900763" y="-11.971830985915494"/>
+        </collectionViewCell>
+    </objects>
+    <resources>
+        <namedColor name="NavUiButtonBackgroundColor">
+            <color red="0.77647058823529413" green="0.48627450980392156" blue="0.30588235294117649" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+        </namedColor>
+        <namedColor name="whiteColor">
+            <color red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+        </namedColor>
+    </resources>
+</document>
