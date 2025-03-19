@@ -641,6 +641,17 @@
                                     <action selector="btnGoToUserDefault:" destination="tZS-Z7-EWQ" eventType="touchUpInside" id="6a0-j2-lVr"/>
                                 </connections>
                             </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="h3g-q4-u9G">
+                                <rect key="frame" x="40" y="601" width="322" height="45"/>
+                                <color key="backgroundColor" name="gradientStart"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" title="Navigation And UI KT">
+                                    <color key="baseForegroundColor" name="whiteColor"/>
+                                </buttonConfiguration>
+                                <connections>
+                                    <action selector="goToNavAndUIKt:" destination="tZS-Z7-EWQ" eventType="touchUpInside" id="Is6-t1-7cb"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="jSf-I5-jGs"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
@@ -653,8 +664,10 @@
                             <constraint firstItem="jpZ-Oj-E3c" firstAttribute="top" secondItem="APv-jm-80k" secondAttribute="bottom" constant="10" id="AIf-E2-Irp"/>
                             <constraint firstItem="yeM-1l-9q1" firstAttribute="height" secondItem="cKA-9n-Tmj" secondAttribute="height" id="Btt-cN-AWK"/>
                             <constraint firstItem="jSf-I5-jGs" firstAttribute="trailing" secondItem="yeM-1l-9q1" secondAttribute="trailing" constant="40" id="Dmp-IP-teH"/>
+                            <constraint firstItem="h3g-q4-u9G" firstAttribute="height" secondItem="ipf-Pg-Zch" secondAttribute="height" id="GkO-7c-nLm"/>
                             <constraint firstItem="sbN-aZ-N3C" firstAttribute="height" secondItem="jpZ-Oj-E3c" secondAttribute="height" id="HjS-07-GQl"/>
                             <constraint firstItem="uf2-29-rD4" firstAttribute="height" secondItem="TXy-Cp-Dqe" secondAttribute="height" id="IcG-Fc-rne"/>
+                            <constraint firstItem="h3g-q4-u9G" firstAttribute="top" secondItem="ipf-Pg-Zch" secondAttribute="bottom" constant="10" id="L30-EO-duY"/>
                             <constraint firstItem="uf2-29-rD4" firstAttribute="leading" secondItem="TXy-Cp-Dqe" secondAttribute="leading" id="O97-I2-c6F"/>
                             <constraint firstItem="yeM-1l-9q1" firstAttribute="leading" secondItem="jSf-I5-jGs" secondAttribute="leading" constant="40" id="Rtp-dX-lNd"/>
                             <constraint firstItem="sbN-aZ-N3C" firstAttribute="top" secondItem="jpZ-Oj-E3c" secondAttribute="bottom" constant="10" id="TJm-yN-Flt"/>
@@ -671,10 +684,12 @@
                             <constraint firstItem="TXy-Cp-Dqe" firstAttribute="leading" secondItem="sbN-aZ-N3C" secondAttribute="leading" id="ewY-bv-xAf"/>
                             <constraint firstItem="cKA-9n-Tmj" firstAttribute="top" secondItem="jSf-I5-jGs" secondAttribute="top" id="f9L-1t-Kfz"/>
                             <constraint firstItem="ipf-Pg-Zch" firstAttribute="trailing" secondItem="uf2-29-rD4" secondAttribute="trailing" id="gkM-C5-S0H"/>
+                            <constraint firstItem="h3g-q4-u9G" firstAttribute="trailing" secondItem="ipf-Pg-Zch" secondAttribute="trailing" id="jIs-Rk-hXQ"/>
                             <constraint firstItem="APv-jm-80k" firstAttribute="top" secondItem="tVZ-KI-YIJ" secondAttribute="bottom" constant="10" id="k7M-Yr-9RR"/>
                             <constraint firstItem="TXy-Cp-Dqe" firstAttribute="trailing" secondItem="sbN-aZ-N3C" secondAttribute="trailing" id="kBb-CJ-bWV"/>
                             <constraint firstItem="jSf-I5-jGs" firstAttribute="trailing" secondItem="tVZ-KI-YIJ" secondAttribute="trailing" constant="40" id="kcT-il-ggv"/>
                             <constraint firstItem="jpZ-Oj-E3c" firstAttribute="centerX" secondItem="jSf-I5-jGs" secondAttribute="centerX" id="kza-Uk-v16"/>
+                            <constraint firstItem="h3g-q4-u9G" firstAttribute="leading" secondItem="ipf-Pg-Zch" secondAttribute="leading" id="mIJ-YN-mVi"/>
                             <constraint firstItem="TXy-Cp-Dqe" firstAttribute="height" secondItem="sbN-aZ-N3C" secondAttribute="height" id="qp8-DZ-7a3"/>
                             <constraint firstItem="TXy-Cp-Dqe" firstAttribute="width" secondItem="sbN-aZ-N3C" secondAttribute="width" id="rO1-H1-xl2"/>
                             <constraint firstItem="cKA-9n-Tmj" firstAttribute="leading" secondItem="jSf-I5-jGs" secondAttribute="leading" constant="40" id="rvS-P9-Jzf"/>
@@ -919,7 +934,7 @@
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>
         <systemColor name="systemGrayColor">
-            <color red="0.5568627451" green="0.5568627451" blue="0.57647058819999997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <color red="0.55686274509803924" green="0.55686274509803924" blue="0.57647058823529407" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
     </resources>
 </document>

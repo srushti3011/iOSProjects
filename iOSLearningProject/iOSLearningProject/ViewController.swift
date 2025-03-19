@@ -70,4 +70,10 @@ class ViewController: UIViewController {
         let nextViewController = storyboard.instantiateViewController(withIdentifier: "UserDefaultVC") as! UserDefaultVC
         navigationController?.pushViewController(nextViewController, animated: true)
     }
+    
+    @IBAction func goToNavAndUIKt(_ sender: Any) {
+        let storyboard: UIStoryboard = UIStoryboard(name: "KtNavigationAndUiSB", bundle: nil)
+        let nextViewController = storyboard.instantiateViewController(withIdentifier: "OnboardingVC") as! OnboardingVC
+        navigationController?.pushViewController(nextViewController, animated: true)
+    }
 }
