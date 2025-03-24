@@ -17,7 +17,7 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         // If using a storyboard, the `window` property will automatically be initialized and attached to the scene.
         // This delegate does not imply the connecting scene or session are new (see `application:configurationForConnectingSceneSession` instead).
         self.window = self.window ?? UIWindow()
-        let onBoardingDone = UserDefaults.standard.bool(forKey: "onBoarding")
+        let onBoardingDone = UserDefaults.standard.bool(forKey: "onBoardinggg")
         print(onBoardingDone)
         let vc: UIViewController
         if onBoardingDone {
@@ -30,7 +30,7 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
             let storyboard = UIStoryboard(name: "KtNavigationAndUiSB", bundle: nil)
             let root = storyboard.instantiateViewController(withIdentifier: "OnboardingVC") as! OnboardingVC
             vc = UINavigationController(rootViewController: root)
-            UserDefaults.standard.set(true, forKey: "onBoarding")
+            UserDefaults.standard.set(true, forKey: "onBoardinggg")
         }
         window?.rootViewController = vc
         window?.makeKeyAndVisible()
