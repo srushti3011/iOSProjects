@@ -22,7 +22,7 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         let vc: UIViewController
         if onBoardingDone {
             let storyboard = UIStoryboard(name: "KtNavigationAndUiSB", bundle: nil)
-            let root = storyboard.instantiateViewController(withIdentifier: "HomeTabVC") as! HomeTabVC
+            let root = storyboard.instantiateViewController(withIdentifier: "CoffeeHomeTabBarVC") as! CoffeeHomeTabBarVC
             vc = UINavigationController(rootViewController: root)
         } else {
             let storyboard = UIStoryboard(name: "KtNavigationAndUiSB", bundle: nil)
