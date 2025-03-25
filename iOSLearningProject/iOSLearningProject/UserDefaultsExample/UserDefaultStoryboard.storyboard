@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="23504" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_12" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="23506"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--User DefaultVC-->
+        <scene sceneID="s0d-6b-0kx">
+            <objects>
+                <viewController storyboardIdentifier="UserDefaultVC" id="Y6W-OH-hqX" customClass="UserDefaultVC" customModule="iOSLearningProject" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="5EZ-qb-Rvc">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dxh-kX-LKN">
+                                <rect key="frame" x="20" y="79" width="353" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="wgb-PY-DsM">
+                                <rect key="frame" x="20" y="110" width="353" height="34"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="42b-ry-B1g">
+                                <rect key="frame" x="20" y="208" width="353" height="20.333333333333343"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="plw-od-RMt">
+                                <rect key="frame" x="20" y="152" width="353" height="35"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" title="Button"/>
+                                <connections>
+                                    <action selector="saveTextToUserDefault:" destination="Y6W-OH-hqX" eventType="touchUpInside" id="YPQ-7Q-c5s"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="vDu-zF-Fre"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="wgb-PY-DsM" firstAttribute="top" secondItem="dxh-kX-LKN" secondAttribute="bottom" constant="10" id="11i-P3-mnh"/>
+                            <constraint firstItem="42b-ry-B1g" firstAttribute="trailing" secondItem="wgb-PY-DsM" secondAttribute="trailing" id="17S-le-OOS"/>
+                            <constraint firstItem="wgb-PY-DsM" firstAttribute="leading" secondItem="dxh-kX-LKN" secondAttribute="leading" id="DOi-Dh-RBr"/>
+                            <constraint firstItem="plw-od-RMt" firstAttribute="top" secondItem="wgb-PY-DsM" secondAttribute="bottom" constant="8" symbolic="YES" id="HcN-UP-eQ6"/>
+                            <constraint firstItem="dxh-kX-LKN" firstAttribute="top" secondItem="vDu-zF-Fre" secondAttribute="top" constant="20" id="dc0-BB-Efu"/>
+                            <constraint firstItem="plw-od-RMt" firstAttribute="leading" secondItem="wgb-PY-DsM" secondAttribute="leading" id="dr8-cb-lB8"/>
+                            <constraint firstItem="plw-od-RMt" firstAttribute="trailing" secondItem="wgb-PY-DsM" secondAttribute="trailing" id="mUR-Mw-CaK"/>
+                            <constraint firstItem="vDu-zF-Fre" firstAttribute="trailing" secondItem="dxh-kX-LKN" secondAttribute="trailing" constant="20" id="s2b-Pa-q9u"/>
+                            <constraint firstItem="dxh-kX-LKN" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" constant="20" id="sXB-Bo-0jD"/>
+                            <constraint firstItem="42b-ry-B1g" firstAttribute="top" secondItem="plw-od-RMt" secondAttribute="bottom" constant="21" id="tb1-vN-TgF"/>
+                            <constraint firstItem="42b-ry-B1g" firstAttribute="leading" secondItem="wgb-PY-DsM" secondAttribute="leading" id="x4v-Cl-DKz"/>
+                            <constraint firstItem="wgb-PY-DsM" firstAttribute="trailing" secondItem="dxh-kX-LKN" secondAttribute="trailing" id="yyD-Yw-DbG"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="lblDisplayContent" destination="42b-ry-B1g" id="tUC-Xn-i07"/>
+                        <outlet property="txtFieldInput" destination="wgb-PY-DsM" id="bm7-XI-wHa"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Ief-a0-LHa" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="131" y="-27"/>
+        </scene>
+    </scenes>
+    <resources>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>
