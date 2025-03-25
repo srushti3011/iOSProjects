@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="23504" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_12" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="23506"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Segmented Controller-->
+        <scene sceneID="s0d-6b-0kx">
+            <objects>
+                <viewController storyboardIdentifier="SegmentedController" id="Y6W-OH-hqX" customClass="SegmentedController" customModule="UIOne" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="5EZ-qb-Rvc">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <segmentedControl opaque="NO" contentMode="scaleToFill" selected="YES" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" translatesAutoresizingMaskIntoConstraints="NO" id="VgU-DU-LGC">
+                                <rect key="frame" x="40" y="637" width="313" height="32"/>
+                                <segments>
+                                    <segment title="Book"/>
+                                    <segment title="Bag"/>
+                                    <segment title="Sofa"/>
+                                    <segment title="Mountain"/>
+                                </segments>
+                                <connections>
+                                    <action selector="acnSegmentSelectionChanged:" destination="Y6W-OH-hqX" eventType="valueChanged" id="Xv0-1b-dDN"/>
+                                </connections>
+                            </segmentedControl>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="googleLogo 1" translatesAutoresizingMaskIntoConstraints="NO" id="2yX-ce-P23">
+                                <rect key="frame" x="132.66666666666666" y="374.66666666666669" width="127.66666666666666" height="127.66666666666669"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="2yX-ce-P23" secondAttribute="height" multiplier="1:1" id="0GS-PS-prR"/>
+                                </constraints>
+                            </imageView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="vDu-zF-Fre"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="VgU-DU-LGC" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" constant="40" id="185-LI-u5J"/>
+                            <constraint firstItem="vDu-zF-Fre" firstAttribute="trailing" secondItem="VgU-DU-LGC" secondAttribute="trailing" constant="40" id="2hO-bS-hqW"/>
+                            <constraint firstItem="2yX-ce-P23" firstAttribute="centerY" secondItem="vDu-zF-Fre" secondAttribute="centerY" id="icS-vO-src"/>
+                            <constraint firstItem="vDu-zF-Fre" firstAttribute="bottom" secondItem="VgU-DU-LGC" secondAttribute="bottom" constant="150" id="l6p-Qq-gal"/>
+                            <constraint firstItem="2yX-ce-P23" firstAttribute="centerX" secondItem="vDu-zF-Fre" secondAttribute="centerX" id="trt-2E-eAI"/>
+                            <constraint firstItem="2yX-ce-P23" firstAttribute="height" secondItem="5EZ-qb-Rvc" secondAttribute="height" multiplier="0.15" id="zyc-uH-hct"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="imgViewMainImage" destination="2yX-ce-P23" id="GwW-Dx-Kat"/>
+                        <outlet property="segmentSelectOption" destination="VgU-DU-LGC" id="lau-0x-74Q"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Ief-a0-LHa" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-66.412213740458014" y="1.4084507042253522"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="googleLogo 1" width="1920" height="1920"/>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>
