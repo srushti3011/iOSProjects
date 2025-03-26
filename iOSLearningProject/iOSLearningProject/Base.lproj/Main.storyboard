@@ -1,24 +1,93 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13122.16" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="23504" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="3Cp-M8-qO4">
+    <device id="retina6_3" orientation="portrait" appearance="light"/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13104.12"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="23506"/>
+        <capability name="Named colors" minToolsVersion="9.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--View Controller-->
-        <scene sceneID="tne-QT-ifu">
+        <!--Ui Components View Controller-->
+        <scene sceneID="c2y-Se-0HB">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModuleProvider="target" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                <viewController storyboardIdentifier="UiComponentsViewController" id="tqz-bv-iBV" customClass="UiComponentsViewController" customModule="iOSLearningProject" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="bDS-LM-M6n">
+                        <rect key="frame" x="0.0" y="0.0" width="402" height="874"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" xcode11CocoaTouchSystemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
-                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                        <subviews>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="kot-Wi-FwL">
+                                <rect key="frame" x="48" y="306" width="307" height="334"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="RPr-U8-GVE">
+                                        <rect key="frame" x="0.0" y="0.0" width="307" height="164.66666666666666"/>
+                                        <color key="backgroundColor" name="gradientStart"/>
+                                        <state key="normal" title="Button"/>
+                                        <buttonConfiguration key="configuration" style="plain" title="Chat Screen">
+                                            <color key="baseForegroundColor" name="whiteColor"/>
+                                        </buttonConfiguration>
+                                        <connections>
+                                            <action selector="btnGoToChatScreen:" destination="tqz-bv-iBV" eventType="touchUpInside" id="n9E-SV-b1h"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="86R-mg-KIJ">
+                                        <rect key="frame" x="0.0" y="169.66666666666669" width="307" height="164.33333333333331"/>
+                                        <color key="backgroundColor" name="gradientStart"/>
+                                        <state key="normal" title="Button"/>
+                                        <buttonConfiguration key="configuration" style="plain" title="Schedule UI">
+                                            <color key="baseForegroundColor" name="whiteColor"/>
+                                        </buttonConfiguration>
+                                        <connections>
+                                            <action selector="btnGoToScheduleScreen:" destination="tqz-bv-iBV" eventType="touchUpInside" id="ZvZ-eY-eei"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                            </stackView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="Vu6-WG-Hqz"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="Vu6-WG-Hqz" firstAttribute="trailing" secondItem="kot-Wi-FwL" secondAttribute="trailing" constant="47" id="CkK-C9-Ik2"/>
+                            <constraint firstItem="Vu6-WG-Hqz" firstAttribute="bottom" secondItem="kot-Wi-FwL" secondAttribute="bottom" constant="200" id="eWt-Dq-fm3"/>
+                            <constraint firstItem="kot-Wi-FwL" firstAttribute="leading" secondItem="Vu6-WG-Hqz" secondAttribute="leading" constant="48" id="gqf-H0-YHR"/>
+                            <constraint firstItem="kot-Wi-FwL" firstAttribute="top" secondItem="Vu6-WG-Hqz" secondAttribute="top" constant="200" id="lK0-IR-3Gl"/>
+                        </constraints>
                     </view>
+                    <navigationItem key="navigationItem" id="K6w-JR-AQA"/>
                 </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="saQ-sD-gWE" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="374.62686567164178" y="-41.189931350114414"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="iGJ-Jb-iFT">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="3Cp-M8-qO4" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="RMU-0k-oSn">
+                        <rect key="frame" x="0.0" y="62" width="402" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="tqz-bv-iBV" kind="relationship" relationship="rootViewController" id="fsA-8t-wdk"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="xtg-o5-5oc" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-391" y="-41"/>
         </scene>
     </scenes>
+    <resources>
+        <namedColor name="gradientStart">
+            <color red="0.11372549019607843" green="0.66666666666666663" blue="0.9137254901960784" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+        </namedColor>
+        <namedColor name="whiteColor">
+            <color red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+        </namedColor>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
 </document>
