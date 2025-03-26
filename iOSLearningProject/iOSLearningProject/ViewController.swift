@@ -14,6 +14,17 @@ class ViewController: UIViewController {
         // Do any additional setup after loading the view.
     }
 
-
+    @IBAction func btnGoToKTSignup(_ sender: Any) {
+        let storyBoard: UIStoryboard = UIStoryboard(name: "KtExercise", bundle: nil)
+        let nextViewController = storyBoard.instantiateViewController(withIdentifier: "KtSignUpController") as! KtSignUpController
+        navigationController?.pushViewController(nextViewController, animated: true)
+    }
+    
+    @IBAction func btnGoToKYLogin(_ sender: Any) {
+        let storyBoard: UIStoryboard = UIStoryboard(name: "KtExercise", bundle: nil)
+        let nextViewController = storyBoard.instantiateViewController(withIdentifier: "KtLoginController") as! KtLoginController
+        navigationController?.pushViewController(nextViewController, animated: true)
+    }
+    
 }
 
