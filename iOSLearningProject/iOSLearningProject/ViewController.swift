@@ -15,5 +15,10 @@ class ViewController: UIViewController {
     }
 
 
+    @IBAction func btnGoToUserDefaultsPractice(_ sender: Any) {
+        let storyboard = UIStoryboard(name: "UserDefaultStoryboard", bundle: nil)
+        let nextViewController = storyboard.instantiateViewController(withIdentifier: "UserDefaultVC") as! UserDefaultVC
+        navigationController?.pushViewController(nextViewController, animated: true)
+    }
 }
 
