@@ -1,24 +1,247 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13122.16" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="23504" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="V2m-1e-9zv">
+    <device id="retina6_12" orientation="portrait" appearance="light"/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13104.12"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="23506"/>
+        <capability name="Named colors" minToolsVersion="9.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="collection view cell content view" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
+        <!--Navigation Controller-->
+        <scene sceneID="h76-VD-y5G">
+            <objects>
+                <navigationController id="V2m-1e-9zv" sceneMemberID="viewController">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="bxM-An-r6m">
+                        <rect key="frame" x="0.0" y="59" width="393" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="rootViewController" id="CNX-4a-YTN"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="azN-FX-G2z" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-1002" y="-34"/>
+        </scene>
         <!--View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="iOSLearningProject" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" xcode11CocoaTouchSystemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="D4u-kj-SgX">
+                                <rect key="frame" x="10" y="123" width="373" height="35"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" title="Normal API Call">
+                                    <backgroundConfiguration key="background">
+                                        <color key="backgroundColor" name="ButtonBackground"/>
+                                    </backgroundConfiguration>
+                                    <color key="baseForegroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </buttonConfiguration>
+                                <connections>
+                                    <action selector="btnBasicAPICall:" destination="BYZ-38-t0r" eventType="touchUpInside" id="e5b-WZ-o3T"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Om1-2V-fhs">
+                                <rect key="frame" x="10" y="178" width="373" height="35"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" title="Collection View With API Call">
+                                    <backgroundConfiguration key="background">
+                                        <color key="backgroundColor" name="ButtonBackground"/>
+                                    </backgroundConfiguration>
+                                    <color key="baseForegroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </buttonConfiguration>
+                                <connections>
+                                    <action selector="btnCollectionViewWithAPI:" destination="BYZ-38-t0r" eventType="touchUpInside" id="7t3-ia-lSz"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="jcF-1u-yNn">
+                                <rect key="frame" x="10" y="233" width="373" height="35"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" title="Post Request">
+                                    <backgroundConfiguration key="background">
+                                        <color key="backgroundColor" name="ButtonBackground"/>
+                                    </backgroundConfiguration>
+                                    <color key="baseForegroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </buttonConfiguration>
+                                <connections>
+                                    <action selector="btnMakePostRequest:" destination="BYZ-38-t0r" eventType="touchUpInside" id="fMq-a0-yTg"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ltb-2S-Q16">
+                                <rect key="frame" x="10" y="288" width="373" height="35"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" title="Put Request">
+                                    <backgroundConfiguration key="background">
+                                        <color key="backgroundColor" name="ButtonBackground"/>
+                                    </backgroundConfiguration>
+                                    <color key="baseForegroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </buttonConfiguration>
+                                <connections>
+                                    <action selector="btnMakePutRequest:" destination="BYZ-38-t0r" eventType="touchUpInside" id="jez-v2-gqG"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="DFf-qO-sfl">
+                                <rect key="frame" x="10" y="343" width="373" height="35"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" title="Delete Request">
+                                    <backgroundConfiguration key="background">
+                                        <color key="backgroundColor" name="ButtonBackground"/>
+                                    </backgroundConfiguration>
+                                    <color key="baseForegroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </buttonConfiguration>
+                                <connections>
+                                    <action selector="btnDeletePost:" destination="BYZ-38-t0r" eventType="touchUpInside" id="qQS-qe-9sR"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="eX2-Fd-168">
+                                <rect key="frame" x="10" y="398" width="373" height="35"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" title="Get Request with Query Param">
+                                    <backgroundConfiguration key="background">
+                                        <color key="backgroundColor" name="ButtonBackground"/>
+                                    </backgroundConfiguration>
+                                    <color key="baseForegroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </buttonConfiguration>
+                                <connections>
+                                    <action selector="btnGetWithQueryParam:" destination="BYZ-38-t0r" eventType="touchUpInside" id="ve6-pP-ngO"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="wm0-Y6-clC">
+                                <rect key="frame" x="10" y="453" width="373" height="35"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" title="Get Request with Path Param">
+                                    <backgroundConfiguration key="background">
+                                        <color key="backgroundColor" name="ButtonBackground"/>
+                                    </backgroundConfiguration>
+                                    <color key="baseForegroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </buttonConfiguration>
+                                <connections>
+                                    <action selector="btnGetWithPathParam:" destination="BYZ-38-t0r" eventType="touchUpInside" id="CV3-IH-SoX"/>
+                                </connections>
+                            </button>
+                        </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="wm0-Y6-clC" firstAttribute="top" secondItem="eX2-Fd-168" secondAttribute="bottom" constant="20" id="0eD-Kk-sxh"/>
+                            <constraint firstItem="DFf-qO-sfl" firstAttribute="leading" secondItem="ltb-2S-Q16" secondAttribute="leading" id="EaO-v5-cs2"/>
+                            <constraint firstItem="jcF-1u-yNn" firstAttribute="top" secondItem="Om1-2V-fhs" secondAttribute="bottom" constant="20" id="FVf-OA-5QV"/>
+                            <constraint firstItem="ltb-2S-Q16" firstAttribute="top" secondItem="jcF-1u-yNn" secondAttribute="bottom" constant="20" id="GI7-SR-LOE"/>
+                            <constraint firstItem="wm0-Y6-clC" firstAttribute="leading" secondItem="eX2-Fd-168" secondAttribute="leading" id="Gfe-zw-x4z"/>
+                            <constraint firstItem="jcF-1u-yNn" firstAttribute="trailing" secondItem="Om1-2V-fhs" secondAttribute="trailing" id="MUb-ht-deN"/>
+                            <constraint firstItem="eX2-Fd-168" firstAttribute="top" secondItem="DFf-qO-sfl" secondAttribute="bottom" constant="20" id="MiJ-p9-g5y"/>
+                            <constraint firstItem="ltb-2S-Q16" firstAttribute="leading" secondItem="jcF-1u-yNn" secondAttribute="leading" id="Nxm-ly-Jap"/>
+                            <constraint firstItem="jcF-1u-yNn" firstAttribute="leading" secondItem="Om1-2V-fhs" secondAttribute="leading" id="O8l-SG-Xlg"/>
+                            <constraint firstItem="DFf-qO-sfl" firstAttribute="trailing" secondItem="ltb-2S-Q16" secondAttribute="trailing" id="Oko-UA-A4l"/>
+                            <constraint firstItem="wm0-Y6-clC" firstAttribute="trailing" secondItem="eX2-Fd-168" secondAttribute="trailing" id="OvS-Vu-BKD"/>
+                            <constraint firstItem="D4u-kj-SgX" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="10" id="Qiu-qm-fdZ"/>
+                            <constraint firstItem="eX2-Fd-168" firstAttribute="leading" secondItem="DFf-qO-sfl" secondAttribute="leading" id="T5Y-ux-R4X"/>
+                            <constraint firstItem="eX2-Fd-168" firstAttribute="trailing" secondItem="DFf-qO-sfl" secondAttribute="trailing" id="Ujx-7f-SwZ"/>
+                            <constraint firstItem="Om1-2V-fhs" firstAttribute="trailing" secondItem="D4u-kj-SgX" secondAttribute="trailing" id="coo-qA-fFx"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="D4u-kj-SgX" secondAttribute="trailing" constant="10" id="dyv-lo-KEB"/>
+                            <constraint firstItem="Om1-2V-fhs" firstAttribute="top" secondItem="D4u-kj-SgX" secondAttribute="bottom" constant="20" id="j4S-l4-hmS"/>
+                            <constraint firstItem="D4u-kj-SgX" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="20" id="lM0-eP-PPe"/>
+                            <constraint firstItem="DFf-qO-sfl" firstAttribute="top" secondItem="ltb-2S-Q16" secondAttribute="bottom" constant="20" id="mDr-Lo-OZI"/>
+                            <constraint firstItem="Om1-2V-fhs" firstAttribute="leading" secondItem="D4u-kj-SgX" secondAttribute="leading" id="nLx-V1-2c1"/>
+                            <constraint firstItem="ltb-2S-Q16" firstAttribute="trailing" secondItem="jcF-1u-yNn" secondAttribute="trailing" id="pJM-hr-l1L"/>
+                        </constraints>
                     </view>
+                    <navigationItem key="navigationItem" id="np4-N9-BoC"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="-311" y="-35"/>
+        </scene>
+        <!--Basic Api Call-->
+        <scene sceneID="Fac-eW-l65">
+            <objects>
+                <viewController storyboardIdentifier="BasicApiCall" id="Qrr-dV-GN5" customClass="BasicApiCall" customModule="iOSLearningProject" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="Z0v-bE-FqH">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Finding" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="jSA-kT-gAI">
+                                <rect key="frame" x="0.0" y="59.000000000000007" width="393" height="20.333333333333336"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="rXS-Mf-eZb"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="jSA-kT-gAI" firstAttribute="leading" secondItem="rXS-Mf-eZb" secondAttribute="leading" id="24t-Pk-ORe"/>
+                            <constraint firstItem="rXS-Mf-eZb" firstAttribute="trailing" secondItem="jSA-kT-gAI" secondAttribute="trailing" id="pDu-WF-aQh"/>
+                            <constraint firstItem="jSA-kT-gAI" firstAttribute="top" secondItem="rXS-Mf-eZb" secondAttribute="top" id="vDh-zf-Lue"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="lblResponse" destination="jSA-kT-gAI" id="pqi-LX-uqq"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="ZoH-f7-5h8" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="518" y="-35"/>
+        </scene>
+        <!--Products CollectionVC-->
+        <scene sceneID="vaM-U2-HdB">
+            <objects>
+                <viewController storyboardIdentifier="ProductsCollectionVC" id="sQm-KJ-ryh" customClass="ProductsCollectionVC" customModule="iOSLearningProject" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="E4v-9m-kJm">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="wzW-5Q-ze1">
+                                <rect key="frame" x="0.0" y="59" width="393" height="759"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <collectionViewFlowLayout key="collectionViewLayout" automaticEstimatedItemSize="YES" minimumLineSpacing="10" minimumInteritemSpacing="10" id="WLs-3c-pI4">
+                                    <size key="itemSize" width="128" height="128"/>
+                                    <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                                    <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                                    <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                                </collectionViewFlowLayout>
+                                <cells>
+                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="ZIL-Bc-4EW">
+                                        <rect key="frame" x="0.0" y="0.0" width="127.99999999999997" height="128"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <collectionViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="9Ml-2s-ZQ5">
+                                            <rect key="frame" x="0.0" y="0.0" width="127.99999999999997" height="128"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                        </collectionViewCellContentView>
+                                    </collectionViewCell>
+                                </cells>
+                            </collectionView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="PW1-6w-pZu"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="wzW-5Q-ze1" firstAttribute="leading" secondItem="PW1-6w-pZu" secondAttribute="leading" id="Vnf-4U-vXC"/>
+                            <constraint firstItem="wzW-5Q-ze1" firstAttribute="top" secondItem="PW1-6w-pZu" secondAttribute="top" id="hAL-AR-b1T"/>
+                            <constraint firstItem="PW1-6w-pZu" firstAttribute="bottom" secondItem="wzW-5Q-ze1" secondAttribute="bottom" id="th3-AS-VSp"/>
+                            <constraint firstItem="PW1-6w-pZu" firstAttribute="trailing" secondItem="wzW-5Q-ze1" secondAttribute="trailing" id="vYD-9o-xN6"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="collectionViewProducts" destination="wzW-5Q-ze1" id="F4K-5G-jDe"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="h8B-xv-Ky2" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1265" y="-35"/>
         </scene>
     </scenes>
+    <resources>
+        <namedColor name="ButtonBackground">
+            <color red="1" green="0.75294117647058822" blue="0.59999999999999998" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+        </namedColor>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
 </document>

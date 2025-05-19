@@ -6,6 +6,10 @@
 	objectVersion = 77;
 	objects = {
 
+/* Begin PBXBuildFile section */
+		2D3EA9A62DDB625100B6DB37 /* Alamofire in Frameworks */ = {isa = PBXBuildFile; productRef = 2D3EA9A52DDB625100B6DB37 /* Alamofire */; };
+/* End PBXBuildFile section */
+
 /* Begin PBXContainerItemProxy section */
 		2D6560BE2D6C2C8700D986C8 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
@@ -65,6 +69,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2D3EA9A62DDB625100B6DB37 /* Alamofire in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -125,6 +130,7 @@
 			);
 			name = iOSLearningProject;
 			packageProductDependencies = (
+				2D3EA9A52DDB625100B6DB37 /* Alamofire */,
 			);
 			productName = iOSLearningProject;
 			productReference = 2D6560A72D6C2C8500D986C8 /* iOSLearningProject.app */;
@@ -208,6 +214,9 @@
 			);
 			mainGroup = 2D65609E2D6C2C8500D986C8;
 			minimizedProjectReferenceProxies = 1;
+			packageReferences = (
+				2D3EA9A42DDB625100B6DB37 /* XCRemoteSwiftPackageReference "Alamofire" */,
+			);
 			preferredProjectObjectVersion = 77;
 			productRefGroup = 2D6560A82D6C2C8500D986C8 /* Products */;
 			projectDirPath = "";
@@ -563,6 +572,25 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		2D3EA9A42DDB625100B6DB37 /* XCRemoteSwiftPackageReference "Alamofire" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/Alamofire/Alamofire";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 5.10.2;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		2D3EA9A52DDB625100B6DB37 /* Alamofire */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 2D3EA9A42DDB625100B6DB37 /* XCRemoteSwiftPackageReference "Alamofire" */;
+			productName = Alamofire;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 2D65609F2D6C2C8500D986C8 /* Project object */;
 }
