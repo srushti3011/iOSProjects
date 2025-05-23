@@ -22,7 +22,7 @@ class BasicApiCall: UIViewController {
                 DispatchQueue.main.async {
                     self.lblResponse.text = "Loading"
                 }
-            case .GotNonEmptyResponse:
+            case .Success:
                 guard let response else {
                     if let error {
                         print(error)
@@ -34,11 +34,8 @@ class BasicApiCall: UIViewController {
                     print(response)
                 }
                 print(response)
-            case .GotEmptyResponse:
-                DispatchQueue.main.async {
-                    self.lblResponse.text = "No response"
-                }
-                self.lblResponse.text = "No res"
+            case .Cancelled:
+                print("Cancelled")
             }
         }
     }

@@ -6,22 +6,18 @@
 //
 
 import Foundation
-
-enum ApiState {
-    case Loading, Error, GotNonEmptyResponse, GotEmptyResponse
-}
+import Alamofire
 
 class ApiService {
     static var apiState = ApiState.Loading
     static let sharedaApiCallInstance = ApiService()
-    
     static let configurationObject = URLSessionConfiguration.default
-//    static let configurationObject = URLSessionConfiguration.init()
     static let customConfigSession = URLSession(configuration: ApiService.configurationObject)
     
     init() {
         ApiService.configurationObject.timeoutIntervalForRequest = 1000
         ApiService.configurationObject.allowsCellularAccess = false
+        //        ApiService.configurationObject.urlCache = URLCache.shared
     }
     
     func callAPI(urlToCall: URL, completionHandler: @escaping (ResponseFromAPI?, Error?, ApiState) -> Void) {
@@ -29,35 +25,20 @@ class ApiService {
         let task = ApiService.customConfigSession.dataTask(with: urlToCall) { (data, response, error) in
             if let error {
                 print("Error", error.localizedDescription)
-                // change state to error state i.e. the failed state
-                ApiService.apiState = ApiState.Error
+                ApiService.apiState = ApiState.Error(message: "Error")
                 completionHandler(nil, error, ApiService.apiState)
             } else {
                 guard let response = response as? HTTPURLResponse, let data else { return }
                 if response.statusCode == 200 {
-                    if data.isEmpty {
-                        // change state to empty state
-                        print("Data is empty")
-                        print(data.isEmpty)
-                        ApiService.apiState = ApiState.GotEmptyResponse
-                        completionHandler(nil, nil, ApiService.apiState)
-                    } else {
-                        // change state to data got state
-                        do {
-                            let decoder = JSONDecoder()
-                            let parsedData = try decoder.decode(ResponseFromAPI.self, from: data)
-                            ApiService.apiState = ApiState.GotNonEmptyResponse
-                            print("Got data")
-                            completionHandler(parsedData, nil, ApiService.apiState)
-                        } catch {
-                            print("Something went wrong")
-                        }
+                    do {
+                        let decoder = JSONDecoder()
+                        let parsedData = try decoder.decode(ResponseFromAPI.self, from: data)
+                        ApiService.apiState = ApiState.Success
+                        print("Got data")
+                        completionHandler(parsedData, nil, ApiService.apiState)
+                    } catch {
+                        print("Something went wrong")
                     }
-                } else {
-                    print("status code not 200")
-                    print(response.statusCode)
-                    ApiService.apiState = ApiState.Error
-                    completionHandler(nil, nil, ApiService.apiState)
                 }
             }
         }
@@ -66,15 +47,66 @@ class ApiService {
     
     func getPosts(urlToCall: URL, completionHandler: @escaping ([ResponseFromAPI]?, Error?) -> Void) {
         let sharedSession = URLSession.shared
-        let urlToCall = URLRequest(url: urlToCall)
-        let dataTask = sharedSession.dataTask(with: urlToCall) { (jsonReceived, response, error) in
+        var request = URLRequest(url: urlToCall)
+        request.cachePolicy = .returnCacheDataElseLoad
+        
+        let memoryCapacity = 4 * 1024 * 1024
+        let diskCapacity = 100 * 1024 * 1024
+        let urlCache = URLCache(memoryCapacity: memoryCapacity, diskCapacity: diskCapacity, diskPath: "myCache")
+        URLCache.shared = urlCache
+        
+        if let cachedResponse = URLCache.shared.cachedResponse(for: request) {
+            print("Got cached data")
+            print(cachedResponse)
+        } else {
+            print("didn't find in cache")
+        }
+        
+        let dataTask = sharedSession.dataTask(with: request) { (jsonReceived, response, error) in
             guard let jsonReceived else {
                 completionHandler(nil, error)
                 return
             }
             do {
+                let cachedResponse = CachedURLResponse(response: response!, data: jsonReceived)
+                URLCache.shared.storeCachedResponse(cachedResponse, for: request)
                 let decoder = JSONDecoder()
                 let parsedData = try decoder.decode([ResponseFromAPI].self, from: jsonReceived)
+                completionHandler(parsedData, nil)
+            } catch {
+                print("Something went wrong")
+            }
+        }
+        dataTask.resume()
+    }
+    
+    func getPost(urlToCall: URL, completionHandler: @escaping (ResponseFromAPI?, Error?) -> Void) {
+        //        URLCache.shared.removeAllCachedResponses()
+        //        return
+        let sharedSession = URLSession.shared
+        var request = URLRequest(url: urlToCall)
+        request.cachePolicy = .returnCacheDataElseLoad
+        if let cachedResponse = URLCache.shared.cachedResponse(for: request) {
+            print("Got cached data and the cached response is")
+            if let responseString = String(data: cachedResponse.data, encoding: .utf8) {
+                print("Cached Data (String):\n\(responseString)")
+            } else {
+                print("Failed to convert cached data to String")
+            }
+            return
+        } else {
+            print("didn't find in cache")
+        }
+        
+        let dataTask = sharedSession.dataTask(with: request) { (jsonReceived, response, error) in
+            guard let jsonReceived else {
+                completionHandler(nil, error)
+                return
+            }
+            do {
+                //                print(response)
+                let decoder = JSONDecoder()
+                let parsedData = try decoder.decode(ResponseFromAPI.self, from: jsonReceived)
                 completionHandler(parsedData, nil)
             } catch {
                 print("Something went wrong")
@@ -115,11 +147,11 @@ class ApiService {
     
     func updatePostUsingPutRequest(urlToCall: URL) {
         let updatedData: [String: Any] = [
-                    "id": 1,
-                    "title": "Updated Title",
-                    "body": "This is an updated body for the PUT request.",
-                    "userId": 1
-                ]
+            "id": 1,
+            "title": "Updated Title",
+            "body": "This is an updated body for the PUT request.",
+            "userId": 1
+        ]
         let request = configureRequest(callUrl: urlToCall, methodType: "PUT", bodyOfRequest: updatedData)
         let task = ApiService.customConfigSession.dataTask(with: request) { (jsonRes, response, error) in
             if let error {
@@ -228,132 +260,103 @@ class ApiService {
         request.httpBody = try? JSONSerialization.data(withJSONObject: body)
         return request
     }
-    
-    // generic code ---------------------------------------------------------------------------------------------------------------------------
-    let baseurl = "https://reqres.in/api"
-    
-    func makeCall<T: Codable>(
-        modelType: T.Type,
-        method: RequestMethodType,
+  
+    func makeCallWithBody<T: Codable, U: Codable>(
         endPoint: EndPoint,
-        queryParams: [URLQueryItem]?,
-        pathParam: String?,
-        headers: [(Headers, String)]?,
-        body: Any?,
-        completionHandler: @escaping (T?, String?) -> Void
+        body: T? = nil,
+        stateHandler: @escaping(U?, ApiState, String?) -> Void
     ) {
-        let url = computeURL(endPoint: endPoint, pathParam: pathParam, queryParams: queryParams)
-        if let url {
-            let request = getRequest(url: url, method: method, headers: headers, body: body)
-            let task = ApiService.customConfigSession.dataTask(with: request) { (data, response, error) in
-                if let error {
-                    print("Error getting data \(error.localizedDescription)")
-                    completionHandler(nil, error.localizedDescription)
-                }
-                if let data {
-                    do {
-//                        let responseJson = try JSONSerialization.jsonObject(with: data, options: [])
-                        let decodedData = try JSONDecoder().decode(T.self, from: data)
-                        completionHandler(decodedData, nil)
-                    } catch let error {
-                        print("Error in parsing data \(error.localizedDescription)")
-                    }
+        stateHandler(nil, ApiState.Loading, nil)
+        let url = endPoint.endPointURL
+        guard let url else {
+            ApiService.apiState = ApiState.Error(message: "Fatal error")
+            stateHandler(nil, ApiState.Error(message: "Fatal error"), "Fatal error")
+            print("Fatal error")
+            return
+        }
+        let request = buildRequest(url: url, endPoint: endPoint, body: body ?? nil)
+        let task = ApiService.customConfigSession.dataTask(with: request) { (data, response, error) in
+            guard let response = response as? HTTPURLResponse, let data else { return }
+            if (400...499).contains(response.statusCode) {
+                stateHandler(nil, ApiState.Error(message: "Client error"), "Client error")
+                print("Client error")
+            } else if (500...511).contains(response.statusCode) {
+                stateHandler(nil, ApiState.Error(message: "Server error"), "Server error")
+                print("Server error")
+            } else if (200...226).contains(response.statusCode) {
+                do {
+                    let responseJson = try JSONSerialization.jsonObject(with: data, options: [])
+                    print(responseJson)
+                    let decodedData = try JSONDecoder().decode(U.self, from: data)
+                    stateHandler(decodedData, ApiState.Success, nil)
+                } catch let error {
+                    print("Error in parsing data \(error.localizedDescription)")
+                    stateHandler(nil, ApiState.Error(message: "Error in parsing response"), error.localizedDescription)
                 }
             }
-            task.resume()
         }
+        task.resume()
     }
     
-    func getRequest(url: URL, method: RequestMethodType, headers: [(Headers, String)]?, body: Any?) -> URLRequest {
-        var request = URLRequest(url: url)
-        request.httpMethod = method.rawValue
-        if let body {
-            do {
-                if let codableBody = body as? Codable {
-                    do {
-                        let bodyToSet = try JSONEncoder().encode(codableBody)
-                        request.httpBody = bodyToSet
-                    } catch let error {
-                        print("Encoding problem \(error.localizedDescription)")
-                    }
-                } else {
-                    request.httpBody = try JSONSerialization.data(withJSONObject: body)
+    func makeCallWithoutBody<U: Codable>(
+        endPoint: EndPoint,
+        stateHandler: @escaping(U?, ApiState, String?) -> Void
+    ) {
+        stateHandler(nil, ApiState.Loading, nil)
+        let url = endPoint.endPointURL
+        guard let url else {
+            ApiService.apiState = ApiState.Error(message: "Fatal error")
+            stateHandler(nil, ApiState.Error(message: "Fatal error"), "Fatal error")
+            print("Fatal error")
+            return
+        }
+        let request = buildRequestWithoutBody(url: url, endPoint: endPoint)
+        let task = ApiService.customConfigSession.dataTask(with: request) { (data, response, error) in
+            guard let response = response as? HTTPURLResponse, let data else { return }
+            if (400...499).contains(response.statusCode) {
+                stateHandler(nil, ApiState.Error(message: "Client error"), "Client error")
+                print("Client error")
+            } else if (500...511).contains(response.statusCode) {
+                stateHandler(nil, ApiState.Error(message: "Server error"), "Server error")
+                print("Server error")
+            } else if (200...226).contains(response.statusCode) {
+                do {
+                    let responseJson = try JSONSerialization.jsonObject(with: data, options: [])
+                    print(responseJson)
+                    let decodedData = try JSONDecoder().decode(U.self, from: data)
+                    stateHandler(decodedData, ApiState.Success, nil)
+                } catch let error {
+                    print("Error in parsing data \(error.localizedDescription)")
+                    stateHandler(nil, ApiState.Error(message: "Error in parsing response"), error.localizedDescription)
                 }
-            } catch let error {
-                print("Error in serializing the body \(error.localizedDescription)")
             }
         }
-        if let headers {
-            for (header, value) in headers {
-                request.setValue(value, forHTTPHeaderField: header.rawValue)
+        task.resume()
+    }
+    
+    func buildRequest<T: Codable>(url: URL, endPoint: EndPoint, body: T? = nil) -> URLRequest {
+        var request = URLRequest(url: url)
+        request.httpMethod = endPoint.httpMethod.rawValue
+        for (header, value) in endPoint.headers {
+            request.setValue(value, forHTTPHeaderField: header)
+        }
+        if let body {
+            do {
+                let encodedBody = try JSONEncoder().encode(body)
+                request.httpBody = encodedBody
+            } catch _ {
+                print("Error in encoding the body")
             }
         }
         return request
     }
     
-    func computeURL(endPoint: EndPoint, pathParam: String?, queryParams: [URLQueryItem]?) -> URL? {
-        if let pathParam {
-            let urlString = "\(baseurl)\(endPoint.rawValue)/\(pathParam)"
-            print(urlString)
-            if let queryParams {
-                var urlComponent = URLComponents(string: urlString)
-                urlComponent?.queryItems = queryParams
-                return urlComponent?.url
-            }
-            return URL(string: urlString)
+    func buildRequestWithoutBody(url: URL, endPoint: EndPoint) -> URLRequest {
+        var request = URLRequest(url: url)
+        request.httpMethod = endPoint.httpMethod.rawValue
+        for (header, value) in endPoint.headers {
+            request.setValue(value, forHTTPHeaderField: header)
         }
-        if let queryParams {
-            let urlString = "\(baseurl)\(endPoint.rawValue)"
-            var urlComponent = URLComponents(string: urlString)
-            urlComponent?.queryItems = queryParams
-            return urlComponent?.url
-        }
-        return URL(string: "\(baseurl)\(endPoint.rawValue)")
+        return request
     }
-}
-
-enum RequestMethodType: String {
-    case GET = "GET"
-    case POST = "POST"
-    case PUT = "PUT"
-    case PATCH = "PATCH"
-    case DELETE = "DELETE"
-}
-
-enum EndPoint: String {
-    case users = "/users"
-    case register = "/register"
-    case login = "/login"
-    
-//    var endPoint: String {
-//        switch self {
-//        case .users(let uderid):
-//            <#code#>
-//        case .register:
-//            <#code#>
-//        case .login:
-//            <#code#>
-//        }
-//    }
-    
-//    var headers:
-}
-
-enum Headers: String {
-    case ContentType = "Content-Type"
-    case Authorization = "x-api-key"
-}
-
-enum ContentType: String {
-    case textHTML = "text/html"
-    case json = "Application/json"
-}
-
-class User: Codable {
-    init(name: String, job: String) {
-        self.name = name
-        self.job = job
-    }
-    let name: String
-    let job: String
 }

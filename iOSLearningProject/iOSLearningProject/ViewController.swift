@@ -6,9 +6,12 @@
 //
 
 import UIKit
+import SwiftUI
+import PulseUI
 
 class ViewController: UIViewController {
     
+    @IBOutlet weak var lblAlamofireGenericState: UILabel!
     override func viewDidLoad() {
         super.viewDidLoad()
     }
@@ -35,12 +38,10 @@ class ViewController: UIViewController {
     }
     
     @IBAction func btnMakePutRequest(_ sender: Any) {
-        Task { @MainActor in
-            guard let url = URL(string: "https://jsonplaceholder.typicode.com/posts/1") else {
-                return
-            }
-            ApiService.sharedaApiCallInstance.updatePostUsingPutRequest(urlToCall: url)
+        guard let url = URL(string: "https://jsonplaceholder.typicode.com/posts/1") else {
+            return
         }
+        ApiService.sharedaApiCallInstance.updatePostUsingPutRequest(urlToCall: url)
     }
     
     @IBAction func btnDeletePost(_ sender: Any) {
@@ -57,66 +58,120 @@ class ViewController: UIViewController {
             ApiService.sharedaApiCallInstance.getWithQueryParam(urlToCall: "https://jsonplaceholder.typicode.com/posts/1", queryParam: URLQueryItem(name: "postId", value: "1"))
         }
     }
-    @IBAction func btnGetWithPathParam(_ sender: Any) {
-//        Task { @MainActor in
-//            ApiService.sharedaApiCallInstance.getWithPathParam(urlToCall: "https://reqres.in/api/users/", pathParam: "2")
-//            ApiService().makeCall(method: RequestMethodType.GET, endPoint: EndPoint.users, queryParams: nil, pathParam: "2", headers: nil, body: nil)
-            
-//            1
-//            ApiService().makeCall(
-//                method: RequestMethodType.GET,
-//                endPoint: EndPoint.users,
-//                queryParams: [
-//                    URLQueryItem(name: "page", value: "2")
-//                ],
-//                pathParam: nil,
-//                headers: nil,
-//                body: nil)
-            
-//            2
-//            ApiService().makeCall(
-//                method: RequestMethodType.GET,
-//                endPoint: EndPoint.users,
-//                queryParams: nil,
-//                pathParam: nil,
-//                headers: nil,
-//                body: nil)
-            
-//            3
-        ApiService.sharedaApiCallInstance.makeCall(
-                modelType: UserCreated.self,
-                method: RequestMethodType.POST,
-                endPoint: EndPoint.users,
-                queryParams: nil,
-                pathParam: nil,
-                headers: [
-                    (Headers.Authorization, "reqres-free-v1"),
-                    (Headers.ContentType, ContentType.json.rawValue)
-                ],
-                body: [
-                    "name": "givenName",
-                    "job": "Software dev."
-                ]
-        ) { (user: UserCreated?, error: String?) in
-            if let user {
-                print("In completion handler and got the user with id \(user.id)")
-                print(user)
-            } else {
-                print("In completion handler else")
+    
+    @IBAction func btnGenericRequest(_ sender: Any) {
+        ApiService.sharedaApiCallInstance.makeCallWithBody(
+            endPoint: EndPoint.createUser,
+            body: CreateUserBody(name: "MYName", job: "MYJob")
+        ) { (data: CreatedUserResponse?, state, error) in
+            switch state {
+            case .Loading:
+                print("Loading")
+            case .Error(let message):
+                print("Error \(message)")
+            case .Success:
+                if let data {
+                    print("\(data.id) is created")
+                }
+            case .Cancelled:
+                print("Cancelled")
             }
         }
     }
-}
-
-struct UserCreated: Codable {
-    init(name: String, job: String, id: String, createdAt: String) {
-        self.name = name
-        self.job = job
-        self.id = id
-        self.createdAt = createdAt
+    
+    //alamofire api calls
+    @IBAction func btnGetUserAlamofire(_ sender: Any) {
+        let userId = 2
+        AlamofireAPIService.shared.getSingleUser(url: "https://reqres.in/api/users/\(String(userId))")
     }
-    let name: String
-    let job: String
-    let id: String
-    let createdAt: String
+    
+    @IBAction func btnRegisterUserAlamofire(_ sender: Any) {
+        AlamofireAPIService.shared.registerUser()
+    }
+    
+    @IBAction func btnRequestWithQueryParam(_ sender: Any) {
+        AlamofireAPIService.shared.getListOfUsers()
+    }
+    
+    // generic alamofire call
+    @IBAction func btnGenericAlamofireRequest(_ sender: Any) {
+        let requestToCreateUser = AlamofireAPIService.shared.callEndpointWithBody(
+            endPoint: EndPoint.createUser,
+            body: CreateUserBody(name: "MYName", job: "MYJob")
+        ) { (response: CreatedUserResponse?, state, error) in
+            switch state {
+            case .Loading:
+                self.lblAlamofireGenericState.text = "Loading"
+            case .Error(let message):
+                self.lblAlamofireGenericState.text = message
+            case .Success:
+                if let response {
+                    self.lblAlamofireGenericState.text = "\(response.id) \(response.name)"
+                }
+            case .Cancelled:
+                print("Cancelled")
+            }
+        }
+        
+        let requestToGetSingleUser = AlamofireAPIService.shared.callEndpointWithoutBody(
+            endPoint: EndPoint.getSingleUser(userId: 2)
+        ) { (response: UserDetail?, state, error) in
+            switch state {
+            case .Loading:
+                print("loading user detail")
+            case .Error(let message):
+                print("error \(message)")
+            case .Success:
+                if let response {
+                    print(response)
+                }
+            case .Cancelled:
+                print("Cancelled")
+            }
+        }
+        
+        let requestToGetUserList = AlamofireAPIService.shared.callEndpointWithoutBody(
+            endPoint: EndPoint.getUserList(pageNo: 2)
+        ) { (response: UserList?, state, error) in
+            switch state {
+            case .Loading:
+                print("Loading users")
+            case .Error(let message):
+                print("Error fetching user list \(message)")
+            case .Success:
+                if let response {
+                    print(response.data[0])
+                }
+            case .Cancelled:
+                print("Cancelled")
+            }
+        }
+    }
+    
+    @IBAction func btnCachedGetRequest(_ sender: Any) {
+        ApiService.sharedaApiCallInstance.getPost(
+            urlToCall: URL(string: "https://jsonplaceholder.typicode.com/posts/1")!
+        ) { (response, error) in
+            print(response!)
+        }
+    }
+    
+    @IBAction func btnOpenPulse(_ sender: Any) {
+        let view = NavigationView {
+            ConsoleView()
+        }
+        present(UIHostingController(rootView: view), animated: true)
+    }
+    
+    @IBAction func btnGoToGrandCentralDispatch(_ sender: Any) {
+        let storyboard = UIStoryboard(name: "Main", bundle: nil)
+        let nextViewController = storyboard.instantiateViewController(withIdentifier: "GCDViewController") as! GCDViewController
+        navigationController?.pushViewController(nextViewController, animated: true)
+    }
+    
+    @IBAction func btnUILoadingAccordingToStates(_ sender: Any) {
+        let storyboard = UIStoryboard(name: "Main", bundle: nil)
+        let nextViewController = storyboard.instantiateViewController(withIdentifier: "UserListTableView") as! UserListTableView
+        navigationController?.pushViewController(nextViewController, animated: true)
+    }
 }

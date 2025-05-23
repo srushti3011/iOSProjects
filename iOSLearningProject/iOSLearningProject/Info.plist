@@ -21,5 +21,13 @@
 			</array>
 		</dict>
 	</dict>
+    <key>NSBonjourServices</key>
+    <array>
+        <string>_Bagel._tcp</string>
+    </array>
+    <key>NSLocalNetworkUsageDescription</key>
+    <string>Network access required</string>
+    <key>NSLocationWhenInUseUsageDescription</key>
+    <string>Please allow us to use your current location to locate the accounts.</string>
 </dict>
 </plist>

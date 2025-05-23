@@ -24,7 +24,7 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="azN-FX-G2z" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-1002" y="-34"/>
+            <point key="canvasLocation" x="-1076" y="-35"/>
         </scene>
         <!--View Controller-->
         <scene sceneID="tne-QT-ifu">
@@ -35,7 +35,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="D4u-kj-SgX">
-                                <rect key="frame" x="10" y="123" width="373" height="35"/>
+                                <rect key="frame" x="10" y="103" width="373" height="35"/>
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="plain" title="Normal API Call">
                                     <backgroundConfiguration key="background">
@@ -48,7 +48,7 @@
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Om1-2V-fhs">
-                                <rect key="frame" x="10" y="178" width="373" height="35"/>
+                                <rect key="frame" x="10" y="140" width="373" height="35"/>
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="plain" title="Collection View With API Call">
                                     <backgroundConfiguration key="background">
@@ -61,7 +61,7 @@
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="jcF-1u-yNn">
-                                <rect key="frame" x="10" y="233" width="373" height="35"/>
+                                <rect key="frame" x="10" y="177" width="373" height="35"/>
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="plain" title="Post Request">
                                     <backgroundConfiguration key="background">
@@ -74,7 +74,7 @@
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ltb-2S-Q16">
-                                <rect key="frame" x="10" y="288" width="373" height="35"/>
+                                <rect key="frame" x="10" y="214" width="373" height="35"/>
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="plain" title="Put Request">
                                     <backgroundConfiguration key="background">
@@ -87,7 +87,7 @@
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="DFf-qO-sfl">
-                                <rect key="frame" x="10" y="343" width="373" height="35"/>
+                                <rect key="frame" x="10" y="251" width="373" height="35"/>
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="plain" title="Delete Request">
                                     <backgroundConfiguration key="background">
@@ -100,7 +100,7 @@
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="eX2-Fd-168">
-                                <rect key="frame" x="10" y="398" width="373" height="35"/>
+                                <rect key="frame" x="10" y="288" width="373" height="35"/>
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="plain" title="Get Request with Query Param">
                                     <backgroundConfiguration key="background">
@@ -113,46 +113,186 @@
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="wm0-Y6-clC">
-                                <rect key="frame" x="10" y="453" width="373" height="35"/>
+                                <rect key="frame" x="10" y="325" width="373" height="35"/>
                                 <state key="normal" title="Button"/>
-                                <buttonConfiguration key="configuration" style="plain" title="Get Request with Path Param">
+                                <buttonConfiguration key="configuration" style="plain" title="Generic request">
                                     <backgroundConfiguration key="background">
                                         <color key="backgroundColor" name="ButtonBackground"/>
                                     </backgroundConfiguration>
                                     <color key="baseForegroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </buttonConfiguration>
                                 <connections>
-                                    <action selector="btnGetWithPathParam:" destination="BYZ-38-t0r" eventType="touchUpInside" id="CV3-IH-SoX"/>
+                                    <action selector="btnGenericRequest:" destination="BYZ-38-t0r" eventType="touchUpInside" id="uYF-00-Cx9"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="18R-F6-38r">
+                                <rect key="frame" x="10" y="362" width="373" height="35"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" title="Alamofire Get Request">
+                                    <backgroundConfiguration key="background">
+                                        <color key="backgroundColor" name="ButtonBackground"/>
+                                    </backgroundConfiguration>
+                                    <color key="baseForegroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </buttonConfiguration>
+                                <connections>
+                                    <action selector="btnGetUserAlamofire:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Kno-4t-KlJ"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="lKF-7b-Tea">
+                                <rect key="frame" x="10" y="399" width="373" height="35"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" title="Alamofire Post Request">
+                                    <backgroundConfiguration key="background">
+                                        <color key="backgroundColor" name="ButtonBackground"/>
+                                    </backgroundConfiguration>
+                                    <color key="baseForegroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </buttonConfiguration>
+                                <connections>
+                                    <action selector="btnRegisterUserAlamofire:" destination="BYZ-38-t0r" eventType="touchUpInside" id="PbZ-7C-T81"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Lw2-fP-TUM">
+                                <rect key="frame" x="10" y="436" width="373" height="35"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" title="Alamofire Request With Query Parameter">
+                                    <backgroundConfiguration key="background">
+                                        <color key="backgroundColor" name="ButtonBackground"/>
+                                    </backgroundConfiguration>
+                                    <color key="baseForegroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </buttonConfiguration>
+                                <connections>
+                                    <action selector="btnRequestWithQueryParam:" destination="BYZ-38-t0r" eventType="touchUpInside" id="edf-Mn-a29"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="vjr-IU-oym">
+                                <rect key="frame" x="10" y="473" width="373" height="35"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" title="Alamofire Request Generic">
+                                    <backgroundConfiguration key="background">
+                                        <color key="backgroundColor" name="ButtonBackground"/>
+                                    </backgroundConfiguration>
+                                    <color key="baseForegroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </buttonConfiguration>
+                                <connections>
+                                    <action selector="btnGenericAlamofireRequest:" destination="BYZ-38-t0r" eventType="touchUpInside" id="wJb-FY-aeb"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="FiP-Aq-rmH">
+                                <rect key="frame" x="10" y="510" width="373" height="35"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" title="Cached Get Request">
+                                    <backgroundConfiguration key="background">
+                                        <color key="backgroundColor" name="ButtonBackground"/>
+                                    </backgroundConfiguration>
+                                    <color key="baseForegroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </buttonConfiguration>
+                                <connections>
+                                    <action selector="btnCachedGetRequest:" destination="BYZ-38-t0r" eventType="touchUpInside" id="ms1-rx-ZCc"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Yzb-Wk-0Fh">
+                                <rect key="frame" x="10" y="547" width="373" height="35"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" title="Button for opening Pulse UI">
+                                    <backgroundConfiguration key="background">
+                                        <color key="backgroundColor" name="AccentColor"/>
+                                    </backgroundConfiguration>
+                                    <color key="baseForegroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </buttonConfiguration>
+                                <connections>
+                                    <action selector="btnOpenPulse:" destination="BYZ-38-t0r" eventType="touchUpInside" id="6kE-1a-WQu"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ac6-E0-8OF">
+                                <rect key="frame" x="10" y="584" width="373" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="NmJ-9Z-gJs">
+                                <rect key="frame" x="10" y="607" width="373" height="35"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" title="Go To GCD Practice">
+                                    <backgroundConfiguration key="background">
+                                        <color key="backgroundColor" name="ButtonBackground"/>
+                                    </backgroundConfiguration>
+                                    <color key="baseForegroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </buttonConfiguration>
+                                <connections>
+                                    <action selector="btnGoToGrandCentralDispatch:" destination="BYZ-38-t0r" eventType="touchUpInside" id="5k1-pC-acw"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="lqE-Cx-zbh">
+                                <rect key="frame" x="10" y="644" width="373" height="35"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" title="UILoading According To States">
+                                    <backgroundConfiguration key="background">
+                                        <color key="backgroundColor" name="ButtonBackground"/>
+                                    </backgroundConfiguration>
+                                    <color key="baseForegroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </buttonConfiguration>
+                                <connections>
+                                    <action selector="btnUILoadingAccordingToStates:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Nl0-zV-kx8"/>
                                 </connections>
                             </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
-                            <constraint firstItem="wm0-Y6-clC" firstAttribute="top" secondItem="eX2-Fd-168" secondAttribute="bottom" constant="20" id="0eD-Kk-sxh"/>
+                            <constraint firstItem="wm0-Y6-clC" firstAttribute="top" secondItem="eX2-Fd-168" secondAttribute="bottom" constant="2" id="0eD-Kk-sxh"/>
+                            <constraint firstItem="18R-F6-38r" firstAttribute="leading" secondItem="wm0-Y6-clC" secondAttribute="leading" id="1JT-EN-Zkz"/>
+                            <constraint firstItem="lqE-Cx-zbh" firstAttribute="top" secondItem="NmJ-9Z-gJs" secondAttribute="bottom" constant="2" id="1QX-FN-mJv"/>
+                            <constraint firstItem="NmJ-9Z-gJs" firstAttribute="top" secondItem="Ac6-E0-8OF" secondAttribute="bottom" constant="2" id="2Hl-6f-jef"/>
+                            <constraint firstItem="FiP-Aq-rmH" firstAttribute="trailing" secondItem="vjr-IU-oym" secondAttribute="trailing" id="2lz-1T-LDP"/>
+                            <constraint firstItem="Lw2-fP-TUM" firstAttribute="leading" secondItem="lKF-7b-Tea" secondAttribute="leading" id="6Qp-lq-kYF"/>
+                            <constraint firstItem="lKF-7b-Tea" firstAttribute="trailing" secondItem="18R-F6-38r" secondAttribute="trailing" id="7nh-9i-WnR"/>
+                            <constraint firstItem="FiP-Aq-rmH" firstAttribute="top" secondItem="vjr-IU-oym" secondAttribute="bottom" constant="2" id="8MH-nB-k8U"/>
+                            <constraint firstItem="vjr-IU-oym" firstAttribute="trailing" secondItem="Lw2-fP-TUM" secondAttribute="trailing" id="9PT-Zt-QfD"/>
+                            <constraint firstItem="Ac6-E0-8OF" firstAttribute="leading" secondItem="Yzb-Wk-0Fh" secondAttribute="leading" id="D61-y9-UFx"/>
                             <constraint firstItem="DFf-qO-sfl" firstAttribute="leading" secondItem="ltb-2S-Q16" secondAttribute="leading" id="EaO-v5-cs2"/>
-                            <constraint firstItem="jcF-1u-yNn" firstAttribute="top" secondItem="Om1-2V-fhs" secondAttribute="bottom" constant="20" id="FVf-OA-5QV"/>
-                            <constraint firstItem="ltb-2S-Q16" firstAttribute="top" secondItem="jcF-1u-yNn" secondAttribute="bottom" constant="20" id="GI7-SR-LOE"/>
+                            <constraint firstItem="jcF-1u-yNn" firstAttribute="top" secondItem="Om1-2V-fhs" secondAttribute="bottom" constant="2" id="FVf-OA-5QV"/>
+                            <constraint firstItem="ltb-2S-Q16" firstAttribute="top" secondItem="jcF-1u-yNn" secondAttribute="bottom" constant="2" id="GI7-SR-LOE"/>
                             <constraint firstItem="wm0-Y6-clC" firstAttribute="leading" secondItem="eX2-Fd-168" secondAttribute="leading" id="Gfe-zw-x4z"/>
                             <constraint firstItem="jcF-1u-yNn" firstAttribute="trailing" secondItem="Om1-2V-fhs" secondAttribute="trailing" id="MUb-ht-deN"/>
-                            <constraint firstItem="eX2-Fd-168" firstAttribute="top" secondItem="DFf-qO-sfl" secondAttribute="bottom" constant="20" id="MiJ-p9-g5y"/>
+                            <constraint firstItem="eX2-Fd-168" firstAttribute="top" secondItem="DFf-qO-sfl" secondAttribute="bottom" constant="2" id="MiJ-p9-g5y"/>
+                            <constraint firstItem="Yzb-Wk-0Fh" firstAttribute="trailing" secondItem="FiP-Aq-rmH" secondAttribute="trailing" id="MqC-Wl-ghQ"/>
                             <constraint firstItem="ltb-2S-Q16" firstAttribute="leading" secondItem="jcF-1u-yNn" secondAttribute="leading" id="Nxm-ly-Jap"/>
                             <constraint firstItem="jcF-1u-yNn" firstAttribute="leading" secondItem="Om1-2V-fhs" secondAttribute="leading" id="O8l-SG-Xlg"/>
                             <constraint firstItem="DFf-qO-sfl" firstAttribute="trailing" secondItem="ltb-2S-Q16" secondAttribute="trailing" id="Oko-UA-A4l"/>
                             <constraint firstItem="wm0-Y6-clC" firstAttribute="trailing" secondItem="eX2-Fd-168" secondAttribute="trailing" id="OvS-Vu-BKD"/>
                             <constraint firstItem="D4u-kj-SgX" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="10" id="Qiu-qm-fdZ"/>
+                            <constraint firstItem="lqE-Cx-zbh" firstAttribute="trailing" secondItem="NmJ-9Z-gJs" secondAttribute="trailing" id="SOa-Qy-S16"/>
                             <constraint firstItem="eX2-Fd-168" firstAttribute="leading" secondItem="DFf-qO-sfl" secondAttribute="leading" id="T5Y-ux-R4X"/>
                             <constraint firstItem="eX2-Fd-168" firstAttribute="trailing" secondItem="DFf-qO-sfl" secondAttribute="trailing" id="Ujx-7f-SwZ"/>
+                            <constraint firstItem="NmJ-9Z-gJs" firstAttribute="leading" secondItem="Ac6-E0-8OF" secondAttribute="leading" id="XgB-Gd-Hjz"/>
+                            <constraint firstItem="Lw2-fP-TUM" firstAttribute="trailing" secondItem="lKF-7b-Tea" secondAttribute="trailing" id="YjI-aA-nCq"/>
+                            <constraint firstItem="Ac6-E0-8OF" firstAttribute="top" secondItem="Yzb-Wk-0Fh" secondAttribute="bottom" constant="2" id="buE-Ab-qLC"/>
+                            <constraint firstItem="lqE-Cx-zbh" firstAttribute="leading" secondItem="NmJ-9Z-gJs" secondAttribute="leading" id="bvX-3f-cIz"/>
                             <constraint firstItem="Om1-2V-fhs" firstAttribute="trailing" secondItem="D4u-kj-SgX" secondAttribute="trailing" id="coo-qA-fFx"/>
+                            <constraint firstItem="lKF-7b-Tea" firstAttribute="leading" secondItem="18R-F6-38r" secondAttribute="leading" id="ddJ-pJ-K2F"/>
+                            <constraint firstItem="Yzb-Wk-0Fh" firstAttribute="top" secondItem="FiP-Aq-rmH" secondAttribute="bottom" constant="2" id="dne-68-4iV"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="D4u-kj-SgX" secondAttribute="trailing" constant="10" id="dyv-lo-KEB"/>
-                            <constraint firstItem="Om1-2V-fhs" firstAttribute="top" secondItem="D4u-kj-SgX" secondAttribute="bottom" constant="20" id="j4S-l4-hmS"/>
-                            <constraint firstItem="D4u-kj-SgX" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="20" id="lM0-eP-PPe"/>
-                            <constraint firstItem="DFf-qO-sfl" firstAttribute="top" secondItem="ltb-2S-Q16" secondAttribute="bottom" constant="20" id="mDr-Lo-OZI"/>
+                            <constraint firstItem="FiP-Aq-rmH" firstAttribute="leading" secondItem="vjr-IU-oym" secondAttribute="leading" id="gnC-vb-yht"/>
+                            <constraint firstItem="Ac6-E0-8OF" firstAttribute="trailing" secondItem="Yzb-Wk-0Fh" secondAttribute="trailing" id="hTX-FL-toW"/>
+                            <constraint firstItem="vjr-IU-oym" firstAttribute="leading" secondItem="Lw2-fP-TUM" secondAttribute="leading" id="iQb-tP-TLd"/>
+                            <constraint firstItem="Om1-2V-fhs" firstAttribute="top" secondItem="D4u-kj-SgX" secondAttribute="bottom" constant="2" id="j4S-l4-hmS"/>
+                            <constraint firstItem="D4u-kj-SgX" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="lM0-eP-PPe"/>
+                            <constraint firstItem="DFf-qO-sfl" firstAttribute="top" secondItem="ltb-2S-Q16" secondAttribute="bottom" constant="2" id="mDr-Lo-OZI"/>
+                            <constraint firstItem="vjr-IU-oym" firstAttribute="top" secondItem="Lw2-fP-TUM" secondAttribute="bottom" constant="2" id="n8C-Ka-NGO"/>
                             <constraint firstItem="Om1-2V-fhs" firstAttribute="leading" secondItem="D4u-kj-SgX" secondAttribute="leading" id="nLx-V1-2c1"/>
                             <constraint firstItem="ltb-2S-Q16" firstAttribute="trailing" secondItem="jcF-1u-yNn" secondAttribute="trailing" id="pJM-hr-l1L"/>
+                            <constraint firstItem="NmJ-9Z-gJs" firstAttribute="trailing" secondItem="Ac6-E0-8OF" secondAttribute="trailing" id="qE0-YH-JAH"/>
+                            <constraint firstItem="18R-F6-38r" firstAttribute="trailing" secondItem="wm0-Y6-clC" secondAttribute="trailing" id="qv7-zN-uc9"/>
+                            <constraint firstItem="lKF-7b-Tea" firstAttribute="top" secondItem="18R-F6-38r" secondAttribute="bottom" constant="2" id="rIX-fm-7nE"/>
+                            <constraint firstItem="18R-F6-38r" firstAttribute="top" secondItem="wm0-Y6-clC" secondAttribute="bottom" constant="2" id="sgr-aH-oge"/>
+                            <constraint firstItem="Yzb-Wk-0Fh" firstAttribute="leading" secondItem="FiP-Aq-rmH" secondAttribute="leading" id="x5R-zP-wjW"/>
+                            <constraint firstItem="Lw2-fP-TUM" firstAttribute="top" secondItem="lKF-7b-Tea" secondAttribute="bottom" constant="2" id="xjA-YE-uaU"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="np4-N9-BoC"/>
+                    <connections>
+                        <outlet property="lblAlamofireGenericState" destination="Ac6-E0-8OF" id="K89-tg-Vfq"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
@@ -187,7 +327,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ZoH-f7-5h8" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="518" y="-35"/>
+            <point key="canvasLocation" x="384" y="-35"/>
         </scene>
         <!--Products CollectionVC-->
         <scene sceneID="vaM-U2-HdB">
@@ -233,10 +373,140 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="h8B-xv-Ky2" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1265" y="-35"/>
+            <point key="canvasLocation" x="1066" y="-35"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="tNu-Tb-38m">
+            <objects>
+                <viewController storyboardIdentifier="GCDViewController" id="eKM-cQ-tEg" customClass="GCDViewController" customModule="iOSLearningProject" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="UCc-VD-DEO">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="uul-3U-Lp9">
+                                <rect key="frame" x="5" y="64" width="383" height="749"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="YH4-WS-bYK">
+                                        <rect key="frame" x="0.0" y="0.0" width="383" height="125"/>
+                                        <state key="normal" title="Button"/>
+                                        <buttonConfiguration key="configuration" style="plain" title="Sync Function"/>
+                                        <connections>
+                                            <action selector="btnSyncFunction:" destination="eKM-cQ-tEg" eventType="touchUpInside" id="GT6-Zr-Hfa"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="SEs-V1-MPa">
+                                        <rect key="frame" x="0.0" y="125" width="383" height="124.66666666666669"/>
+                                        <state key="normal" title="Button"/>
+                                        <buttonConfiguration key="configuration" style="plain" title="Async Function"/>
+                                        <connections>
+                                            <action selector="btnAsyncFunction:" destination="eKM-cQ-tEg" eventType="touchUpInside" id="FSU-Vw-aVr"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="9SI-vC-XWK">
+                                        <rect key="frame" x="0.0" y="249.66666666666669" width="383" height="125"/>
+                                        <state key="normal" title="Button"/>
+                                        <buttonConfiguration key="configuration" style="plain" title="Fire Multiple API Calls Together"/>
+                                        <connections>
+                                            <action selector="btnFireMultipleAPICallsTogether:" destination="eKM-cQ-tEg" eventType="touchUpInside" id="cnh-Rz-URs"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="AnH-vA-guU">
+                                        <rect key="frame" x="0.0" y="374.66666666666669" width="383" height="124.66666666666669"/>
+                                        <state key="normal" title="Button"/>
+                                        <buttonConfiguration key="configuration" style="plain" title="Work Item"/>
+                                        <connections>
+                                            <action selector="btnWorkItemPractice:" destination="eKM-cQ-tEg" eventType="touchUpInside" id="JqN-jE-izW"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="qhz-E7-U3b">
+                                        <rect key="frame" x="0.0" y="499.33333333333337" width="383" height="125"/>
+                                        <state key="normal" title="Button"/>
+                                        <buttonConfiguration key="configuration" style="plain" title="Operation Queue"/>
+                                        <connections>
+                                            <action selector="btnOperationQueuePractice:" destination="eKM-cQ-tEg" eventType="touchUpInside" id="do9-Z3-qTs"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="eGp-61-rg6">
+                                        <rect key="frame" x="0.0" y="624.33333333333337" width="383" height="124.66666666666663"/>
+                                        <state key="normal" title="Button"/>
+                                        <buttonConfiguration key="configuration" style="plain" title="Thread Safe Dictionary"/>
+                                        <connections>
+                                            <action selector="btnThreadSafedictionary:" destination="eKM-cQ-tEg" eventType="touchUpInside" id="YWU-XC-u9o"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                            </stackView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="hSB-TS-6uo"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="hSB-TS-6uo" firstAttribute="bottom" secondItem="uul-3U-Lp9" secondAttribute="bottom" constant="5" id="Afe-zD-1d4"/>
+                            <constraint firstItem="hSB-TS-6uo" firstAttribute="trailing" secondItem="uul-3U-Lp9" secondAttribute="trailing" constant="5" id="D6I-4W-O56"/>
+                            <constraint firstItem="uul-3U-Lp9" firstAttribute="top" secondItem="hSB-TS-6uo" secondAttribute="top" constant="5" id="IN3-Ak-C0i"/>
+                            <constraint firstItem="uul-3U-Lp9" firstAttribute="leading" secondItem="hSB-TS-6uo" secondAttribute="leading" constant="5" id="J6S-FN-qmZ"/>
+                        </constraints>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="oYy-yv-FOn" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1769" y="-35"/>
+        </scene>
+        <!--User List Table View-->
+        <scene sceneID="4MO-wk-amI">
+            <objects>
+                <viewController storyboardIdentifier="UserListTableView" id="Fb6-xT-7gg" customClass="UserListTableView" customModule="iOSLearningProject" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="IL1-2d-cYL">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="e4a-bm-4sn">
+                                <rect key="frame" x="0.0" y="59" width="393" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="Paj-Fa-qEE">
+                                <rect key="frame" x="0.0" y="80" width="393" height="738"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                            </tableView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" id="cJ3-Vq-ws3">
+                                <rect key="frame" x="0.0" y="404" width="393" height="44"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" title="Button"/>
+                                <connections>
+                                    <action selector="b:" destination="Fb6-xT-7gg" eventType="touchUpInside" id="Opk-ye-MaZ"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="aOf-aT-hhh"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="aOf-aT-hhh" firstAttribute="bottom" secondItem="Paj-Fa-qEE" secondAttribute="bottom" id="4cu-VU-hjl"/>
+                            <constraint firstItem="e4a-bm-4sn" firstAttribute="leading" secondItem="aOf-aT-hhh" secondAttribute="leading" id="7qk-5y-ciM"/>
+                            <constraint firstItem="Paj-Fa-qEE" firstAttribute="leading" secondItem="e4a-bm-4sn" secondAttribute="leading" id="ACJ-Fe-L6S"/>
+                            <constraint firstItem="cJ3-Vq-ws3" firstAttribute="trailing" secondItem="Paj-Fa-qEE" secondAttribute="trailing" id="Apz-Hy-2EJ"/>
+                            <constraint firstItem="e4a-bm-4sn" firstAttribute="top" secondItem="aOf-aT-hhh" secondAttribute="top" id="HlP-V2-GuS"/>
+                            <constraint firstItem="aOf-aT-hhh" firstAttribute="trailing" secondItem="e4a-bm-4sn" secondAttribute="trailing" id="KkM-y2-NEE"/>
+                            <constraint firstItem="Paj-Fa-qEE" firstAttribute="top" secondItem="e4a-bm-4sn" secondAttribute="bottom" id="Mvj-ym-53k"/>
+                            <constraint firstItem="Paj-Fa-qEE" firstAttribute="trailing" secondItem="e4a-bm-4sn" secondAttribute="trailing" id="Zcc-e9-G6W"/>
+                            <constraint firstItem="cJ3-Vq-ws3" firstAttribute="leading" secondItem="Paj-Fa-qEE" secondAttribute="leading" id="c34-M4-nxH"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="lblLoading" destination="e4a-bm-4sn" id="cfP-UL-D0K"/>
+                        <outlet property="tableViewUser" destination="Paj-Fa-qEE" id="qpU-YP-Z2I"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Ts0-xV-IwT" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2435.8778625954196" y="-35.211267605633807"/>
         </scene>
     </scenes>
     <resources>
+        <namedColor name="AccentColor">
+            <color red="0.0" green="0.46000000000000002" blue="0.89000000000000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
         <namedColor name="ButtonBackground">
             <color red="1" green="0.75294117647058822" blue="0.59999999999999998" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
         </namedColor>
