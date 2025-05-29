@@ -14,26 +14,31 @@ class UserViewModel {
     var hideLoading: (() -> ())?
     var showError: (() -> ())?
     var data: [DataForUser] = [DataForUser]()
+    var dataForTableView: [UserListData] = [UserListData]()
     
     func callAPI() -> DataRequest? {
         let request = AlamofireAPIService.shared.callEndpointWithoutBody(
             endPoint: EndPoint.getUserList(pageNo: 2)
-        ) { (response: UserList?, state, error) in
+        ) { (state: ApiState<UserList>) in
             switch state {
             case .Loading:
                 self.showLoading?()
             case .Error(_):
                 self.hideLoading?()
-            case .Success:
-                if let response {
-                    self.hideLoading?()
-                    self.data = response.data
-                    self.reloadTableData?()
-                }
-            case .Cancelled:
-                print("Cancelled")
+            case .Success(let response):
+                self.hideLoading?()
+                self.data = response.data
+                self.setUserListUIModel()
+                self.reloadTableData?()
             }
         }
         return request
+    }
+    
+    func setUserListUIModel() {
+        for user in self.data {
+            let userItem = UserListData(user: user)
+            self.dataForTableView.append(userItem)
+        }
     }
 }

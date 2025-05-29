@@ -7,6 +7,24 @@
 
 import Foundation
 
-enum ApiState {
-    case Loading, Error(message: String), Success, Cancelled
+enum ApiState<U> {
+    case Loading, Error(error: Error), Success(data: U)
+}
+
+enum UIState<T> {
+    case idle
+    case loading
+    case success(data: T)
+    case error(error: Error)
+}
+
+enum APIError: LocalizedError {
+    case serverMessage(String)
+
+    var errorDescription: String? {
+        switch self {
+        case .serverMessage(let message):
+            return "Can't Login: \(message)"
+        }
+    }
 }

@@ -34,8 +34,6 @@ class BasicApiCall: UIViewController {
                     print(response)
                 }
                 print(response)
-            case .Cancelled:
-                print("Cancelled")
             }
         }
     }

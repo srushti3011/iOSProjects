@@ -108,8 +108,8 @@ class AlamofireAPIService {
         }
     }
     
-    func callEndpointWithBody<T: Codable, U: Codable>(endPoint: EndPoint, body: T?, stateHandler: @escaping (U?, ApiState, AFError?) -> Void) -> DataRequest? {
-        stateHandler(nil, ApiState.Loading, nil)
+    func callEndpointWithBody<T: Codable, U: Codable>(endPoint: EndPoint, body: T?, stateHandler: @escaping (ApiState<U>) -> Void) -> DataRequest? {
+        stateHandler(ApiState.Loading)
         guard let endPointURL = endPoint.endPointURL else {
             return nil
         }
@@ -123,16 +123,23 @@ class AlamofireAPIService {
             switch response.result {
             case .success(let decodedResponse):
                 print(decodedResponse)
-                stateHandler(decodedResponse, ApiState.Success, nil)
+                stateHandler(ApiState<U>.Success(data: decodedResponse))
             case .failure(let error):
-                stateHandler(nil, ApiState.Error(message: "Serialization problem"), error)
+                if let apiError = try? JSONDecoder().decode(APIErrorResponse.self, from: response.data!) {
+                    
+                    let customError = APIError.serverMessage(apiError.error)
+                    print("Decoded API Error: \(apiError)")
+                    stateHandler(ApiState.Error(error: customError))
+                    return
+                }
+                stateHandler(ApiState.Error(error: error))
             }
         }
         return request
     }
     
-    func callEndpointWithoutBody<U: Codable>(endPoint: EndPoint, stateHandler: @escaping (U?, ApiState, AFError?) -> Void) -> DataRequest? {
-        stateHandler(nil, ApiState.Loading, nil)
+    func callEndpointWithoutBody<U: Codable>(endPoint: EndPoint, stateHandler: @escaping (ApiState<U>) -> Void) -> DataRequest? {
+        stateHandler(ApiState.Loading)
         guard let endPointURL = endPoint.endPointURL else {
             return nil
         }
@@ -144,15 +151,12 @@ class AlamofireAPIService {
         request.responseDecodable(of: U.self) { response in
             switch response.result {
             case .success(let decodedResponse):
-                stateHandler(decodedResponse, ApiState.Success, nil)
+                stateHandler(ApiState<U>.Success(data: decodedResponse))
             case .failure(let error):
-                if let afError = error.asAFError, afError.isExplicitlyCancelledError {
-                    stateHandler(nil, .Cancelled, afError)
-                } else {
-                    stateHandler(nil, .Error(message: "Serialization problem"), error)
-                }
+                stateHandler(ApiState.Error(error: error))
             }
         }
         return request
     }
 }
+

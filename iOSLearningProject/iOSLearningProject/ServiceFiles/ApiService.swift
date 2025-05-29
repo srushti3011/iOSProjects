@@ -8,8 +8,12 @@
 import Foundation
 import Alamofire
 
+enum ApiStateNonGeneric {
+    case Loading, Error(error: String), Success
+}
+
 class ApiService {
-    static var apiState = ApiState.Loading
+    static var apiState = ApiStateNonGeneric.Loading
     static let sharedaApiCallInstance = ApiService()
     static let configurationObject = URLSessionConfiguration.default
     static let customConfigSession = URLSession(configuration: ApiService.configurationObject)
@@ -20,12 +24,11 @@ class ApiService {
         //        ApiService.configurationObject.urlCache = URLCache.shared
     }
     
-    func callAPI(urlToCall: URL, completionHandler: @escaping (ResponseFromAPI?, Error?, ApiState) -> Void) {
+    func callAPI(urlToCall: URL, completionHandler: @escaping (ResponseFromAPI?, Error?, ApiStateNonGeneric) -> Void) {
         print("Requesting")
         let task = ApiService.customConfigSession.dataTask(with: urlToCall) { (data, response, error) in
             if let error {
                 print("Error", error.localizedDescription)
-                ApiService.apiState = ApiState.Error(message: "Error")
                 completionHandler(nil, error, ApiService.apiState)
             } else {
                 guard let response = response as? HTTPURLResponse, let data else { return }
@@ -33,7 +36,6 @@ class ApiService {
                     do {
                         let decoder = JSONDecoder()
                         let parsedData = try decoder.decode(ResponseFromAPI.self, from: data)
-                        ApiService.apiState = ApiState.Success
                         print("Got data")
                         completionHandler(parsedData, nil, ApiService.apiState)
                     } catch {
@@ -264,13 +266,13 @@ class ApiService {
     func makeCallWithBody<T: Codable, U: Codable>(
         endPoint: EndPoint,
         body: T? = nil,
-        stateHandler: @escaping(U?, ApiState, String?) -> Void
+        stateHandler: @escaping(U?, ApiStateNonGeneric, String?) -> Void
     ) {
-        stateHandler(nil, ApiState.Loading, nil)
+        stateHandler(nil, ApiStateNonGeneric.Loading, nil)
         let url = endPoint.endPointURL
         guard let url else {
-            ApiService.apiState = ApiState.Error(message: "Fatal error")
-            stateHandler(nil, ApiState.Error(message: "Fatal error"), "Fatal error")
+            ApiService.apiState = ApiStateNonGeneric.Error(error: "Fatal error")
+            stateHandler(nil, ApiStateNonGeneric.Error(error: "Fatal error"), "Fatal error")
             print("Fatal error")
             return
         }
@@ -278,20 +280,20 @@ class ApiService {
         let task = ApiService.customConfigSession.dataTask(with: request) { (data, response, error) in
             guard let response = response as? HTTPURLResponse, let data else { return }
             if (400...499).contains(response.statusCode) {
-                stateHandler(nil, ApiState.Error(message: "Client error"), "Client error")
+                stateHandler(nil, ApiStateNonGeneric.Error(error: "Client error"), "Client error")
                 print("Client error")
             } else if (500...511).contains(response.statusCode) {
-                stateHandler(nil, ApiState.Error(message: "Server error"), "Server error")
+                stateHandler(nil, ApiStateNonGeneric.Error(error: "Server error"), "Server error")
                 print("Server error")
             } else if (200...226).contains(response.statusCode) {
                 do {
                     let responseJson = try JSONSerialization.jsonObject(with: data, options: [])
                     print(responseJson)
                     let decodedData = try JSONDecoder().decode(U.self, from: data)
-                    stateHandler(decodedData, ApiState.Success, nil)
+                    stateHandler(decodedData, ApiStateNonGeneric.Success, nil)
                 } catch let error {
                     print("Error in parsing data \(error.localizedDescription)")
-                    stateHandler(nil, ApiState.Error(message: "Error in parsing response"), error.localizedDescription)
+                    stateHandler(nil, ApiStateNonGeneric.Error(error: "Error in parsing response"), error.localizedDescription)
                 }
             }
         }
@@ -300,13 +302,13 @@ class ApiService {
     
     func makeCallWithoutBody<U: Codable>(
         endPoint: EndPoint,
-        stateHandler: @escaping(U?, ApiState, String?) -> Void
+        stateHandler: @escaping(U?, ApiStateNonGeneric, String?) -> Void
     ) {
-        stateHandler(nil, ApiState.Loading, nil)
+        stateHandler(nil, ApiStateNonGeneric.Loading, nil)
         let url = endPoint.endPointURL
         guard let url else {
-            ApiService.apiState = ApiState.Error(message: "Fatal error")
-            stateHandler(nil, ApiState.Error(message: "Fatal error"), "Fatal error")
+            ApiService.apiState = ApiStateNonGeneric.Error(error: "Fatal error")
+            stateHandler(nil, ApiStateNonGeneric.Error(error: "Fatal error"), "Fatal error")
             print("Fatal error")
             return
         }
@@ -314,20 +316,20 @@ class ApiService {
         let task = ApiService.customConfigSession.dataTask(with: request) { (data, response, error) in
             guard let response = response as? HTTPURLResponse, let data else { return }
             if (400...499).contains(response.statusCode) {
-                stateHandler(nil, ApiState.Error(message: "Client error"), "Client error")
+                stateHandler(nil, ApiStateNonGeneric.Error(error: "Client error"), "Client error")
                 print("Client error")
             } else if (500...511).contains(response.statusCode) {
-                stateHandler(nil, ApiState.Error(message: "Server error"), "Server error")
+                stateHandler(nil, ApiStateNonGeneric.Error(error: "Server error"), "Server error")
                 print("Server error")
             } else if (200...226).contains(response.statusCode) {
                 do {
                     let responseJson = try JSONSerialization.jsonObject(with: data, options: [])
                     print(responseJson)
                     let decodedData = try JSONDecoder().decode(U.self, from: data)
-                    stateHandler(decodedData, ApiState.Success, nil)
+                    stateHandler(decodedData, ApiStateNonGeneric.Success, nil)
                 } catch let error {
                     print("Error in parsing data \(error.localizedDescription)")
-                    stateHandler(nil, ApiState.Error(message: "Error in parsing response"), error.localizedDescription)
+                    stateHandler(nil, ApiStateNonGeneric.Error(error: "Error in parsing response"), error.localizedDescription)
                 }
             }
         }

@@ -20,8 +20,6 @@ class UserListTableView: UIViewController {
         self.tableViewUser.dataSource = self
         initializeViewModel()
         registerCells()
-        print("Calling api")
-        
     }
     
     override func viewWillDisappear(_ animated: Bool) {
@@ -66,13 +64,13 @@ extension UserListTableView: UITableViewDataSource {
         return 1
     }
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return viewModel.data.count
+        return viewModel.dataForTableView.count
     }
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         guard let cell = tableViewUser.dequeueReusableCell(withIdentifier: "UserTableViewCell", for: indexPath) as? UserTableViewCell else {
             return UITableViewCell()
         }
-        cell.configure(data: viewModel.data[indexPath.row])
+        cell.configure(data: viewModel.dataForTableView[indexPath.row])
         return cell
     }
 }
