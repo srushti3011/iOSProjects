@@ -14,6 +14,7 @@ class ViewController: UIViewController {
     @IBOutlet weak var lblAlamofireGenericState: UILabel!
     override func viewDidLoad() {
         super.viewDidLoad()
+        UserDefaults.standard.removeObject(forKey: "userToken")
     }
     
     @IBAction func btnBasicAPICall(_ sender: UIButton) {
@@ -73,8 +74,6 @@ class ViewController: UIViewController {
                 if let data {
                     print("\(data.id) is created")
                 }
-            case .Cancelled:
-                print("Cancelled")
             }
         }
     }
@@ -95,55 +94,43 @@ class ViewController: UIViewController {
     
     // generic alamofire call
     @IBAction func btnGenericAlamofireRequest(_ sender: Any) {
-        let requestToCreateUser = AlamofireAPIService.shared.callEndpointWithBody(
+        _ = AlamofireAPIService.shared.callEndpointWithBody(
             endPoint: EndPoint.createUser,
             body: CreateUserBody(name: "MYName", job: "MYJob")
-        ) { (response: CreatedUserResponse?, state, error) in
+        ) { (state: ApiState<CreatedUserResponse>) in
             switch state {
             case .Loading:
                 self.lblAlamofireGenericState.text = "Loading"
-            case .Error(let message):
-                self.lblAlamofireGenericState.text = message
-            case .Success:
-                if let response {
-                    self.lblAlamofireGenericState.text = "\(response.id) \(response.name)"
-                }
-            case .Cancelled:
-                print("Cancelled")
+            case .Error(let error):
+                self.lblAlamofireGenericState.text = error.localizedDescription
+            case .Success(let response):
+                self.lblAlamofireGenericState.text = "\(response.id) \(response.name)"
             }
-        }
-        
-        let requestToGetSingleUser = AlamofireAPIService.shared.callEndpointWithoutBody(
-            endPoint: EndPoint.getSingleUser(userId: 2)
-        ) { (response: UserDetail?, state, error) in
-            switch state {
-            case .Loading:
-                print("loading user detail")
-            case .Error(let message):
-                print("error \(message)")
-            case .Success:
-                if let response {
+            
+            _ = AlamofireAPIService.shared.callEndpointWithoutBody(
+                endPoint: EndPoint.getSingleUser(userId: 2)
+            ) { (state: ApiState<UserDetail>) in
+                switch state {
+                case .Loading:
+                    print("loading user detail")
+                case .Error(let error):
+                    print("error \(error.localizedDescription)")
+                case .Success(let response):
                     print(response)
                 }
-            case .Cancelled:
-                print("Cancelled")
-            }
-        }
-        
-        let requestToGetUserList = AlamofireAPIService.shared.callEndpointWithoutBody(
-            endPoint: EndPoint.getUserList(pageNo: 2)
-        ) { (response: UserList?, state, error) in
-            switch state {
-            case .Loading:
-                print("Loading users")
-            case .Error(let message):
-                print("Error fetching user list \(message)")
-            case .Success:
-                if let response {
-                    print(response.data[0])
+                
+                _ = AlamofireAPIService.shared.callEndpointWithoutBody(
+                    endPoint: EndPoint.getUserList(pageNo: 2)
+                ) { (state: ApiState<UserList>) in
+                    switch state {
+                    case .Loading:
+                        print("Loading users")
+                    case .Error(let error):
+                        print("Error fetching user list \(error.localizedDescription)")
+                    case .Success(let response):
+                        print(response.data[0])
+                    }
                 }
-            case .Cancelled:
-                print("Cancelled")
             }
         }
     }
@@ -173,5 +160,17 @@ class ViewController: UIViewController {
         let storyboard = UIStoryboard(name: "Main", bundle: nil)
         let nextViewController = storyboard.instantiateViewController(withIdentifier: "UserListTableView") as! UserListTableView
         navigationController?.pushViewController(nextViewController, animated: true)
+    }
+    
+    @IBAction func btnGoToWebServicesExercise(_ sender: Any) {
+        if let _ = UserDefaults.standard.string(forKey: "userToken") {
+            let storyboard = UIStoryboard(name: "Main", bundle: nil)
+            let nextViewController = storyboard.instantiateViewController(withIdentifier: "UserListAndCreationViewController") as! UserListAndCreationViewController
+            self.navigationController?.pushViewController(nextViewController, animated: true)
+        } else {
+            let storyboard = UIStoryboard(name: "Main", bundle: nil)
+            let nextViewController = storyboard.instantiateViewController(withIdentifier: "LoginViewController") as! LoginViewController
+            navigationController?.pushViewController(nextViewController, animated: true)
+        }
     }
 }

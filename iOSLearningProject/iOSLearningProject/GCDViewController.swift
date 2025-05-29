@@ -56,51 +56,43 @@ class GCDViewController: UIViewController {
         
         dispatchGroup.enter()
         DispatchQueue.global().async {
-            AlamofireAPIService.shared.callEndpointWithoutBody(
+            _ = AlamofireAPIService.shared.callEndpointWithoutBody(
                 endPoint: EndPoint.getSingleUser(userId: 1)
-            ) { (response: UserDetail?, state, error) in
+            ) { (state: ApiState<UserDetail>) in
                 switch state {
                 case .Loading:
                     print("loading user detail")
                 case .Error(let message):
                     print("error \(message)")
-                case .Success:
-                    if let response {
-                        print(response)
-                    }
+                case .Success(let response):
+                    print(response)
                     dispatchGroup.leave()
-                case .Cancelled:
-                    print("Cancelled")
                 }
             }
-        }
-        
-        dispatchGroup.enter()
-        DispatchQueue.global().async {
-            AlamofireAPIService.shared.callEndpointWithoutBody(
-                endPoint: EndPoint.getSingleUser(userId: 2)
-            ) { (response: UserDetail?, state, error) in
-                switch state {
-                case .Loading:
-                    print("loading user detail")
-                case .Error(let message):
-                    print("error \(message)")
-                case .Success:
-                    print("got response but sleeping")
-                    sleep(2)
-                    if let response {
+            
+            dispatchGroup.enter()
+            DispatchQueue.global().async {
+                _ = AlamofireAPIService.shared.callEndpointWithoutBody(
+                    endPoint: EndPoint.getSingleUser(userId: 2)
+                ) { (state: ApiState<UserDetail>) in
+                    switch state {
+                    case .Loading:
+                        print("loading user detail")
+                    case .Error(let message):
+                        print("error \(message)")
+                    case .Success(let response):
+                        print("got response but sleeping")
+                        sleep(2)
                         print(response)
+                        dispatchGroup.leave()
                     }
-                    dispatchGroup.leave()
-                case .Cancelled:
-                    print("Cancelled")
                 }
             }
+            dispatchGroup.notify(queue: .global()) {
+                print("Both the api calls are done")
+            }
+            print("After dispatching work done")
         }
-        dispatchGroup.notify(queue: .global()) {
-            print("Both the api calls are done")
-        }
-        print("After dispatching work done")
     }
     
     @IBAction func btnWorkItemPractice(_ sender: Any) {
@@ -118,7 +110,7 @@ class GCDViewController: UIViewController {
     
     @IBAction func btnOperationQueuePractice(_ sender: Any) {
         let operationQueue = OperationQueue()
-//        operationQueue.maxConcurrentOperationCount = 2
+        operationQueue.maxConcurrentOperationCount = 2
         operationQueue.addOperation {
             print("Operation One")
             sleep(3)

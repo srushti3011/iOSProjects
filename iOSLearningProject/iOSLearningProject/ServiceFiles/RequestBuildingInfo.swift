@@ -122,7 +122,7 @@ enum EndPoint {
         switch self {
         default:
             [
-                (Headers.Authorization.rawValue, "reqres-free-v1")
+                (Headers.Authorization.rawValue, UserDefaults.standard.string(forKey: "userToken") ?? "reqres-free-v1")
             ]
         }
     }

@@ -81,3 +81,16 @@ struct UserList: Codable {
         case data, support
     }
 }
+
+struct UserLogin: Codable {
+    let email: String?
+    let password: String?
+}
+
+struct UserLoginResponse: Codable {
+    let token: String
+}
+
+struct APIErrorResponse: Codable {
+    var error: String
+}
