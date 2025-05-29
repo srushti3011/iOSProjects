@@ -12,6 +12,7 @@
 		2D57DCF02DDDF687007B54EB /* Pulse in Frameworks */ = {isa = PBXBuildFile; productRef = 2D57DCEF2DDDF687007B54EB /* Pulse */; };
 		2D57DCF22DDDF687007B54EB /* PulseProxy in Frameworks */ = {isa = PBXBuildFile; productRef = 2D57DCF12DDDF687007B54EB /* PulseProxy */; };
 		2D57DCF42DDDF687007B54EB /* PulseUI in Frameworks */ = {isa = PBXBuildFile; productRef = 2D57DCF32DDDF687007B54EB /* PulseUI */; };
+		2DACF4262DE585B50079BDC3 /* Kingfisher in Frameworks */ = {isa = PBXBuildFile; productRef = 2DACF4252DE585B50079BDC3 /* Kingfisher */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -73,6 +74,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2DACF4262DE585B50079BDC3 /* Kingfisher in Frameworks */,
 				2D57DCF02DDDF687007B54EB /* Pulse in Frameworks */,
 				2D57DCF42DDDF687007B54EB /* PulseUI in Frameworks */,
 				2D57DCF22DDDF687007B54EB /* PulseProxy in Frameworks */,
@@ -143,6 +145,7 @@
 				2D57DCEF2DDDF687007B54EB /* Pulse */,
 				2D57DCF12DDDF687007B54EB /* PulseProxy */,
 				2D57DCF32DDDF687007B54EB /* PulseUI */,
+				2DACF4252DE585B50079BDC3 /* Kingfisher */,
 			);
 			productName = iOSLearningProject;
 			productReference = 2D6560A72D6C2C8500D986C8 /* iOSLearningProject.app */;
@@ -230,6 +233,7 @@
 				2D3EA9A42DDB625100B6DB37 /* XCRemoteSwiftPackageReference "Alamofire" */,
 				2D2AFAA72DDCA8040013C8B1 /* XCRemoteSwiftPackageReference "Bagel" */,
 				2D57DCEE2DDDF687007B54EB /* XCRemoteSwiftPackageReference "Pulse" */,
+				2DACF4242DE585B50079BDC3 /* XCRemoteSwiftPackageReference "Kingfisher" */,
 			);
 			preferredProjectObjectVersion = 77;
 			productRefGroup = 2D6560A82D6C2C8500D986C8 /* Products */;
@@ -612,6 +616,14 @@
 				version = 5.1.4;
 			};
 		};
+		2DACF4242DE585B50079BDC3 /* XCRemoteSwiftPackageReference "Kingfisher" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/onevcat/Kingfisher";
+			requirement = {
+				kind = exactVersion;
+				version = 8.3.2;
+			};
+		};
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
@@ -639,6 +651,11 @@
 			isa = XCSwiftPackageProductDependency;
 			package = 2D57DCEE2DDDF687007B54EB /* XCRemoteSwiftPackageReference "Pulse" */;
 			productName = PulseUI;
+		};
+		2DACF4252DE585B50079BDC3 /* Kingfisher */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 2DACF4242DE585B50079BDC3 /* XCRemoteSwiftPackageReference "Kingfisher" */;
+			productName = Kingfisher;
 		};
 /* End XCSwiftPackageProductDependency section */
 	};
