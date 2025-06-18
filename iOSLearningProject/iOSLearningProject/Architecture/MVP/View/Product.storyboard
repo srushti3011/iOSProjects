@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="23504" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_12" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="23506"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Product View Controller-->
+        <scene sceneID="s0d-6b-0kx">
+            <objects>
+                <viewController storyboardIdentifier="ProductViewController" id="Y6W-OH-hqX" customClass="ProductViewController" customModule="DoubtClear" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="5EZ-qb-Rvc">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="Nfz-yL-6DT">
+                                <rect key="frame" x="0.0" y="59" width="393" height="200"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="200" id="YkQ-k1-ete"/>
+                                </constraints>
+                            </tableView>
+                            <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Enter product name" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="uMX-6I-DNQ">
+                                <rect key="frame" x="0.0" y="312" width="393" height="34"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Enter product price" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="BIh-KE-iEf">
+                                <rect key="frame" x="0.0" y="366" width="393" height="34"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="i7l-Y6-IUD">
+                                <rect key="frame" x="0.0" y="425" width="393" height="35"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" title="Add Product"/>
+                                <connections>
+                                    <action selector="btnAddProductAction:" destination="Y6W-OH-hqX" eventType="touchUpInside" id="X95-KY-A0G"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="vDu-zF-Fre"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="i7l-Y6-IUD" firstAttribute="top" secondItem="BIh-KE-iEf" secondAttribute="bottom" constant="25" id="1PM-xS-la3"/>
+                            <constraint firstItem="Nfz-yL-6DT" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" id="3UE-LX-WWA"/>
+                            <constraint firstItem="i7l-Y6-IUD" firstAttribute="trailing" secondItem="BIh-KE-iEf" secondAttribute="trailing" id="5Qc-DV-t2b"/>
+                            <constraint firstItem="vDu-zF-Fre" firstAttribute="trailing" secondItem="Nfz-yL-6DT" secondAttribute="trailing" id="67E-LJ-pde"/>
+                            <constraint firstItem="uMX-6I-DNQ" firstAttribute="top" secondItem="Nfz-yL-6DT" secondAttribute="bottom" constant="53" id="EVi-BC-Vsj"/>
+                            <constraint firstItem="BIh-KE-iEf" firstAttribute="trailing" secondItem="uMX-6I-DNQ" secondAttribute="trailing" id="Hru-Q0-pW8"/>
+                            <constraint firstItem="i7l-Y6-IUD" firstAttribute="leading" secondItem="BIh-KE-iEf" secondAttribute="leading" id="R1U-Qz-lvg"/>
+                            <constraint firstItem="BIh-KE-iEf" firstAttribute="top" secondItem="uMX-6I-DNQ" secondAttribute="bottom" constant="20" id="RFp-Qe-KuR"/>
+                            <constraint firstItem="BIh-KE-iEf" firstAttribute="leading" secondItem="uMX-6I-DNQ" secondAttribute="leading" id="gUc-ox-f5F"/>
+                            <constraint firstItem="uMX-6I-DNQ" firstAttribute="leading" secondItem="Nfz-yL-6DT" secondAttribute="leading" id="jY1-XJ-yL4"/>
+                            <constraint firstItem="uMX-6I-DNQ" firstAttribute="trailing" secondItem="Nfz-yL-6DT" secondAttribute="trailing" id="lhN-sy-7p1"/>
+                            <constraint firstItem="Nfz-yL-6DT" firstAttribute="top" secondItem="vDu-zF-Fre" secondAttribute="top" id="yQJ-lH-aIn"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="tableView" destination="Nfz-yL-6DT" id="Lel-ox-aUW"/>
+                        <outlet property="tfProductName" destination="uMX-6I-DNQ" id="Awi-Xy-MZU"/>
+                        <outlet property="tfProductPrice" destination="BIh-KE-iEf" id="G8U-YG-LpT"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Ief-a0-LHa" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-31" y="-174"/>
+        </scene>
+    </scenes>
+    <resources>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>
