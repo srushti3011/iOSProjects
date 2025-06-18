@@ -209,19 +209,6 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="NmJ-9Z-gJs">
-                                <rect key="frame" x="10" y="607" width="373" height="35"/>
-                                <state key="normal" title="Button"/>
-                                <buttonConfiguration key="configuration" style="plain" title="Go To GCD Practice">
-                                    <backgroundConfiguration key="background">
-                                        <color key="backgroundColor" name="ButtonBackground"/>
-                                    </backgroundConfiguration>
-                                    <color key="baseForegroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                </buttonConfiguration>
-                                <connections>
-                                    <action selector="btnGoToGrandCentralDispatch:" destination="BYZ-38-t0r" eventType="touchUpInside" id="5k1-pC-acw"/>
-                                </connections>
-                            </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="lqE-Cx-zbh">
                                 <rect key="frame" x="10" y="644" width="373" height="35"/>
                                 <state key="normal" title="Button"/>
@@ -248,6 +235,32 @@
                                     <action selector="btnGoToWebServicesExercise:" destination="BYZ-38-t0r" eventType="touchUpInside" id="8T4-rx-KSH"/>
                                 </connections>
                             </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="a6z-W1-etl">
+                                <rect key="frame" x="10" y="720" width="373" height="35"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" title="Architecture">
+                                    <backgroundConfiguration key="background">
+                                        <color key="backgroundColor" name="ButtonBackground"/>
+                                    </backgroundConfiguration>
+                                    <color key="baseForegroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </buttonConfiguration>
+                                <connections>
+                                    <action selector="btnGoToArchitectureHome:" destination="BYZ-38-t0r" eventType="touchUpInside" id="VDa-Sa-Roq"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="NmJ-9Z-gJs">
+                                <rect key="frame" x="10" y="607" width="373" height="35"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" title="Go To GCD Practice">
+                                    <backgroundConfiguration key="background">
+                                        <color key="backgroundColor" name="ButtonBackground"/>
+                                    </backgroundConfiguration>
+                                    <color key="baseForegroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </buttonConfiguration>
+                                <connections>
+                                    <action selector="btnGoToGrandCentralDispatch:" destination="BYZ-38-t0r" eventType="touchUpInside" id="5k1-pC-acw"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
@@ -267,6 +280,8 @@
                             <constraint firstItem="jcF-1u-yNn" firstAttribute="top" secondItem="Om1-2V-fhs" secondAttribute="bottom" constant="2" id="FVf-OA-5QV"/>
                             <constraint firstItem="ltb-2S-Q16" firstAttribute="top" secondItem="jcF-1u-yNn" secondAttribute="bottom" constant="2" id="GI7-SR-LOE"/>
                             <constraint firstItem="wm0-Y6-clC" firstAttribute="leading" secondItem="eX2-Fd-168" secondAttribute="leading" id="Gfe-zw-x4z"/>
+                            <constraint firstItem="a6z-W1-etl" firstAttribute="trailing" secondItem="Ftc-io-CkG" secondAttribute="trailing" id="Gfg-hf-QB3"/>
+                            <constraint firstItem="a6z-W1-etl" firstAttribute="top" secondItem="Ftc-io-CkG" secondAttribute="bottom" constant="4" id="LBS-SY-hTP"/>
                             <constraint firstItem="jcF-1u-yNn" firstAttribute="trailing" secondItem="Om1-2V-fhs" secondAttribute="trailing" id="MUb-ht-deN"/>
                             <constraint firstItem="eX2-Fd-168" firstAttribute="top" secondItem="DFf-qO-sfl" secondAttribute="bottom" constant="2" id="MiJ-p9-g5y"/>
                             <constraint firstItem="Yzb-Wk-0Fh" firstAttribute="trailing" secondItem="FiP-Aq-rmH" secondAttribute="trailing" id="MqC-Wl-ghQ"/>
@@ -289,6 +304,7 @@
                             <constraint firstItem="Yzb-Wk-0Fh" firstAttribute="top" secondItem="FiP-Aq-rmH" secondAttribute="bottom" constant="2" id="dne-68-4iV"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="D4u-kj-SgX" secondAttribute="trailing" constant="10" id="dyv-lo-KEB"/>
                             <constraint firstItem="FiP-Aq-rmH" firstAttribute="leading" secondItem="vjr-IU-oym" secondAttribute="leading" id="gnC-vb-yht"/>
+                            <constraint firstItem="a6z-W1-etl" firstAttribute="leading" secondItem="Ftc-io-CkG" secondAttribute="leading" id="gsd-nf-WOg"/>
                             <constraint firstItem="Ac6-E0-8OF" firstAttribute="trailing" secondItem="Yzb-Wk-0Fh" secondAttribute="trailing" id="hTX-FL-toW"/>
                             <constraint firstItem="vjr-IU-oym" firstAttribute="leading" secondItem="Lw2-fP-TUM" secondAttribute="leading" id="iQb-tP-TLd"/>
                             <constraint firstItem="Om1-2V-fhs" firstAttribute="top" secondItem="D4u-kj-SgX" secondAttribute="bottom" constant="2" id="j4S-l4-hmS"/>
@@ -752,6 +768,69 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="jaZ-q5-1mx" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="384" y="629"/>
+        </scene>
+        <!--Architecture HomeVC-->
+        <scene sceneID="4rT-x4-s4Q">
+            <objects>
+                <viewController storyboardIdentifier="ArchitectureHomeVC" id="6FQ-Y5-nK4" customClass="ArchitectureHomeVC" customModule="iOSLearningProject" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="Jvm-Nh-9xM">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="CMh-y2-5Ls">
+                                <rect key="frame" x="10" y="69" width="373" height="35"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="tinted" title="MVC"/>
+                                <connections>
+                                    <action selector="btnGoToMVCAction:" destination="6FQ-Y5-nK4" eventType="touchUpInside" id="DTe-iY-dyA"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="SI6-rG-2Uk">
+                                <rect key="frame" x="10" y="124" width="373" height="35"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="tinted" title="MVP"/>
+                                <connections>
+                                    <action selector="btnGoToMVPAction:" destination="6FQ-Y5-nK4" eventType="touchUpInside" id="Zaw-H8-Yr3"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="zCr-4p-pM2">
+                                <rect key="frame" x="10" y="179" width="373" height="35"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="tinted" title="MVVM"/>
+                                <connections>
+                                    <action selector="btnGoToMVVMAction:" destination="6FQ-Y5-nK4" eventType="touchUpInside" id="xQ3-z9-wBN"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Wnr-O1-82O">
+                                <rect key="frame" x="10" y="234" width="373" height="35"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="tinted" title="Viper"/>
+                                <connections>
+                                    <action selector="btnGoToViperAction:" destination="6FQ-Y5-nK4" eventType="touchUpInside" id="Iax-18-K12"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="1wb-dT-gu3"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="Wnr-O1-82O" firstAttribute="top" secondItem="zCr-4p-pM2" secondAttribute="bottom" constant="20" id="2cZ-Sb-9C2"/>
+                            <constraint firstItem="Wnr-O1-82O" firstAttribute="leading" secondItem="zCr-4p-pM2" secondAttribute="leading" id="3kh-YG-MyG"/>
+                            <constraint firstItem="CMh-y2-5Ls" firstAttribute="top" secondItem="1wb-dT-gu3" secondAttribute="top" constant="10" id="Vyz-3A-RcI"/>
+                            <constraint firstItem="zCr-4p-pM2" firstAttribute="top" secondItem="SI6-rG-2Uk" secondAttribute="bottom" constant="20" id="XJ8-5p-iRy"/>
+                            <constraint firstItem="1wb-dT-gu3" firstAttribute="trailing" secondItem="CMh-y2-5Ls" secondAttribute="trailing" constant="10" id="aa1-wn-EbY"/>
+                            <constraint firstItem="CMh-y2-5Ls" firstAttribute="leading" secondItem="1wb-dT-gu3" secondAttribute="leading" constant="10" id="ai2-Hn-k34"/>
+                            <constraint firstItem="Wnr-O1-82O" firstAttribute="trailing" secondItem="zCr-4p-pM2" secondAttribute="trailing" id="dd2-N1-q7R"/>
+                            <constraint firstItem="zCr-4p-pM2" firstAttribute="leading" secondItem="SI6-rG-2Uk" secondAttribute="leading" id="fig-UQ-FA6"/>
+                            <constraint firstItem="SI6-rG-2Uk" firstAttribute="trailing" secondItem="CMh-y2-5Ls" secondAttribute="trailing" id="gVr-g1-YmW"/>
+                            <constraint firstItem="zCr-4p-pM2" firstAttribute="trailing" secondItem="SI6-rG-2Uk" secondAttribute="trailing" id="s2E-p0-Nsd"/>
+                            <constraint firstItem="SI6-rG-2Uk" firstAttribute="top" secondItem="CMh-y2-5Ls" secondAttribute="bottom" constant="20" id="sqp-Yx-JNf"/>
+                            <constraint firstItem="SI6-rG-2Uk" firstAttribute="leading" secondItem="CMh-y2-5Ls" secondAttribute="leading" id="xJI-CR-fkS"/>
+                        </constraints>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Qml-jh-2uT" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1065" y="629"/>
         </scene>
     </scenes>
     <resources>
