@@ -34,291 +34,259 @@
                         <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="D4u-kj-SgX">
-                                <rect key="frame" x="10" y="103" width="373" height="35"/>
-                                <state key="normal" title="Button"/>
-                                <buttonConfiguration key="configuration" style="plain" title="Normal API Call">
-                                    <backgroundConfiguration key="background">
-                                        <color key="backgroundColor" name="ButtonBackground"/>
-                                    </backgroundConfiguration>
-                                    <color key="baseForegroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                </buttonConfiguration>
-                                <connections>
-                                    <action selector="btnBasicAPICall:" destination="BYZ-38-t0r" eventType="touchUpInside" id="e5b-WZ-o3T"/>
-                                </connections>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Om1-2V-fhs">
-                                <rect key="frame" x="10" y="140" width="373" height="35"/>
-                                <state key="normal" title="Button"/>
-                                <buttonConfiguration key="configuration" style="plain" title="Collection View With API Call">
-                                    <backgroundConfiguration key="background">
-                                        <color key="backgroundColor" name="ButtonBackground"/>
-                                    </backgroundConfiguration>
-                                    <color key="baseForegroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                </buttonConfiguration>
-                                <connections>
-                                    <action selector="btnCollectionViewWithAPI:" destination="BYZ-38-t0r" eventType="touchUpInside" id="7t3-ia-lSz"/>
-                                </connections>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="jcF-1u-yNn">
-                                <rect key="frame" x="10" y="177" width="373" height="35"/>
-                                <state key="normal" title="Button"/>
-                                <buttonConfiguration key="configuration" style="plain" title="Post Request">
-                                    <backgroundConfiguration key="background">
-                                        <color key="backgroundColor" name="ButtonBackground"/>
-                                    </backgroundConfiguration>
-                                    <color key="baseForegroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                </buttonConfiguration>
-                                <connections>
-                                    <action selector="btnMakePostRequest:" destination="BYZ-38-t0r" eventType="touchUpInside" id="fMq-a0-yTg"/>
-                                </connections>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ltb-2S-Q16">
-                                <rect key="frame" x="10" y="214" width="373" height="35"/>
-                                <state key="normal" title="Button"/>
-                                <buttonConfiguration key="configuration" style="plain" title="Put Request">
-                                    <backgroundConfiguration key="background">
-                                        <color key="backgroundColor" name="ButtonBackground"/>
-                                    </backgroundConfiguration>
-                                    <color key="baseForegroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                </buttonConfiguration>
-                                <connections>
-                                    <action selector="btnMakePutRequest:" destination="BYZ-38-t0r" eventType="touchUpInside" id="jez-v2-gqG"/>
-                                </connections>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="DFf-qO-sfl">
-                                <rect key="frame" x="10" y="251" width="373" height="35"/>
-                                <state key="normal" title="Button"/>
-                                <buttonConfiguration key="configuration" style="plain" title="Delete Request">
-                                    <backgroundConfiguration key="background">
-                                        <color key="backgroundColor" name="ButtonBackground"/>
-                                    </backgroundConfiguration>
-                                    <color key="baseForegroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                </buttonConfiguration>
-                                <connections>
-                                    <action selector="btnDeletePost:" destination="BYZ-38-t0r" eventType="touchUpInside" id="qQS-qe-9sR"/>
-                                </connections>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="eX2-Fd-168">
-                                <rect key="frame" x="10" y="288" width="373" height="35"/>
-                                <state key="normal" title="Button"/>
-                                <buttonConfiguration key="configuration" style="plain" title="Get Request with Query Param">
-                                    <backgroundConfiguration key="background">
-                                        <color key="backgroundColor" name="ButtonBackground"/>
-                                    </backgroundConfiguration>
-                                    <color key="baseForegroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                </buttonConfiguration>
-                                <connections>
-                                    <action selector="btnGetWithQueryParam:" destination="BYZ-38-t0r" eventType="touchUpInside" id="ve6-pP-ngO"/>
-                                </connections>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="wm0-Y6-clC">
-                                <rect key="frame" x="10" y="325" width="373" height="35"/>
-                                <state key="normal" title="Button"/>
-                                <buttonConfiguration key="configuration" style="plain" title="Generic request">
-                                    <backgroundConfiguration key="background">
-                                        <color key="backgroundColor" name="ButtonBackground"/>
-                                    </backgroundConfiguration>
-                                    <color key="baseForegroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                </buttonConfiguration>
-                                <connections>
-                                    <action selector="btnGenericRequest:" destination="BYZ-38-t0r" eventType="touchUpInside" id="uYF-00-Cx9"/>
-                                </connections>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="18R-F6-38r">
-                                <rect key="frame" x="10" y="362" width="373" height="35"/>
-                                <state key="normal" title="Button"/>
-                                <buttonConfiguration key="configuration" style="plain" title="Alamofire Get Request">
-                                    <backgroundConfiguration key="background">
-                                        <color key="backgroundColor" name="ButtonBackground"/>
-                                    </backgroundConfiguration>
-                                    <color key="baseForegroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                </buttonConfiguration>
-                                <connections>
-                                    <action selector="btnGetUserAlamofire:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Kno-4t-KlJ"/>
-                                </connections>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="lKF-7b-Tea">
-                                <rect key="frame" x="10" y="399" width="373" height="35"/>
-                                <state key="normal" title="Button"/>
-                                <buttonConfiguration key="configuration" style="plain" title="Alamofire Post Request">
-                                    <backgroundConfiguration key="background">
-                                        <color key="backgroundColor" name="ButtonBackground"/>
-                                    </backgroundConfiguration>
-                                    <color key="baseForegroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                </buttonConfiguration>
-                                <connections>
-                                    <action selector="btnRegisterUserAlamofire:" destination="BYZ-38-t0r" eventType="touchUpInside" id="PbZ-7C-T81"/>
-                                </connections>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Lw2-fP-TUM">
-                                <rect key="frame" x="10" y="436" width="373" height="35"/>
-                                <state key="normal" title="Button"/>
-                                <buttonConfiguration key="configuration" style="plain" title="Alamofire Request With Query Parameter">
-                                    <backgroundConfiguration key="background">
-                                        <color key="backgroundColor" name="ButtonBackground"/>
-                                    </backgroundConfiguration>
-                                    <color key="baseForegroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                </buttonConfiguration>
-                                <connections>
-                                    <action selector="btnRequestWithQueryParam:" destination="BYZ-38-t0r" eventType="touchUpInside" id="edf-Mn-a29"/>
-                                </connections>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="vjr-IU-oym">
-                                <rect key="frame" x="10" y="473" width="373" height="35"/>
-                                <state key="normal" title="Button"/>
-                                <buttonConfiguration key="configuration" style="plain" title="Alamofire Request Generic">
-                                    <backgroundConfiguration key="background">
-                                        <color key="backgroundColor" name="ButtonBackground"/>
-                                    </backgroundConfiguration>
-                                    <color key="baseForegroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                </buttonConfiguration>
-                                <connections>
-                                    <action selector="btnGenericAlamofireRequest:" destination="BYZ-38-t0r" eventType="touchUpInside" id="wJb-FY-aeb"/>
-                                </connections>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="FiP-Aq-rmH">
-                                <rect key="frame" x="10" y="510" width="373" height="35"/>
-                                <state key="normal" title="Button"/>
-                                <buttonConfiguration key="configuration" style="plain" title="Cached Get Request">
-                                    <backgroundConfiguration key="background">
-                                        <color key="backgroundColor" name="ButtonBackground"/>
-                                    </backgroundConfiguration>
-                                    <color key="baseForegroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                </buttonConfiguration>
-                                <connections>
-                                    <action selector="btnCachedGetRequest:" destination="BYZ-38-t0r" eventType="touchUpInside" id="ms1-rx-ZCc"/>
-                                </connections>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Yzb-Wk-0Fh">
-                                <rect key="frame" x="10" y="547" width="373" height="35"/>
-                                <state key="normal" title="Button"/>
-                                <buttonConfiguration key="configuration" style="plain" title="Button for opening Pulse UI">
-                                    <backgroundConfiguration key="background">
-                                        <color key="backgroundColor" name="AccentColor"/>
-                                    </backgroundConfiguration>
-                                    <color key="baseForegroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                </buttonConfiguration>
-                                <connections>
-                                    <action selector="btnOpenPulse:" destination="BYZ-38-t0r" eventType="touchUpInside" id="6kE-1a-WQu"/>
-                                </connections>
-                            </button>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ac6-E0-8OF">
-                                <rect key="frame" x="10" y="584" width="373" height="21"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="lqE-Cx-zbh">
-                                <rect key="frame" x="10" y="644" width="373" height="35"/>
-                                <state key="normal" title="Button"/>
-                                <buttonConfiguration key="configuration" style="plain" title="UILoading According To States">
-                                    <backgroundConfiguration key="background">
-                                        <color key="backgroundColor" name="ButtonBackground"/>
-                                    </backgroundConfiguration>
-                                    <color key="baseForegroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                </buttonConfiguration>
-                                <connections>
-                                    <action selector="btnUILoadingAccordingToStates:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Nl0-zV-kx8"/>
-                                </connections>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Ftc-io-CkG">
-                                <rect key="frame" x="10" y="681" width="373" height="35"/>
-                                <state key="normal" title="Button"/>
-                                <buttonConfiguration key="configuration" style="plain" title="Web Services Exercise">
-                                    <backgroundConfiguration key="background">
-                                        <color key="backgroundColor" name="ButtonBackground"/>
-                                    </backgroundConfiguration>
-                                    <color key="baseForegroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                </buttonConfiguration>
-                                <connections>
-                                    <action selector="btnGoToWebServicesExercise:" destination="BYZ-38-t0r" eventType="touchUpInside" id="8T4-rx-KSH"/>
-                                </connections>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="a6z-W1-etl">
-                                <rect key="frame" x="10" y="720" width="373" height="35"/>
-                                <state key="normal" title="Button"/>
-                                <buttonConfiguration key="configuration" style="plain" title="Architecture">
-                                    <backgroundConfiguration key="background">
-                                        <color key="backgroundColor" name="ButtonBackground"/>
-                                    </backgroundConfiguration>
-                                    <color key="baseForegroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                </buttonConfiguration>
-                                <connections>
-                                    <action selector="btnGoToArchitectureHome:" destination="BYZ-38-t0r" eventType="touchUpInside" id="VDa-Sa-Roq"/>
-                                </connections>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="NmJ-9Z-gJs">
-                                <rect key="frame" x="10" y="607" width="373" height="35"/>
-                                <state key="normal" title="Button"/>
-                                <buttonConfiguration key="configuration" style="plain" title="Go To GCD Practice">
-                                    <backgroundConfiguration key="background">
-                                        <color key="backgroundColor" name="ButtonBackground"/>
-                                    </backgroundConfiguration>
-                                    <color key="baseForegroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                </buttonConfiguration>
-                                <connections>
-                                    <action selector="btnGoToGrandCentralDispatch:" destination="BYZ-38-t0r" eventType="touchUpInside" id="5k1-pC-acw"/>
-                                </connections>
-                            </button>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="tBG-a9-6Er">
+                                <rect key="frame" x="10" y="103" width="373" height="715"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="D4u-kj-SgX">
+                                        <rect key="frame" x="0.0" y="0.0" width="373" height="37.666666666666664"/>
+                                        <state key="normal" title="Button"/>
+                                        <buttonConfiguration key="configuration" style="plain" title="Normal API Call">
+                                            <backgroundConfiguration key="background">
+                                                <color key="backgroundColor" name="ButtonBackground"/>
+                                            </backgroundConfiguration>
+                                            <color key="baseForegroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        </buttonConfiguration>
+                                        <connections>
+                                            <action selector="btnBasicAPICall:" destination="BYZ-38-t0r" eventType="touchUpInside" id="e5b-WZ-o3T"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Om1-2V-fhs">
+                                        <rect key="frame" x="0.0" y="37.666666666666657" width="373" height="37.666666666666657"/>
+                                        <state key="normal" title="Button"/>
+                                        <buttonConfiguration key="configuration" style="plain" title="Collection View With API Call">
+                                            <backgroundConfiguration key="background">
+                                                <color key="backgroundColor" name="ButtonBackground"/>
+                                            </backgroundConfiguration>
+                                            <color key="baseForegroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        </buttonConfiguration>
+                                        <connections>
+                                            <action selector="btnCollectionViewWithAPI:" destination="BYZ-38-t0r" eventType="touchUpInside" id="7t3-ia-lSz"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="jcF-1u-yNn">
+                                        <rect key="frame" x="0.0" y="75.333333333333343" width="373" height="37.666666666666657"/>
+                                        <state key="normal" title="Button"/>
+                                        <buttonConfiguration key="configuration" style="plain" title="Post Request">
+                                            <backgroundConfiguration key="background">
+                                                <color key="backgroundColor" name="ButtonBackground"/>
+                                            </backgroundConfiguration>
+                                            <color key="baseForegroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        </buttonConfiguration>
+                                        <connections>
+                                            <action selector="btnMakePostRequest:" destination="BYZ-38-t0r" eventType="touchUpInside" id="fMq-a0-yTg"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ltb-2S-Q16">
+                                        <rect key="frame" x="0.0" y="113.00000000000001" width="373" height="37.666666666666671"/>
+                                        <state key="normal" title="Button"/>
+                                        <buttonConfiguration key="configuration" style="plain" title="Put Request">
+                                            <backgroundConfiguration key="background">
+                                                <color key="backgroundColor" name="ButtonBackground"/>
+                                            </backgroundConfiguration>
+                                            <color key="baseForegroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        </buttonConfiguration>
+                                        <connections>
+                                            <action selector="btnMakePutRequest:" destination="BYZ-38-t0r" eventType="touchUpInside" id="jez-v2-gqG"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="DFf-qO-sfl">
+                                        <rect key="frame" x="0.0" y="150.66666666666666" width="373" height="37.333333333333343"/>
+                                        <state key="normal" title="Button"/>
+                                        <buttonConfiguration key="configuration" style="plain" title="Delete Request">
+                                            <backgroundConfiguration key="background">
+                                                <color key="backgroundColor" name="ButtonBackground"/>
+                                            </backgroundConfiguration>
+                                            <color key="baseForegroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        </buttonConfiguration>
+                                        <connections>
+                                            <action selector="btnDeletePost:" destination="BYZ-38-t0r" eventType="touchUpInside" id="qQS-qe-9sR"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="eX2-Fd-168">
+                                        <rect key="frame" x="0.0" y="188" width="373" height="37.666666666666657"/>
+                                        <state key="normal" title="Button"/>
+                                        <buttonConfiguration key="configuration" style="plain" title="Get Request with Query Param">
+                                            <backgroundConfiguration key="background">
+                                                <color key="backgroundColor" name="ButtonBackground"/>
+                                            </backgroundConfiguration>
+                                            <color key="baseForegroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        </buttonConfiguration>
+                                        <connections>
+                                            <action selector="btnGetWithQueryParam:" destination="BYZ-38-t0r" eventType="touchUpInside" id="ve6-pP-ngO"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="wm0-Y6-clC">
+                                        <rect key="frame" x="0.0" y="225.66666666666669" width="373" height="37.666666666666686"/>
+                                        <state key="normal" title="Button"/>
+                                        <buttonConfiguration key="configuration" style="plain" title="Generic request">
+                                            <backgroundConfiguration key="background">
+                                                <color key="backgroundColor" name="ButtonBackground"/>
+                                            </backgroundConfiguration>
+                                            <color key="baseForegroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        </buttonConfiguration>
+                                        <connections>
+                                            <action selector="btnGenericRequest:" destination="BYZ-38-t0r" eventType="touchUpInside" id="uYF-00-Cx9"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="18R-F6-38r">
+                                        <rect key="frame" x="0.0" y="263.33333333333331" width="373" height="37.666666666666686"/>
+                                        <state key="normal" title="Button"/>
+                                        <buttonConfiguration key="configuration" style="plain" title="Alamofire Get Request">
+                                            <backgroundConfiguration key="background">
+                                                <color key="backgroundColor" name="ButtonBackground"/>
+                                            </backgroundConfiguration>
+                                            <color key="baseForegroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        </buttonConfiguration>
+                                        <connections>
+                                            <action selector="btnGetUserAlamofire:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Kno-4t-KlJ"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="lKF-7b-Tea">
+                                        <rect key="frame" x="0.0" y="301" width="373" height="37.666666666666686"/>
+                                        <state key="normal" title="Button"/>
+                                        <buttonConfiguration key="configuration" style="plain" title="Alamofire Post Request">
+                                            <backgroundConfiguration key="background">
+                                                <color key="backgroundColor" name="ButtonBackground"/>
+                                            </backgroundConfiguration>
+                                            <color key="baseForegroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        </buttonConfiguration>
+                                        <connections>
+                                            <action selector="btnRegisterUserAlamofire:" destination="BYZ-38-t0r" eventType="touchUpInside" id="PbZ-7C-T81"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Lw2-fP-TUM">
+                                        <rect key="frame" x="0.0" y="338.66666666666669" width="373" height="37.666666666666686"/>
+                                        <state key="normal" title="Button"/>
+                                        <buttonConfiguration key="configuration" style="plain" title="Alamofire Request With Query Parameter">
+                                            <backgroundConfiguration key="background">
+                                                <color key="backgroundColor" name="ButtonBackground"/>
+                                            </backgroundConfiguration>
+                                            <color key="baseForegroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        </buttonConfiguration>
+                                        <connections>
+                                            <action selector="btnRequestWithQueryParam:" destination="BYZ-38-t0r" eventType="touchUpInside" id="edf-Mn-a29"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="vjr-IU-oym">
+                                        <rect key="frame" x="0.0" y="376.33333333333331" width="373" height="37.666666666666686"/>
+                                        <state key="normal" title="Button"/>
+                                        <buttonConfiguration key="configuration" style="plain" title="Alamofire Request Generic">
+                                            <backgroundConfiguration key="background">
+                                                <color key="backgroundColor" name="ButtonBackground"/>
+                                            </backgroundConfiguration>
+                                            <color key="baseForegroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        </buttonConfiguration>
+                                        <connections>
+                                            <action selector="btnGenericAlamofireRequest:" destination="BYZ-38-t0r" eventType="touchUpInside" id="wJb-FY-aeb"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="FiP-Aq-rmH">
+                                        <rect key="frame" x="0.0" y="414" width="373" height="37.666666666666686"/>
+                                        <state key="normal" title="Button"/>
+                                        <buttonConfiguration key="configuration" style="plain" title="Cached Get Request">
+                                            <backgroundConfiguration key="background">
+                                                <color key="backgroundColor" name="ButtonBackground"/>
+                                            </backgroundConfiguration>
+                                            <color key="baseForegroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        </buttonConfiguration>
+                                        <connections>
+                                            <action selector="btnCachedGetRequest:" destination="BYZ-38-t0r" eventType="touchUpInside" id="ms1-rx-ZCc"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Yzb-Wk-0Fh">
+                                        <rect key="frame" x="0.0" y="451.66666666666663" width="373" height="37.666666666666686"/>
+                                        <state key="normal" title="Button"/>
+                                        <buttonConfiguration key="configuration" style="plain" title="Button for opening Pulse UI">
+                                            <backgroundConfiguration key="background">
+                                                <color key="backgroundColor" name="AccentColor"/>
+                                            </backgroundConfiguration>
+                                            <color key="baseForegroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        </buttonConfiguration>
+                                        <connections>
+                                            <action selector="btnOpenPulse:" destination="BYZ-38-t0r" eventType="touchUpInside" id="6kE-1a-WQu"/>
+                                        </connections>
+                                    </button>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ac6-E0-8OF">
+                                        <rect key="frame" x="0.0" y="489.33333333333337" width="373" height="37.666666666666629"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="NmJ-9Z-gJs">
+                                        <rect key="frame" x="0.0" y="527" width="373" height="37.333333333333371"/>
+                                        <state key="normal" title="Button"/>
+                                        <buttonConfiguration key="configuration" style="plain" title="Go To GCD Practice">
+                                            <backgroundConfiguration key="background">
+                                                <color key="backgroundColor" name="ButtonBackground"/>
+                                            </backgroundConfiguration>
+                                            <color key="baseForegroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        </buttonConfiguration>
+                                        <connections>
+                                            <action selector="btnGoToGrandCentralDispatch:" destination="BYZ-38-t0r" eventType="touchUpInside" id="5k1-pC-acw"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="lqE-Cx-zbh">
+                                        <rect key="frame" x="0.0" y="564.33333333333337" width="373" height="37.666666666666629"/>
+                                        <state key="normal" title="Button"/>
+                                        <buttonConfiguration key="configuration" style="plain" title="UILoading According To States">
+                                            <backgroundConfiguration key="background">
+                                                <color key="backgroundColor" name="ButtonBackground"/>
+                                            </backgroundConfiguration>
+                                            <color key="baseForegroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        </buttonConfiguration>
+                                        <connections>
+                                            <action selector="btnUILoadingAccordingToStates:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Nl0-zV-kx8"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Ftc-io-CkG">
+                                        <rect key="frame" x="0.0" y="602" width="373" height="37.666666666666629"/>
+                                        <state key="normal" title="Button"/>
+                                        <buttonConfiguration key="configuration" style="plain" title="Web Services Exercise">
+                                            <backgroundConfiguration key="background">
+                                                <color key="backgroundColor" name="ButtonBackground"/>
+                                            </backgroundConfiguration>
+                                            <color key="baseForegroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        </buttonConfiguration>
+                                        <connections>
+                                            <action selector="btnGoToWebServicesExercise:" destination="BYZ-38-t0r" eventType="touchUpInside" id="8T4-rx-KSH"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="a6z-W1-etl">
+                                        <rect key="frame" x="0.0" y="639.66666666666663" width="373" height="37.666666666666629"/>
+                                        <state key="normal" title="Button"/>
+                                        <buttonConfiguration key="configuration" style="plain" title="Architecture">
+                                            <backgroundConfiguration key="background">
+                                                <color key="backgroundColor" name="ButtonBackground"/>
+                                            </backgroundConfiguration>
+                                            <color key="baseForegroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        </buttonConfiguration>
+                                        <connections>
+                                            <action selector="btnGoToArchitectureHome:" destination="BYZ-38-t0r" eventType="touchUpInside" id="VDa-Sa-Roq"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="d7C-TR-EIr">
+                                        <rect key="frame" x="0.0" y="677.33333333333337" width="373" height="37.666666666666629"/>
+                                        <state key="normal" title="Button"/>
+                                        <buttonConfiguration key="configuration" style="plain" title="Permissions">
+                                            <backgroundConfiguration key="background">
+                                                <color key="backgroundColor" name="ButtonBackground"/>
+                                            </backgroundConfiguration>
+                                            <color key="baseForegroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        </buttonConfiguration>
+                                        <connections>
+                                            <action selector="btnGoToPermissionsAction:" destination="BYZ-38-t0r" eventType="touchUpInside" id="XGs-VU-S1k"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                            </stackView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
-                            <constraint firstItem="wm0-Y6-clC" firstAttribute="top" secondItem="eX2-Fd-168" secondAttribute="bottom" constant="2" id="0eD-Kk-sxh"/>
-                            <constraint firstItem="18R-F6-38r" firstAttribute="leading" secondItem="wm0-Y6-clC" secondAttribute="leading" id="1JT-EN-Zkz"/>
-                            <constraint firstItem="lqE-Cx-zbh" firstAttribute="top" secondItem="NmJ-9Z-gJs" secondAttribute="bottom" constant="2" id="1QX-FN-mJv"/>
-                            <constraint firstItem="Ftc-io-CkG" firstAttribute="leading" secondItem="lqE-Cx-zbh" secondAttribute="leading" id="27K-kO-GsL"/>
-                            <constraint firstItem="NmJ-9Z-gJs" firstAttribute="top" secondItem="Ac6-E0-8OF" secondAttribute="bottom" constant="2" id="2Hl-6f-jef"/>
-                            <constraint firstItem="FiP-Aq-rmH" firstAttribute="trailing" secondItem="vjr-IU-oym" secondAttribute="trailing" id="2lz-1T-LDP"/>
-                            <constraint firstItem="Lw2-fP-TUM" firstAttribute="leading" secondItem="lKF-7b-Tea" secondAttribute="leading" id="6Qp-lq-kYF"/>
-                            <constraint firstItem="lKF-7b-Tea" firstAttribute="trailing" secondItem="18R-F6-38r" secondAttribute="trailing" id="7nh-9i-WnR"/>
-                            <constraint firstItem="FiP-Aq-rmH" firstAttribute="top" secondItem="vjr-IU-oym" secondAttribute="bottom" constant="2" id="8MH-nB-k8U"/>
-                            <constraint firstItem="vjr-IU-oym" firstAttribute="trailing" secondItem="Lw2-fP-TUM" secondAttribute="trailing" id="9PT-Zt-QfD"/>
-                            <constraint firstItem="Ac6-E0-8OF" firstAttribute="leading" secondItem="Yzb-Wk-0Fh" secondAttribute="leading" id="D61-y9-UFx"/>
-                            <constraint firstItem="DFf-qO-sfl" firstAttribute="leading" secondItem="ltb-2S-Q16" secondAttribute="leading" id="EaO-v5-cs2"/>
-                            <constraint firstItem="jcF-1u-yNn" firstAttribute="top" secondItem="Om1-2V-fhs" secondAttribute="bottom" constant="2" id="FVf-OA-5QV"/>
-                            <constraint firstItem="ltb-2S-Q16" firstAttribute="top" secondItem="jcF-1u-yNn" secondAttribute="bottom" constant="2" id="GI7-SR-LOE"/>
-                            <constraint firstItem="wm0-Y6-clC" firstAttribute="leading" secondItem="eX2-Fd-168" secondAttribute="leading" id="Gfe-zw-x4z"/>
-                            <constraint firstItem="a6z-W1-etl" firstAttribute="trailing" secondItem="Ftc-io-CkG" secondAttribute="trailing" id="Gfg-hf-QB3"/>
-                            <constraint firstItem="a6z-W1-etl" firstAttribute="top" secondItem="Ftc-io-CkG" secondAttribute="bottom" constant="4" id="LBS-SY-hTP"/>
-                            <constraint firstItem="jcF-1u-yNn" firstAttribute="trailing" secondItem="Om1-2V-fhs" secondAttribute="trailing" id="MUb-ht-deN"/>
-                            <constraint firstItem="eX2-Fd-168" firstAttribute="top" secondItem="DFf-qO-sfl" secondAttribute="bottom" constant="2" id="MiJ-p9-g5y"/>
-                            <constraint firstItem="Yzb-Wk-0Fh" firstAttribute="trailing" secondItem="FiP-Aq-rmH" secondAttribute="trailing" id="MqC-Wl-ghQ"/>
-                            <constraint firstItem="ltb-2S-Q16" firstAttribute="leading" secondItem="jcF-1u-yNn" secondAttribute="leading" id="Nxm-ly-Jap"/>
-                            <constraint firstItem="jcF-1u-yNn" firstAttribute="leading" secondItem="Om1-2V-fhs" secondAttribute="leading" id="O8l-SG-Xlg"/>
-                            <constraint firstItem="DFf-qO-sfl" firstAttribute="trailing" secondItem="ltb-2S-Q16" secondAttribute="trailing" id="Oko-UA-A4l"/>
-                            <constraint firstItem="wm0-Y6-clC" firstAttribute="trailing" secondItem="eX2-Fd-168" secondAttribute="trailing" id="OvS-Vu-BKD"/>
-                            <constraint firstItem="D4u-kj-SgX" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="10" id="Qiu-qm-fdZ"/>
-                            <constraint firstItem="Ftc-io-CkG" firstAttribute="top" secondItem="lqE-Cx-zbh" secondAttribute="bottom" constant="2" id="Rxo-v7-ICy"/>
-                            <constraint firstItem="lqE-Cx-zbh" firstAttribute="trailing" secondItem="NmJ-9Z-gJs" secondAttribute="trailing" id="SOa-Qy-S16"/>
-                            <constraint firstItem="eX2-Fd-168" firstAttribute="leading" secondItem="DFf-qO-sfl" secondAttribute="leading" id="T5Y-ux-R4X"/>
-                            <constraint firstItem="eX2-Fd-168" firstAttribute="trailing" secondItem="DFf-qO-sfl" secondAttribute="trailing" id="Ujx-7f-SwZ"/>
-                            <constraint firstItem="NmJ-9Z-gJs" firstAttribute="leading" secondItem="Ac6-E0-8OF" secondAttribute="leading" id="XgB-Gd-Hjz"/>
-                            <constraint firstItem="Ftc-io-CkG" firstAttribute="trailing" secondItem="lqE-Cx-zbh" secondAttribute="trailing" id="Xs8-Lb-9VH"/>
-                            <constraint firstItem="Lw2-fP-TUM" firstAttribute="trailing" secondItem="lKF-7b-Tea" secondAttribute="trailing" id="YjI-aA-nCq"/>
-                            <constraint firstItem="Ac6-E0-8OF" firstAttribute="top" secondItem="Yzb-Wk-0Fh" secondAttribute="bottom" constant="2" id="buE-Ab-qLC"/>
-                            <constraint firstItem="lqE-Cx-zbh" firstAttribute="leading" secondItem="NmJ-9Z-gJs" secondAttribute="leading" id="bvX-3f-cIz"/>
-                            <constraint firstItem="Om1-2V-fhs" firstAttribute="trailing" secondItem="D4u-kj-SgX" secondAttribute="trailing" id="coo-qA-fFx"/>
-                            <constraint firstItem="lKF-7b-Tea" firstAttribute="leading" secondItem="18R-F6-38r" secondAttribute="leading" id="ddJ-pJ-K2F"/>
-                            <constraint firstItem="Yzb-Wk-0Fh" firstAttribute="top" secondItem="FiP-Aq-rmH" secondAttribute="bottom" constant="2" id="dne-68-4iV"/>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="D4u-kj-SgX" secondAttribute="trailing" constant="10" id="dyv-lo-KEB"/>
-                            <constraint firstItem="FiP-Aq-rmH" firstAttribute="leading" secondItem="vjr-IU-oym" secondAttribute="leading" id="gnC-vb-yht"/>
-                            <constraint firstItem="a6z-W1-etl" firstAttribute="leading" secondItem="Ftc-io-CkG" secondAttribute="leading" id="gsd-nf-WOg"/>
-                            <constraint firstItem="Ac6-E0-8OF" firstAttribute="trailing" secondItem="Yzb-Wk-0Fh" secondAttribute="trailing" id="hTX-FL-toW"/>
-                            <constraint firstItem="vjr-IU-oym" firstAttribute="leading" secondItem="Lw2-fP-TUM" secondAttribute="leading" id="iQb-tP-TLd"/>
-                            <constraint firstItem="Om1-2V-fhs" firstAttribute="top" secondItem="D4u-kj-SgX" secondAttribute="bottom" constant="2" id="j4S-l4-hmS"/>
-                            <constraint firstItem="D4u-kj-SgX" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="lM0-eP-PPe"/>
-                            <constraint firstItem="DFf-qO-sfl" firstAttribute="top" secondItem="ltb-2S-Q16" secondAttribute="bottom" constant="2" id="mDr-Lo-OZI"/>
-                            <constraint firstItem="vjr-IU-oym" firstAttribute="top" secondItem="Lw2-fP-TUM" secondAttribute="bottom" constant="2" id="n8C-Ka-NGO"/>
-                            <constraint firstItem="Om1-2V-fhs" firstAttribute="leading" secondItem="D4u-kj-SgX" secondAttribute="leading" id="nLx-V1-2c1"/>
-                            <constraint firstItem="ltb-2S-Q16" firstAttribute="trailing" secondItem="jcF-1u-yNn" secondAttribute="trailing" id="pJM-hr-l1L"/>
-                            <constraint firstItem="NmJ-9Z-gJs" firstAttribute="trailing" secondItem="Ac6-E0-8OF" secondAttribute="trailing" id="qE0-YH-JAH"/>
-                            <constraint firstItem="18R-F6-38r" firstAttribute="trailing" secondItem="wm0-Y6-clC" secondAttribute="trailing" id="qv7-zN-uc9"/>
-                            <constraint firstItem="lKF-7b-Tea" firstAttribute="top" secondItem="18R-F6-38r" secondAttribute="bottom" constant="2" id="rIX-fm-7nE"/>
-                            <constraint firstItem="18R-F6-38r" firstAttribute="top" secondItem="wm0-Y6-clC" secondAttribute="bottom" constant="2" id="sgr-aH-oge"/>
-                            <constraint firstItem="Yzb-Wk-0Fh" firstAttribute="leading" secondItem="FiP-Aq-rmH" secondAttribute="leading" id="x5R-zP-wjW"/>
-                            <constraint firstItem="Lw2-fP-TUM" firstAttribute="top" secondItem="lKF-7b-Tea" secondAttribute="bottom" constant="2" id="xjA-YE-uaU"/>
+                            <constraint firstItem="tBG-a9-6Er" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="1FT-de-kc6"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="tBG-a9-6Er" secondAttribute="trailing" constant="10" id="YuF-RL-7Kb"/>
+                            <constraint firstItem="tBG-a9-6Er" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="10" id="iP0-L4-Amb"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="tBG-a9-6Er" secondAttribute="bottom" id="qXN-jd-sj1"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="np4-N9-BoC"/>
