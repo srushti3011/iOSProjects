@@ -38,7 +38,7 @@
                                 <rect key="frame" x="10" y="103" width="373" height="715"/>
                                 <subviews>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="D4u-kj-SgX">
-                                        <rect key="frame" x="0.0" y="0.0" width="373" height="37.666666666666664"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="373" height="35.666666666666664"/>
                                         <state key="normal" title="Button"/>
                                         <buttonConfiguration key="configuration" style="plain" title="Normal API Call">
                                             <backgroundConfiguration key="background">
@@ -51,7 +51,7 @@
                                         </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Om1-2V-fhs">
-                                        <rect key="frame" x="0.0" y="37.666666666666657" width="373" height="37.666666666666657"/>
+                                        <rect key="frame" x="0.0" y="35.666666666666657" width="373" height="36"/>
                                         <state key="normal" title="Button"/>
                                         <buttonConfiguration key="configuration" style="plain" title="Collection View With API Call">
                                             <backgroundConfiguration key="background">
@@ -64,7 +64,7 @@
                                         </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="jcF-1u-yNn">
-                                        <rect key="frame" x="0.0" y="75.333333333333343" width="373" height="37.666666666666657"/>
+                                        <rect key="frame" x="0.0" y="71.666666666666657" width="373" height="35.666666666666657"/>
                                         <state key="normal" title="Button"/>
                                         <buttonConfiguration key="configuration" style="plain" title="Post Request">
                                             <backgroundConfiguration key="background">
@@ -77,7 +77,7 @@
                                         </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ltb-2S-Q16">
-                                        <rect key="frame" x="0.0" y="113.00000000000001" width="373" height="37.666666666666671"/>
+                                        <rect key="frame" x="0.0" y="107.33333333333334" width="373" height="35.666666666666657"/>
                                         <state key="normal" title="Button"/>
                                         <buttonConfiguration key="configuration" style="plain" title="Put Request">
                                             <backgroundConfiguration key="background">
@@ -90,7 +90,7 @@
                                         </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="DFf-qO-sfl">
-                                        <rect key="frame" x="0.0" y="150.66666666666666" width="373" height="37.333333333333343"/>
+                                        <rect key="frame" x="0.0" y="143" width="373" height="35.666666666666657"/>
                                         <state key="normal" title="Button"/>
                                         <buttonConfiguration key="configuration" style="plain" title="Delete Request">
                                             <backgroundConfiguration key="background">
@@ -103,7 +103,7 @@
                                         </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="eX2-Fd-168">
-                                        <rect key="frame" x="0.0" y="188" width="373" height="37.666666666666657"/>
+                                        <rect key="frame" x="0.0" y="178.66666666666669" width="373" height="36"/>
                                         <state key="normal" title="Button"/>
                                         <buttonConfiguration key="configuration" style="plain" title="Get Request with Query Param">
                                             <backgroundConfiguration key="background">
@@ -116,7 +116,7 @@
                                         </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="wm0-Y6-clC">
-                                        <rect key="frame" x="0.0" y="225.66666666666669" width="373" height="37.666666666666686"/>
+                                        <rect key="frame" x="0.0" y="214.66666666666669" width="373" height="35.666666666666657"/>
                                         <state key="normal" title="Button"/>
                                         <buttonConfiguration key="configuration" style="plain" title="Generic request">
                                             <backgroundConfiguration key="background">
@@ -129,7 +129,7 @@
                                         </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="18R-F6-38r">
-                                        <rect key="frame" x="0.0" y="263.33333333333331" width="373" height="37.666666666666686"/>
+                                        <rect key="frame" x="0.0" y="250.33333333333329" width="373" height="35.666666666666657"/>
                                         <state key="normal" title="Button"/>
                                         <buttonConfiguration key="configuration" style="plain" title="Alamofire Get Request">
                                             <backgroundConfiguration key="background">
@@ -142,7 +142,7 @@
                                         </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="lKF-7b-Tea">
-                                        <rect key="frame" x="0.0" y="301" width="373" height="37.666666666666686"/>
+                                        <rect key="frame" x="0.0" y="286" width="373" height="35.666666666666686"/>
                                         <state key="normal" title="Button"/>
                                         <buttonConfiguration key="configuration" style="plain" title="Alamofire Post Request">
                                             <backgroundConfiguration key="background">
@@ -155,7 +155,7 @@
                                         </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Lw2-fP-TUM">
-                                        <rect key="frame" x="0.0" y="338.66666666666669" width="373" height="37.666666666666686"/>
+                                        <rect key="frame" x="0.0" y="321.66666666666669" width="373" height="36"/>
                                         <state key="normal" title="Button"/>
                                         <buttonConfiguration key="configuration" style="plain" title="Alamofire Request With Query Parameter">
                                             <backgroundConfiguration key="background">
@@ -168,7 +168,7 @@
                                         </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="vjr-IU-oym">
-                                        <rect key="frame" x="0.0" y="376.33333333333331" width="373" height="37.666666666666686"/>
+                                        <rect key="frame" x="0.0" y="357.66666666666669" width="373" height="35.666666666666686"/>
                                         <state key="normal" title="Button"/>
                                         <buttonConfiguration key="configuration" style="plain" title="Alamofire Request Generic">
                                             <backgroundConfiguration key="background">
@@ -181,7 +181,7 @@
                                         </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="FiP-Aq-rmH">
-                                        <rect key="frame" x="0.0" y="414" width="373" height="37.666666666666686"/>
+                                        <rect key="frame" x="0.0" y="393.33333333333331" width="373" height="35.666666666666686"/>
                                         <state key="normal" title="Button"/>
                                         <buttonConfiguration key="configuration" style="plain" title="Cached Get Request">
                                             <backgroundConfiguration key="background">
@@ -194,7 +194,7 @@
                                         </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Yzb-Wk-0Fh">
-                                        <rect key="frame" x="0.0" y="451.66666666666663" width="373" height="37.666666666666686"/>
+                                        <rect key="frame" x="0.0" y="429" width="373" height="35.666666666666686"/>
                                         <state key="normal" title="Button"/>
                                         <buttonConfiguration key="configuration" style="plain" title="Button for opening Pulse UI">
                                             <backgroundConfiguration key="background">
@@ -207,13 +207,13 @@
                                         </connections>
                                     </button>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ac6-E0-8OF">
-                                        <rect key="frame" x="0.0" y="489.33333333333337" width="373" height="37.666666666666629"/>
+                                        <rect key="frame" x="0.0" y="464.66666666666663" width="373" height="36"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="NmJ-9Z-gJs">
-                                        <rect key="frame" x="0.0" y="527" width="373" height="37.333333333333371"/>
+                                        <rect key="frame" x="0.0" y="500.66666666666669" width="373" height="35.666666666666686"/>
                                         <state key="normal" title="Button"/>
                                         <buttonConfiguration key="configuration" style="plain" title="Go To GCD Practice">
                                             <backgroundConfiguration key="background">
@@ -226,7 +226,7 @@
                                         </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="lqE-Cx-zbh">
-                                        <rect key="frame" x="0.0" y="564.33333333333337" width="373" height="37.666666666666629"/>
+                                        <rect key="frame" x="0.0" y="536.33333333333337" width="373" height="35.666666666666629"/>
                                         <state key="normal" title="Button"/>
                                         <buttonConfiguration key="configuration" style="plain" title="UILoading According To States">
                                             <backgroundConfiguration key="background">
@@ -239,7 +239,7 @@
                                         </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Ftc-io-CkG">
-                                        <rect key="frame" x="0.0" y="602" width="373" height="37.666666666666629"/>
+                                        <rect key="frame" x="0.0" y="572" width="373" height="35.666666666666629"/>
                                         <state key="normal" title="Button"/>
                                         <buttonConfiguration key="configuration" style="plain" title="Web Services Exercise">
                                             <backgroundConfiguration key="background">
@@ -252,7 +252,7 @@
                                         </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="a6z-W1-etl">
-                                        <rect key="frame" x="0.0" y="639.66666666666663" width="373" height="37.666666666666629"/>
+                                        <rect key="frame" x="0.0" y="607.66666666666663" width="373" height="36"/>
                                         <state key="normal" title="Button"/>
                                         <buttonConfiguration key="configuration" style="plain" title="Architecture">
                                             <backgroundConfiguration key="background">
@@ -265,7 +265,7 @@
                                         </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="d7C-TR-EIr">
-                                        <rect key="frame" x="0.0" y="677.33333333333337" width="373" height="37.666666666666629"/>
+                                        <rect key="frame" x="0.0" y="643.66666666666663" width="373" height="35.666666666666629"/>
                                         <state key="normal" title="Button"/>
                                         <buttonConfiguration key="configuration" style="plain" title="Permissions">
                                             <backgroundConfiguration key="background">
@@ -275,6 +275,19 @@
                                         </buttonConfiguration>
                                         <connections>
                                             <action selector="btnGoToPermissionsAction:" destination="BYZ-38-t0r" eventType="touchUpInside" id="XGs-VU-S1k"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="kBw-xn-osU">
+                                        <rect key="frame" x="0.0" y="679.33333333333337" width="373" height="35.666666666666629"/>
+                                        <state key="normal" title="Button"/>
+                                        <buttonConfiguration key="configuration" style="plain" title="Custom Control">
+                                            <backgroundConfiguration key="background">
+                                                <color key="backgroundColor" name="ButtonBackground"/>
+                                            </backgroundConfiguration>
+                                            <color key="baseForegroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        </buttonConfiguration>
+                                        <connections>
+                                            <action selector="btnGoToCustomControl:" destination="BYZ-38-t0r" eventType="touchUpInside" id="bXA-cR-nwm"/>
                                         </connections>
                                     </button>
                                 </subviews>
