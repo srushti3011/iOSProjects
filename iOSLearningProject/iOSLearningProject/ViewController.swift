@@ -173,4 +173,12 @@ class ViewController: UIViewController {
             navigationController?.pushViewController(nextViewController, animated: true)
         }
     }
+    
+    @IBAction func btnGoToArchitectureHome(_ sender: Any) {
+        let storyboard = UIStoryboard(name: "Main", bundle: nil)
+        let nextViewController = storyboard.instantiateViewController(withIdentifier: "ArchitectureHomeVC") as? ArchitectureHomeVC
+        if let nextViewController {
+            navigationController?.pushViewController(nextViewController, animated: true)
+        }
+    }
 }

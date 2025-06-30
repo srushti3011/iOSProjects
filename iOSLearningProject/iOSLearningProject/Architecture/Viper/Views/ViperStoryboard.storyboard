@@ -1,0 +1,116 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="23504" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_12" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="23506"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Viper HomeVC-->
+        <scene sceneID="s0d-6b-0kx">
+            <objects>
+                <viewController storyboardIdentifier="ViperHomeVC" id="Y6W-OH-hqX" customClass="ViperHomeVC" customModule="DoubtClear" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="5EZ-qb-Rvc">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Add numbers" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="TDS-E0-hbt">
+                                <rect key="frame" x="145" y="88" width="102" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Enter first number" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="mU9-63-vnE">
+                                <rect key="frame" x="16" y="129" width="361" height="34"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Enter second number" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="oUD-si-uaz">
+                                <rect key="frame" x="16" y="191" width="361" height="34"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gaG-mg-Ash">
+                                <rect key="frame" x="16" y="310" width="361" height="0.0"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="a2f-gN-AtI">
+                                <rect key="frame" x="16" y="255" width="361" height="35"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="filled" title="Peform addition"/>
+                                <connections>
+                                    <action selector="btnPerformAdditionClick:" destination="Y6W-OH-hqX" eventType="touchUpInside" id="5xT-q4-u0q"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="vDu-zF-Fre"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="a2f-gN-AtI" firstAttribute="trailing" secondItem="oUD-si-uaz" secondAttribute="trailing" id="6hI-hq-ABA"/>
+                            <constraint firstItem="mU9-63-vnE" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" constant="16" id="A6C-9t-gda"/>
+                            <constraint firstItem="gaG-mg-Ash" firstAttribute="trailing" secondItem="a2f-gN-AtI" secondAttribute="trailing" id="EWB-uo-Bh7"/>
+                            <constraint firstItem="a2f-gN-AtI" firstAttribute="top" secondItem="oUD-si-uaz" secondAttribute="bottom" constant="30" id="EhS-Jc-Qqu"/>
+                            <constraint firstItem="mU9-63-vnE" firstAttribute="top" secondItem="TDS-E0-hbt" secondAttribute="bottom" constant="20" id="FBR-0E-Pel"/>
+                            <constraint firstItem="vDu-zF-Fre" firstAttribute="trailing" secondItem="TDS-E0-hbt" secondAttribute="trailing" constant="146" id="G9B-Xb-FkW"/>
+                            <constraint firstItem="oUD-si-uaz" firstAttribute="top" secondItem="mU9-63-vnE" secondAttribute="bottom" constant="28" id="HwC-N6-YLk"/>
+                            <constraint firstItem="gaG-mg-Ash" firstAttribute="leading" secondItem="a2f-gN-AtI" secondAttribute="leading" id="OsE-tH-ziB"/>
+                            <constraint firstItem="TDS-E0-hbt" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" constant="145" id="Sva-gQ-zGd"/>
+                            <constraint firstItem="vDu-zF-Fre" firstAttribute="trailing" secondItem="mU9-63-vnE" secondAttribute="trailing" constant="16" id="UMF-SH-763"/>
+                            <constraint firstItem="vDu-zF-Fre" firstAttribute="trailing" secondItem="oUD-si-uaz" secondAttribute="trailing" constant="16" id="UZh-Mc-g3Y"/>
+                            <constraint firstItem="a2f-gN-AtI" firstAttribute="leading" secondItem="oUD-si-uaz" secondAttribute="leading" id="kGH-M2-hqI"/>
+                            <constraint firstItem="oUD-si-uaz" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" constant="16" id="opW-hJ-cNs"/>
+                            <constraint firstItem="TDS-E0-hbt" firstAttribute="top" secondItem="vDu-zF-Fre" secondAttribute="top" constant="29" id="pa3-WJ-5T9"/>
+                            <constraint firstItem="gaG-mg-Ash" firstAttribute="top" secondItem="a2f-gN-AtI" secondAttribute="bottom" constant="20" id="yj2-26-Gxf"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="lblApiResult" destination="gaG-mg-Ash" id="DUn-g4-k0d"/>
+                        <outlet property="textFieldNumOne" destination="mU9-63-vnE" id="Kl3-M9-74i"/>
+                        <outlet property="textFieldNumTwo" destination="oUD-si-uaz" id="q7g-GK-RRP"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Ief-a0-LHa" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-112.21374045801527" y="-87.323943661971839"/>
+        </scene>
+        <!--Viper Second ScreenVC-->
+        <scene sceneID="mer-4s-Z8u">
+            <objects>
+                <viewController storyboardIdentifier="ViperSecondScreenVC" id="FU6-7C-8LY" customClass="ViperSecondScreenVC" customModule="DoubtClear" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="MEf-gw-PnG">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="mGW-w9-ezb">
+                                <rect key="frame" x="175.66666666666666" y="428" width="42" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="3ev-AA-uyR"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="mGW-w9-ezb" firstAttribute="centerY" secondItem="3ev-AA-uyR" secondAttribute="centerY" id="0f6-bt-tqL"/>
+                            <constraint firstItem="mGW-w9-ezb" firstAttribute="centerX" secondItem="3ev-AA-uyR" secondAttribute="centerX" id="OkD-sZ-6xn"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="lblMessage" destination="mGW-w9-ezb" id="CuT-ld-zu4"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="pt5-0p-s1d" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="572" y="-87"/>
+        </scene>
+    </scenes>
+    <resources>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>
