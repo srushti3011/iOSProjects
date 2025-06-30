@@ -189,4 +189,9 @@ class ViewController: UIViewController {
             navigationController?.pushViewController(nextViewController, animated: true)
         }
     }
+    
+    @IBAction func btnGoToCustomControl(_ sender: UIButton) {
+        let nextViewController = CustomControlHomeVC(nibName: "CustomControlHomeVC", bundle: nil)
+        navigationController?.pushViewController(nextViewController, animated: true)
+    }
 }
