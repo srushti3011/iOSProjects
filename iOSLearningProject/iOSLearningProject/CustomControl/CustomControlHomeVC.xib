@@ -3,6 +3,7 @@
     <device id="retina6_12" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="23506"/>
+        <capability name="Image references" minToolsVersion="12.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
@@ -32,10 +33,29 @@
                     <nil key="textColor"/>
                     <nil key="highlightedColor"/>
                 </label>
+                <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Enter the details" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="eGe-3z-oEr" customClass="CustomTextField" customModule="iOSLearningProject" customModuleProvider="target">
+                    <rect key="frame" x="15" y="94" width="363" height="34"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                    <textInputTraits key="textInputTraits"/>
+                    <userDefinedRuntimeAttributes>
+                        <userDefinedRuntimeAttribute type="image" keyPath="leftImage">
+                            <imageReference key="value" image="paperplane.circle" catalog="system" symbolScale="large"/>
+                        </userDefinedRuntimeAttribute>
+                        <userDefinedRuntimeAttribute type="image" keyPath="rightImage">
+                            <imageReference key="value" image="eraser.fill" catalog="system" symbolScale="large"/>
+                        </userDefinedRuntimeAttribute>
+                        <userDefinedRuntimeAttribute type="color" keyPath="placeholderColor">
+                            <color key="value" systemColor="systemPurpleColor"/>
+                        </userDefinedRuntimeAttribute>
+                    </userDefinedRuntimeAttributes>
+                </textField>
             </subviews>
             <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
             <color key="backgroundColor" systemColor="systemBackgroundColor"/>
             <constraints>
+                <constraint firstItem="eGe-3z-oEr" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="15" id="JMc-9K-Lia"/>
+                <constraint firstItem="eGe-3z-oEr" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" constant="35" id="Loe-kv-7W7"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="eGe-3z-oEr" secondAttribute="trailing" constant="15" id="Qgc-ft-vt3"/>
                 <constraint firstItem="uya-HO-jYl" firstAttribute="centerX" secondItem="E8q-Gg-5b3" secondAttribute="centerX" id="d4O-LQ-s7w"/>
                 <constraint firstItem="E8q-Gg-5b3" firstAttribute="top" secondItem="uya-HO-jYl" secondAttribute="bottom" constant="8" symbolic="YES" id="l26-kB-wRo"/>
                 <constraint firstItem="E8q-Gg-5b3" firstAttribute="centerX" secondItem="fnl-2z-Ty3" secondAttribute="centerX" id="lDk-eb-jWS"/>
@@ -45,8 +65,13 @@
         </view>
     </objects>
     <resources>
+        <image name="eraser.fill" catalog="system" width="128" height="119"/>
+        <image name="paperplane.circle" catalog="system" width="128" height="123"/>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+        <systemColor name="systemPurpleColor">
+            <color red="0.68627450980000004" green="0.32156862749999998" blue="0.87058823529999996" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
     </resources>
 </document>

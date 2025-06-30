@@ -8,7 +8,7 @@
 import UIKit
 
 class CustomControlHomeVC: UIViewController {
-
+    
     // MARK: Instance variables
     let slider = Slider()
     
@@ -21,6 +21,8 @@ class CustomControlHomeVC: UIViewController {
         super.viewDidLoad()
         slider.addTarget(self, action: #selector(sliderChanged(_:)), for: .valueChanged)
         view.addSubview(slider)
+        let tap = UITapGestureRecognizer(target: self, action: #selector(CustomControlHomeVC.dismissKeyboard))
+        view.addGestureRecognizer(tap)
     }
     
     override func viewDidLayoutSubviews() {
@@ -35,5 +37,9 @@ class CustomControlHomeVC: UIViewController {
     @objc func sliderChanged(_ sender: Slider) {
         lblMinValue.text = String(format: "%.0f", sender.minThumbCurrentValue)
         lblMaxValue.text = String(format: "%.0f", sender.maxThumbCurrentValue)
+    }
+    
+    @objc func dismissKeyboard() {
+        view.endEditing(true)
     }
 }
