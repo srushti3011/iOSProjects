@@ -181,4 +181,12 @@ class ViewController: UIViewController {
             navigationController?.pushViewController(nextViewController, animated: true)
         }
     }
+    
+    @IBAction func btnGoToPermissionsAction(_ sender: UIButton) {
+        let storyboard = UIStoryboard(name: "PermissionsStoryboard", bundle: nil)
+        let nextViewController = storyboard.instantiateViewController(withIdentifier: "PermissionsVC") as? PermissionsVC
+        if let nextViewController {
+            navigationController?.pushViewController(nextViewController, animated: true)
+        }
+    }
 }
